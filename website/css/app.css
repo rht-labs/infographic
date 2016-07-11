@@ -1,0 +1,1445 @@
+/* base styles */
+
+@font-face {
+    font-family: 'Overpass_Bold';
+    src: url('../fonts/Overpass_Bold.woff2') format('woff2'), url('../fonts/Overpass_Bold.woff') format('woff'), url('../fonts/Overpass_Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Overpass_Light';
+    src: url('../fonts/Overpass_Light.woff2') format('woff2'), url('../fonts/Overpass_Light.woff') format('woff'), url('../fonts/Overpass_Light.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Overpass_Regular';
+    src: url('../fonts/Overpass_Regular.woff2') format('woff2'), url('../fonts/Overpass_Regular.woff') format('woff'), url('../fonts/Overpass_Regular.ttf') format('truetype')
+}
+
+html,
+body {
+    height: 100%;
+    background: #4c4d4d;
+}
+
+.row {
+    max-width: 75rem;
+}
+
+#home,
+#confirmation {
+    display: none;
+}
+
+#home .column,
+#home .columns {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.border-all {
+    border: 10px solid #d8dcdd !important;
+}
+
+.border-left {
+    border-left: 10px solid #d8dcdd !important;
+}
+
+.border-right {
+    border-right: 10px solid #d8dcdd !important;
+}
+
+.border-top {
+    border-top: 10px solid #d8dcdd !important;
+}
+
+.border-bottom {
+    border-bottom: 10px solid #d8dcdd !important;
+}
+
+.top-section {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.top-section .rh-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+
+/* typography */
+
+.top-section h1 {
+    font-family: 'Overpass_Bold';
+    font-size: 44px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #bc202a;
+    padding: 0;
+    margin: 0;
+}
+
+.top-section h2 {
+    font-size: 27px;
+    font-family: 'Overpass_Regular';
+    color: #4C4D4D;
+}
+
+.top-section h3 {
+    font-size: 20px;
+    font-family: 'Overpass_Bold';
+    color: #bc202a;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.top-section p {
+    color: #4C4D4D;
+    font-size: 16px;
+}
+
+.acc-title h2 {
+    font-family: 'Overpass_Bold';
+}
+
+.acc-title h2,
+form h3 {
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Overpass_Regular';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.selection-sidebar-header {
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: 'Overpass_Bold';
+}
+
+form .block-section h3.block-section-header {
+    font-family: 'Overpass_Bold';
+}
+
+form .block-section h3.block-section-header span {
+    font-family: 'Overpass_Light';
+}
+
+.selection-sidebar .selection-sidebar-block h4 {
+    color: #020000;
+    text-transform: uppercase;
+    background: #d8dcdd;
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 10px 0;
+    font-weight: normal;
+    font-family: 'Overpass_Bold';
+}
+
+.selection-sidebar .selection-sidebar-section h5 {
+    color: #bc202a;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'Overpass_Bold';
+}
+
+table tbody td,
+table tbody th {
+    font-family: 'Overpass_Regular';
+}
+
+#submit-button,
+.button {
+    font-family: 'Overpass_Bold';
+}
+
+
+/* home page - sidebar */
+
+.selection-sidebar-section {
+    padding: 10px;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+#empty-stack {
+    display: block;
+}
+
+#empty-stack .selection-sidebar-section {
+    height: 150px;
+}
+
+#empty-stack h2 {
+    font-family: 'Overpass_Bold';
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #bc202a;
+    padding-top: 45px;
+}
+
+.selection-sidebar-section .selection {
+    font-family: 'Overpass_Regular';
+}
+
+#automation-sidebar,
+#application-development-sidebar,
+#devops-tools-sidebar,
+#container-platform-sidebar,
+#iaas-sidebar {
+    display: none;
+}
+
+.selection-sidebar-section .remove {
+    min-width: 20px;
+    text-align: right;
+}
+
+table td.remove .locked-icon {
+    height: 12px;
+    width: 12px;
+}
+
+.selection-sidebar-section .remove span {
+    text-decoration: underline;
+    color: #020000;
+    cursor: pointer;
+}
+
+.selection-sidebar {
+    margin-top: 20px;
+}
+
+.selection-sidebar-top {
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.selection-sidebar-header {
+    background: #020000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.selection-sidebar-bottom {
+    text-align: right;
+    margin-bottom: 200px;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+}
+
+table tr {
+    display: none;
+}
+
+#automation-table tr {
+    display: block;
+}
+
+table tbody,
+table tfoot,
+table thead {
+    border: none;
+    background-color: #fff;
+}
+
+table tbody td,
+table tbody th {
+    padding: 0 0 5px 0;
+    width: 100%;
+}
+
+table tbody tr:nth-child(even),
+table tbody tr {
+    background-color: #fff;
+    /* foundation override */
+}
+
+
+/* form styles */
+
+form .block-section {
+    display: block;
+}
+
+form .block-section .block-section-header {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+form .block-section:first-child .block-section-header {
+    margin-top: 10px;
+}
+
+form h3 {
+    color: #bc202a
+}
+
+form h3 span {
+    color: #020000;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+form #submit-button {
+    color: #fff;
+    background: #bc202a;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 60px;
+    font-weight: normal;
+    border: none;
+    font-size: 22px;
+}
+
+input[type='checkbox'],
+label,
+label .checkbox-image,
+[type=checkbox]+label,
+{
+    display: inline;
+}
+
+input[type='checkbox'] {
+    vertical-align: top;
+    margin-top: 3px;
+}
+
+label .checkbox-image {
+    max-width: 110px;
+    height: auto;
+}
+
+
+/* checkbox image and related styles */
+
+form fieldset {
+    padding-left: 20px;
+}
+
+#red-hat-enterprise-open-source .checkbox-image {
+    max-width: 145px;
+}
+
+#red-hat-enterprise-open-source fieldset .row:nth-child(2) {
+    padding-top: 0;
+}
+
+fieldset .row:nth-child(2) {
+    padding-top: 25px;
+}
+
+.text {
+    display: none;
+}
+
+.locked {
+    display: none;
+}
+
+.locked + label {
+    background: url('../images/lock.png') no-repeat;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    background-size: cover;
+    left: -8px;
+    top: 3px;
+}
+
+.locked:checked + label {
+    background: url('../images/lock.png') no-repeat;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    background-size: cover;
+    left: -8px;
+    top: 3px;
+}
+
+.locked + label .checkbox-image {
+    position: relative;
+    left: 25px;
+}
+
+.grayed-out {
+    display: none;
+}
+
+.grayed-out + label {
+    background: url('../images/gray.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    background-size: cover;
+    left: -8px;
+    top: 3px;
+}
+
+.grayed-out:checked + label {
+    background: url('../images/gray.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+    background-size: cover;
+    left: -8px;
+    top: 3px;
+}
+
+.grayed-out + label .checkbox-image {
+    position: relative;
+    left: 25px;
+}
+
+#rhel {
+    position: relative;
+}
+
+.backed-by-rhel {
+    background: #fff;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-top: 10px solid #d8dcdd;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.backed-by-rhel p {
+    font-size: 13px;
+    line-height: 13px;
+    color: #4C4D4D;
+    text-transform: uppercase;
+}
+
+
+/* these exist in form but should not be visible on front end */
+
+#management,
+#networking,
+#storage {
+    display: none;
+}
+
+#accordion {
+    margin-right: 20px;
+}
+
+
+/* active accordion */
+
+#tech-stack .ui-state-active,
+#tech-stack .ui-widget-content .ui-state-active,
+#tech-stack .ui-widget-header .ui-state-active {
+    border: none;
+    background: #bc202a;
+    color: #fff;
+    outline: none;
+}
+
+
+/* non-active accordion */
+
+#tech-stack .ui-state-default,
+#tech-stack .ui-widget-content .ui-state-default,
+#tech-stack .ui-widget-header .ui-state-default {
+    border: none;
+    background: #bc202a;
+    color: #fff;
+    outline: none;
+}
+
+
+/* accordion content */
+
+.acc-header {
+    background: #bc202a !important;
+    overflow: auto;
+    color: #fff;
+    position: relative;
+    margin-top: 20px;
+}
+
+.acc-left {
+    float: left;
+    display: inline;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.acc-left span {
+    display: block;
+}
+
+.acc-sprite {
+    display: block;
+    width: 70px;
+    background: #981c1f;
+    color: #fff;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.acc-sprite span {
+    display: block;
+    margin-top: 28px;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.acc-title {
+    display: block;
+    text-align: left;
+    float: left;
+    padding-left: 20px;
+}
+
+.acc-title h2 {
+    display: block;
+    padding: 0;
+    margin-top: 42px;
+}
+
+.acc-title h2 span {
+    display: inline;
+    text-transform: lowercase !important;
+}
+
+#container-platform-accordion-header .acc-right {
+    padding-right: 30px;
+    /* make it 4 lines so all 4 space evenly */
+}
+
+#monitoring-and-logging {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.acc-right {
+    float: right;
+    width: 50%;
+    border-left: 10px solid #d8dcdd;
+    background: #fff;
+    color: #020000;
+    padding: 10px 15px;
+}
+
+.acc-content {
+    background: #fff;
+    padding: 20px;
+    overflow: visible;
+}
+
+
+/* tool tips */
+
+.has-tip {
+    border-bottom-width: 0;
+    cursor: pointer;
+}
+
+.tool-tip {
+    font-family: 'Overpass_Regular';
+}
+
+
+/* fix foundation tooltip bug */
+
+.tooltip::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 0.75rem;
+    border-color: transparent transparent #0a0a0a;
+    border-bottom-style: solid;
+    border-top-width: 0;
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+/* parsley error styles */
+
+ul.parsley-errors-list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.parsley-errors-list li {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 10px solid #d8dcdd;
+    list-style-type: none;
+    color: #bc202a;
+    ;
+}
+
+
+/* confirmation page styles */
+
+#confirmation {
+    margin-top: 20px;
+}
+
+.conf-block {
+    background: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#iaas-row .conf-block {
+    margin-bottom: 0;
+}
+
+.conf-acc-header {
+    text-align: center;
+    background: #bc202a;
+    padding: 15px;
+}
+
+.conf-acc-header h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-family: 'Overpass_Bold';
+    padding: 0;
+    margin: 0;
+}
+
+.conf-body {
+    background: #fff;
+    border-right: 1px solid #d8dcdd;
+    overflow: auto;
+    width: 100%;
+    padding: 15px;
+}
+
+.conf-section {
+    display: block;
+    float: left;
+    width: auto;
+    min-height: 175px;
+}
+
+.conf-section-header {
+    text-align: center;
+}
+
+.conf-section-header h3 {
+    color: #bc202a;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: 'Overpass_Bold';
+}
+
+#ci-cd-conf .conf-section-header h3 {
+    margin-bottom: 15px;
+}
+
+#source-control-management-conf .conf-section-header h3 {
+    margin-bottom: 12px;
+}
+
+#collaboration-conf .conf-section-header h3 {
+    margin-bottom: 30px;
+}
+
+#build-and-artifact-conf .conf-section-header h3 {
+    margin-bottom: 25px;
+}
+
+#testing-conf .conf-section-header h3,
+#code-quality-conf .conf-section-header h3 {
+    margin-bottom: 20px;
+}
+
+#code-review-conf .conf-section-header h3 {
+    margin-bottom: 25px;
+}
+
+.conf-acc-header h2 {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.conf-section-header h3 {
+    font-size: 12px;
+}
+
+.conf-section img {
+    max-width: 100px;
+    margin: 0 auto 5px auto;
+}
+
+.conf-section#rhe-os-conf img {
+    max-width: 120px;
+}
+
+.conf-section#rhe-os-conf div {
+    text-align: center;
+}
+
+#devops-tools-row .conf-section img {
+    max-width: 80px;
+}
+
+.conf-section#rhel-conf img {
+    max-width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#container-platform-row .conf-section {
+    min-height: auto;
+}
+
+#container-platform-row .stripe-border {
+    border-color: #fff;
+    border-style: solid;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 30px;
+    position: relative;
+}
+
+#container-platform-row .stripe-text {
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    bottom: -23px;
+}
+
+#container-platform-row .stripe-text p {
+    color: #4C4D4D;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+
+.conf-section#monitoring-and-logging-conf img {
+    margin-top: 15px;
+    margin-right: 20px;
+    max-width: 85px;
+}
+
+.conf-section#public-conf img,
+.conf-section#private-conf img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+#rhe-os-conf {
+    padding-right: 20px;
+}
+
+#bic-os-conf {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#infrastructure-conf {
+    padding-left: 20px;
+    padding-right: 25px;
+}
+
+#databases-conf {
+    padding-left: 30px;
+}
+
+#ci-cd-conf {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+#source-control-management-conf,
+#collaboration-conf,
+#build-and-artifact-conf,
+#code-quality-conf {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#testing-conf {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+#code-review-conf {
+    padding-left: 20px;
+}
+
+#rhel-conf {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#monitoring-and-logging-conf {
+    padding-left: 100px;
+}
+
+#private-conf {
+    padding-right: 25px;
+    padding-left: 5px;
+}
+
+#public-conf {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#management-conf {
+    display: block;
+}
+
+#management-conf .conf-section-header {
+    display: inline-block;
+    margin-right: 60px;
+    margin-left: 30px;
+}
+
+#management-conf img:first-of-type {
+    margin-right: 50px
+}
+
+#networking-conf,
+#storage-conf {
+    width: 100%;
+}
+
+#identity-management-conf,
+#certificate-management-conf,
+#management-conf {
+    padding-top: 20px;
+}
+
+.odd-section-block {
+    border: 2px solid #d8dcdd;
+    padding: 10px;
+    height: 75px;
+}
+
+.odd-section-margin-top {
+    margin-top: 10px !important;
+}
+
+.odd-section-margin-left {
+    margin-left: 10px !important;
+}
+
+#storage-conf #storage-img-container-conf {
+    text-align: left;
+}
+
+.thin-border-right {
+    border-right: 2px solid #d8dcdd;
+}
+
+.conf-section div {
+    text-align: center;
+}
+
+#oddball-row {
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px 0 0;
+    float: right;
+}
+
+#oddball-row .row,
+#oddball-row .row .columns {
+    margin: 0;
+    padding: 0;
+}
+
+#oddball-row img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+
+/* social share */
+
+.share-row {
+    margin-top: 20px !important;
+    display: none;
+}
+
+.share-row .columns {
+    padding-left: 0;
+    margin-top: 20px !important;
+}
+
+#share {}
+
+.jssocials-shares {
+    margin-top: 10px;
+}
+
+.jssocials-share {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.3em 0 !important;
+    width: 25% !important;
+    text-align: center;
+}
+
+.jssocials-share-link,
+.jssocials-share-link:hover {
+    background: #000000 !important;
+    color: #fff !important;
+}
+
+.jssocials-share-link {
+    padding: 10px 20px;
+    min-width: 150px;
+    min-height: 45px;
+    box-sizing: border-box;
+}
+
+.jssocials-share-label {
+    font-family: 'Overpass_Bold';
+    text-transform: uppercase;
+    float: left;
+    padding-top: 5px;
+}
+
+.jssocials-share-twitter .jssocials-share-label,
+.jssocials-share-facebook .jssocials-share-label {
+    padding-right: 10px;
+}
+
+.jssocials-shares .fa {
+    float: right;
+    font-size: 25px;
+}
+
+
+/* back links */
+
+.links-row {
+    display: none;
+}
+
+.links-row .columns {
+    padding-left: 0 !important;
+}
+
+#links {
+    padding-top:30px;
+    padding-bottom: 80px;
+}
+
+#links.conf-body {
+    text-align: center;
+    margin: 0 auto;
+    background: none;
+    border: none;
+}
+
+#links.conf-body,
+.links-row .conf-block,
+.links-row .border-all {
+    background: none;
+    border: none !important;
+}
+
+.back-links {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0.3em 0 !important;
+    width: auto;
+    text-align: center;
+}
+
+#links .button {
+    color: #fff;
+    background: #bc202a;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 60px;
+    font-weight: normal;
+    border: none;
+    font-size: 16px
+}
+
+
+/* vertical left side column */
+
+#main-graphic {
+    position: relative;
+}
+
+#automation-vertical {
+    margin-right: 20px;
+    position: relative;
+    height: 100%;
+}
+
+#automation-vertical .conf-section {
+    float: none;
+    text-align: center;
+    height: 100%;
+}
+
+#automation-vertical .conf-block {
+    overflow: hidden;
+    height: 100%;
+}
+
+#automation-vertical .conf-body {
+    height: auto;
+}
+
+#automation-vertical .conf-section img,
+#automation-vertical-mobile .conf-section img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.automation-arrow {
+    position: absolute;
+    padding: 0 !important;
+    left: -47px;
+}
+
+.automation-arrow .arrow {
+    width: 35px;
+    height: auto;
+}
+
+#confirmation-image,
+.image-container {
+    display: none;
+}
+
+#automation-conf-small img,
+#automation-conf-small {
+    text-align: center;
+}
+
+#automation-conf-small .conf-section {
+    float: none;
+    min-height: auto;
+    text-align: center;
+}
+
+
+/* print styles */
+
+@media print {
+    @page {
+        size: portrait;
+    }
+    #confirmation-image,
+    .image-container {
+        display: block !important;
+    }
+    #confirmation {
+        display: none !important;
+    }
+    canvas {
+        display: block !important;
+    }
+    #confirmation-image {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: auto !important;
+    }
+    .share-row {
+        display: none !important;
+    }
+    .links-row {
+        display: none !important;
+    }
+}
+
+
+/* HOME PAGE MEDIA QUERIES */
+
+
+/* HOME PAGE - Small only */
+
+@media screen and (max-width: 39.9375em) {
+    [type=checkbox]+label,
+    [type=radio]+label {
+        margin-bottom: 10px;
+    }
+    .locked + label .checkbox-image {
+        margin-bottom: 60px;
+    }
+    .selection-sidebar-bottom {
+        text-align: center;
+        margin-bottom: 150px;
+    }
+    .acc-sprite {
+        width: 35px;
+    }
+    .acc-title {
+        padding-left: 10px;
+    }
+    .acc-title h2 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 63.9375em) {
+    /* HOME PAGE - small and medium */
+    .top-section h1 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 5px;
+    }
+    .top-section h2 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    .top-section h3 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+    .acc-left,
+    .acc-right {
+        width: 100%;
+        float: none;
+        display: block;
+        position: relative;
+        height: 100px;
+        border-width: 0;
+        border: none;
+    }
+    .acc-right {
+        padding: 15px;
+        height: auto;
+    }
+    #accordion {
+        margin-right: 0px;
+    }
+    #rhel {
+        background: #dfefef;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        min-height: 100px;
+    }
+    #home .column,
+    #home .columns {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 63.9375em) and (max-width: 80em) {
+    /* HOME PAGE - custom query to address some spacing issues */
+    .acc-title {
+        padding-left: 10px;
+    }
+    .acc-title h2 {
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 44px;
+    }
+}
+
+
+/* CONFIRMATION PAGE MEDIA QUERIES */
+
+
+/* CONFIRMATION PAGE - Small only */
+
+@media screen and (max-width: 39.9375em) {
+    .conf-section,
+    .conf-body {
+        float: none;
+        text-align: center;
+        min-height: auto;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    .conf-section-header h3 {
+        margin: 20px;
+        font-size: 14px;
+    }
+    .float-left,
+    .float-right {
+        float: none !important;
+    }
+    #rhe-os-conf,
+    #bic-os-conf,
+    #infrastructure-conf,
+    #databases-conf,
+    #ci-cd-conf,
+    #source-control-management-conf,
+    #collaboration-conf,
+    #build-and-artifact-conf,
+    #code-quality-conf,
+    #testing-conf,
+    #code-review-conf,
+    #rhel-conf,
+    #monitoring-and-logging-conf,
+    #private-conf,
+    #public-conf,
+    #management-conf,
+    #networking-conf,
+    #storage-conf,
+    #oddball-row .row,
+    #oddball-row .row .columns {
+        padding: 0;
+        margin: 0;
+    }
+    .conf-section#rhe-os-conf div,
+    #storage-conf #storage-img-container-conf,
+    .conf-section div {
+        text-align: center;
+    }
+    .thin-border-right {
+        border-right: 0px solid #d8dcdd;
+    }
+    #oddball-row img {
+        max-width: 100px;
+        margin-right: 20px;
+    }
+    #automation-vertical .conf-section img {
+        max-width: 100%
+    }
+    .share-row {
+        padding-left: 10px;
+    }
+    .jssocials-share-link {
+        padding: 10px;
+    }
+    .jssocials-share {
+        display: inline-block;
+        width: 100% !important;
+        text-align: center;
+    }
+    .jssocials-share-link {
+        width: 200px;
+    }
+    .odd-section-block {
+        height: auto
+    }
+    #identity-management-conf,
+    #certificate-management-conf,
+    #confirmation-conf {
+        padding-top: 0px;
+    }
+    /* back links */
+    #links {
+        padding-top:30px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #links.conf-body {
+        text-align: center;
+        margin: 0 auto;
+        background: none;
+        border: none;
+    }
+    .back-links {
+        display: block;
+        margin: 0.3em auto 15px auto !important;
+        width: 200px;
+        text-align: center;
+    }
+    #links .button {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* CONFIRMATION PAGE - Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .thin-border-right {
+        border-right: 0px solid #d8dcdd;
+    }
+    .conf-section div {
+        text-align: center;
+    }
+    .conf-body {
+        text-align: center;
+    }
+    .conf-section {
+        display: inline-block;
+        float: none;
+        width: auto;
+        min-height: 175px;
+        vertical-align: top;
+        text-align: center;
+        margin: 0;
+    }
+    #automation-vertical .conf-section img {
+        max-width: 60%
+    }
+    #identity-management-conf,
+    #certificate-management-conf,
+    #management-conf {
+        padding-top: 10px;
+    }
+    .odd-section-block {
+        height: auto;
+    }
+    .share-row {
+        padding-left: 15px;
+    }
+    .jssocials-share-link {
+        padding: 10px;
+    }
+    .jssocials-share {
+        display: inline-block;
+        width: 100% !important;
+        text-align: center;
+    }
+    .jssocials-share-link {
+        width: 200px;
+    }
+     /* back links */
+    #links {
+        padding-top:30px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    #links .float-left, #links .float-right {
+        float: none !important;
+    }
+    #links.conf-body {
+        text-align: center;
+        margin: 0 auto;
+        background: none;
+        border: none;
+    }
+    .back-links {
+        display: block;
+        margin: 0.3em auto 15px auto !important;
+        width: 200px;
+        text-align: center;
+    }
+    #links .button {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* CONFIRMATION PAGE - medium to almost large- custom query to fix some spacing issues */
+
+@media screen and (min-width: 64em) and (max-width: 1210px) {
+    .conf-body {
+        text-align: center;
+    }
+    .conf-section {
+        display: inline-block;
+        float: none;
+        width: auto;
+        min-height: 175px;
+        vertical-align: top;
+        text-align: center;
+        margin: 0;
+    }
+    .conf-section-header h3 {
+        margin: 0 0 10px 0;
+    }
+}
+
+
+/* CONFIRMATION PAGE small to almost large - shared styles */
+
+@media screen and (max-width: 1210px) {
+    #networking-conf,
+    #storage-conf {
+        width: 100%;
+    }
+    #oddball-row {
+        display: inline-block;
+        margin: 0;
+        padding: 0 0px 0 0;
+        float: none;
+    }
+    .odd-section-margin-top {
+        margin-top: 0 !important;
+    }
+    .odd-section-margin-left {
+        margin-left: 0 !important;
+    }
+    #management-conf .conf-section-header {
+        display: inline-block;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #management-conf img:first-of-type {
+        margin-right: 0px
+    }
+    #storage-conf #storage-img-container-conf {
+        text-align: center;
+    }
+    .odd-section-block {
+        border: 1px solid #d8dcdd;
+        padding: 5px;
+        margin: 10px 0;
+    }
+    .odd-section-block img {
+        padding-bottom: 5px
+    }
+    #container-platform-row .thin-border-right {
+        border: 0;
+    }
+    #monitoring-and-logging-conf {
+        padding-left: 20px;
+    }
+    #automation-vertical {
+        margin-right: 0px;
+    }
+    .automation-arrow {
+        display: none;
+    }
+}
+
+
+/* CONFIRMATION PAGE - Large and up */
+
+@media screen and (min-width: 64em) {
+    #confirmation .no-padding {
+        padding: 0;
+    }
+}
