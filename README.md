@@ -1,4 +1,4 @@
-#Repository for Innovation Labs infographic website and mobile app
+#Repository for Innovation Labs infographic website
 To run using npm http-server
 Run: 
 ```js
