@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 var stack = require('./lib/stack');
-
-app.get('/stack', function (req, res) {
+var bodyParser = require('body-parser');
+app.use(bodyParser());
+app.post('/stack', function (req, res) {
+	console.log(req.body);
 	console.log('in / route');
-	stack.process(function(err, response){
+	stack.processStack(function(err, response){
 		res.send(response);
 	});	
 	

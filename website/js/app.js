@@ -345,3 +345,16 @@ function equalizeHeights() {
         $('#automation-conf .ansible').css('padding', '20px')
     }
 }
+
+function callStack(){
+    var projectName = prompt('Enter project name');
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    $.ajax({
+      type: "POST",
+      url: 'http://localhost:3000/stack',
+      data: {projectName: projectName, getUrl:JSON.stringify(vars)},
+      dataType: 'json'
+    });
+    return false;
+}
