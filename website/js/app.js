@@ -350,7 +350,7 @@ function callStack(){
     var projectName = prompt('Enter project name');
     var query = window.location.search.substring(1);
     var vars = query.split("&");
-    $.post("http://localhost:3000/stack", {projectName: projectName, getUrl:JSON.stringify(vars)}, function(result){
+    $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl:JSON.stringify(vars)}, function(result){
         alert(result);
     })
     
