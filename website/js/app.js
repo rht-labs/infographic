@@ -106,7 +106,7 @@ $(document).ready(function() {
             positionArrow('#container-platform-row');
             positionArrow('#iaas-row');
     })
-    
+
 });
 
 
@@ -143,7 +143,7 @@ function buildSidebar() {
 
             // update table in sidebar
             $(tableId).append(buildRow);
-            
+
         });
 
 
@@ -214,7 +214,7 @@ function buildConfirmationPage() {
     positionArrow('#container-platform-row');
     positionArrow('#iaas-row');
 
-    buildSocialLinks(); 
+    buildSocialLinks();
 
     $('.links-row').show();
 
@@ -236,7 +236,7 @@ function buildScreenShot() {
     }).then(function(){
         window.print();return false;
     })
-    
+
 }
 
 
@@ -253,7 +253,7 @@ function positionArrow(row) {
     // get total height area
     var confBodyHeight = $(row + ' .conf-body').height();
 
-    // get position from top we need to center arrow 
+    // get position from top we need to center arrow
     var newHeight = ((confBodyHeight / 2)) + confBodyHeaderHeight;
     var arrow = $(row + ' .automation-arrow')
     arrow.css("top", newHeight)
@@ -272,7 +272,7 @@ function centerAutomationImage(){
         var fixSpacing = 40
         var matchToContainerPlatform = $('#container-platform-row').offset().top - $('#automation-conf .conf-body').offset().top - fixSpacing
         $('#automation-conf .ansible').css('padding-top', matchToContainerPlatform)
-    } 
+    }
 }
 
 
@@ -348,11 +348,10 @@ function equalizeHeights() {
 
 function callStack(){
     var projectName = prompt('Enter project name');
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl:JSON.stringify(vars)}, function(result){
+
+    $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
         alert(result);
     })
-    
+
     return false;
 }
