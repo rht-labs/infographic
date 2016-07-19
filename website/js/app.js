@@ -350,11 +350,9 @@ function callStack(){
     var projectName = prompt('Enter project name');
     var query = window.location.search.substring(1);
     var vars = query.split("&");
-    $.ajax({
-      type: "POST",
-      url: 'http://localhost:3000/stack',
-      data: {projectName: projectName, getUrl:JSON.stringify(vars)},
-      dataType: 'json'
-    });
+    $.post("http://localhost:3000/stack", {projectName: projectName, getUrl:JSON.stringify(vars)}, function(result){
+        alert(result);
+    })
+    
     return false;
 }
