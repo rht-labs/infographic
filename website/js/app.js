@@ -347,11 +347,23 @@ function equalizeHeights() {
 }
 
 function callStack(){
-    var projectName = prompt('Enter project name');
+    if (window.internal && window.internal == true){
+        var projectName = prompt('Enter project name');
 
-    $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
-        alert(result);
-    })
+        $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
+            alert(result);
+        })
+        return false;
+    } else {
+        console.log('redirecting');
+        window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
+        return false;
+    }
 
-    return false;
+    
+}
+if (window.internal && window.internal == true){
+    $("#form").attr("action", 'internal.html');
+
+   
 }
