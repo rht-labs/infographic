@@ -134,7 +134,7 @@ form .block-section h3.block-section-header span {
     font-family: 'Overpass_Light';
 }
 
-.selection-sidebar .selection-sidebar-block h4 {
+.selection-sidebar .selection-sidebar-block h4, .accordion-title {
     color: #020000;
     text-transform: uppercase;
     background: #d8dcdd;
@@ -144,6 +144,27 @@ form .block-section h3.block-section-header span {
     padding: 10px 0;
     font-weight: normal;
     font-family: 'Overpass_Bold';
+}
+
+.accordion-title:hover {
+    color: #020000;
+    background: #d8dcdd;
+}
+
+.accordion-content {
+    padding: 0px;
+}
+
+.accordion-item:first-child>:first-child, .accordion-item:last-child>:last-child {
+    border-color: #D8DCDD;
+}
+
+dl, ol, ul {
+    margin-bottom: 0rem;
+}
+
+a#l11leu-accordion-label {
+    color: #020000;
 }
 
 .selection-sidebar .selection-sidebar-section h5 {

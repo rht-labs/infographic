@@ -630,15 +630,21 @@
                 </div>
                 <!-- START Ansible Sidebar Block -->
                 <div class="selection-sidebar-block" id="automation-sidebar">
-                    <h4>Automation</h4>
-                    <div class="selection-sidebar-section border-bottom">
-                        <table id="automation-table">
-                            <tr>
-                                <td class="selection">Ansible</td>
-                                <td class="remove"><img src="images/lock.png" class="locked-icon" /></td>
-                            </tr>
-                        </table>
-                    </div>
+                    <ul class="accordion" data-accordion="054d4g-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist">
+                      <li class="accordion-item" data-accordion-item="">
+                        <a href="#" class="accordion-title" aria-controls="l11leu-accordion" role="tab" id="l11leu-accordion-label" aria-expanded="false" aria-selected="false">Automation</a>
+                        <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="l11leu-accordion-label" aria-hidden="true" id="l11leu-accordion" style="display: none;">
+                          <div class="selection-sidebar-section border-bottom">
+                              <table id="automation-table">
+                                  <tr>
+                                      <td class="selection">Ansible</td>
+                                      <td class="remove"><img src="images/lock.png" class="locked-icon" /></td>
+                                  </tr>
+                              </table>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                 </div>
                 <!-- END Ansible Sidebar Block -->
                 <div class="selection-sidebar-block" id="empty-stack">
@@ -648,114 +654,137 @@
                 </div>
                 <!--START Application Development Sidebar Block -->
                 <div class="selection-sidebar-block" id="application-development-sidebar">
-                    <h4>Application Development</h4>
-                    <div class="selection-sidebar-section border-bottom">
+                  <ul class="accordion" data-accordion="054d4g-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist">
+                    <li class="accordion-item" data-accordion-item="">
+                      <a href="#" class="accordion-title" aria-controls="l11leu-accordion" role="tab" id="l11leu-accordion-label" aria-expanded="false" aria-selected="false">APPLICATION DEVELOPMENT</a>
+                      <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="l11leu-accordion-label" aria-hidden="true" id="l11leu-accordion" style="display: none;">
+                        <div class="selection-sidebar-section border-bottom">
                         <h5>RED HAT ENTERPRISE OPEN SOURCE</h5>
                         <table id="red-hat-enterprise-open-source-table">
                         </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
+                      </div>
+                      <div class="selection-sidebar-section border-bottom">
                         <h5>Best-in-class Open Source</h5>
                         <table id="best-in-class-open-source-table">
                         </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
+                      </div>
+                      <div class="selection-sidebar-section border-bottom">
                         <h5>Infrastructure</h5>
                         <table id="infrastructure-table">
                         </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
+                      </div>
+                      <div class="selection-sidebar-section border-bottom">
                         <h5>Data Store</h5>
                         <table id="data-store-table">
                         </table>
-                    </div>
+                      </div>
+                      </div>
+                  </ul>
                 </div>
                 <!--END Application Development Sidebar Block -->
-                <!--START Devop Development Sidebar Block -->
+                <!--START Devops Tools Sidebar Block -->
                 <div class="selection-sidebar-block" id="devops-tools-sidebar">
-                    <h4>Devops Tools</h4>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>CI/CD</h5>
-                        <table id="continuous-integration-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Source Control Management</h5>
-                        <table id="source-control-management-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Collaboration</h5>
-                        <table id="collaboration-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Build And Artifact Management</h5>
-                        <table id="build-and-artifact-management-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Testing</h5>
-                        <table id="testing-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Code Quality</h5>
-                        <table id="code-quality-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Code Review</h5>
-                        <table id="code-review-table">
-                        </table>
-                    </div>
+                  <ul class="accordion" data-accordion="054d4g-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist">
+                    <li class="accordion-item" data-accordion-item="">
+                      <a href="#" class="accordion-title" aria-controls="l11leu-accordion" role="tab" id="l11leu-accordion-label" aria-expanded="false" aria-selected="false">Devops Tools</a>
+                      <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="l11leu-accordion-label" aria-hidden="true" id="l11leu-accordion" style="display: none;">
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>CI/CD</h5>
+                            <table id="continuous-integration-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Source Control Management</h5>
+                            <table id="source-control-management-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Collaboration</h5>
+                            <table id="collaboration-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Build And Artifact Management</h5>
+                            <table id="build-and-artifact-management-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Testing</h5>
+                            <table id="testing-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Code Quality</h5>
+                            <table id="code-quality-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Code Review</h5>
+                            <table id="code-review-table">
+                            </table>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <!--END Devops Tools Sidebar Block -->
-                <!--START Container Platform Development Sidebar Block -->
+                <!--START Platform Container Sidebar Block -->
                 <div class="selection-sidebar-block" id="container-platform-sidebar">
-                    <h4>Container Platform</h4>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>RHEL</h5>
-                        <table id="rhel-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Monitoring and Logging </h5>
-                        <table id="monitoring-and-logging-table">
-                        </table>
-                    </div>
+                  <ul class="accordion" data-accordion="054d4g-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist">
+                    <li class="accordion-item" data-accordion-item="">
+                      <a href="#" class="accordion-title" aria-controls="l11leu-accordion" role="tab" id="l11leu-accordion-label" aria-expanded="false" aria-selected="false">Container Platform</a>
+                      <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="l11leu-accordion-label" aria-hidden="true" id="l11leu-accordion" style="display: none;">
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>RHEL</h5>
+                            <table id="rhel-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Monitoring and Logging </h5>
+                            <table id="monitoring-and-logging-table">
+                            </table>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <!--END Container Platform Development Sidebar Block -->
+                <!--END Container Platform Sidebar Block -->
                 <!--START IaaS Development Sidebar Block -->
                 <div class="selection-sidebar-block" id="iaas-sidebar">
-                    <h4>Hosting Infrastructure</h4>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Private</h5>
-                        <table id="private-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Public</h5>
-                        <table id="public-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Management</h5>
-                        <table id="management-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Networking</h5>
-                        <table id="networking-table">
-                        </table>
-                    </div>
-                    <div class="selection-sidebar-section border-bottom">
-                        <h5>Storage</h5>
-                        <table id="storage-table">
-                        </table>
-                    </div>
+                  <ul class="accordion" data-accordion="054d4g-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist">
+                    <li class="accordion-item" data-accordion-item="">
+                      <a href="#" class="accordion-title" aria-controls="l11leu-accordion" role="tab" id="l11leu-accordion-label" aria-expanded="false" aria-selected="false">Hosting Infrastructure</a>
+                      <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="l11leu-accordion-label" aria-hidden="true" id="l11leu-accordion" style="display: none;">
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Private</h5>
+                            <table id="private-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Public</h5>
+                            <table id="public-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Management</h5>
+                            <table id="management-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Networking</h5>
+                            <table id="networking-table">
+                            </table>
+                        </div>
+                        <div class="selection-sidebar-section border-bottom">
+                            <h5>Storage</h5>
+                            <table id="storage-table">
+                            </table>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <!--END PaaS Development Sidebar Block -->
+                <!--END IaaS Development Sidebar Block -->
             </div>
             <div class="selection-sidebar-bottom">
                 <input type="submit" name="submit" value="Submit" id="submit-button">
@@ -768,12 +797,12 @@
     </form>
     </div>
     <!--close #home -->
-    <!--- 
+    <!---
     ################### ################### ################### ###################
 
-                        CONFIRMATION PAGE BELOW 
+                        CONFIRMATION PAGE BELOW
 
-    ################### ################### ################### ##################### 
+    ################### ################### ################### #####################
     -->
     <!-- the main graphic -->
     <div class="row" id="main-graphic">
