@@ -154,11 +154,18 @@ form .block-section h3.block-section-header span {
 
 .accordion-content {
     padding: 0px;
+    padding-left: 0px;
 }
 
 .accordion-item:first-child>:first-child,
 .accordion-item:last-child>:last-child {
     border-color: #D8DCDD;
+}
+
+.accordion-item.selection-sidebar-section.border-bottom.is-active {
+    /*padding-left: 0px;*/
+    padding-right: 0px;
+    padding-bottom: 0px;
 }
 
 dl,
@@ -196,20 +203,34 @@ table tbody th {
     text-transform: uppercase;
     font-family: 'Overpass_Bold';
     margin-bottom: 0rem;
+    padding-left: 0px;
 }
 
 
 /* home page - sidebar */
 
 .selection-sidebar-section {
+    padding-left: 0px;
     padding: 10px;
+    padding-right: 0px;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.stack-section {
+    padding: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     overflow: auto;
     font-size: 14px;
     line-height: 15px;
 }
 
 #empty-stack {
-    display: block;color: #bc202a;
+    display: block;
+    color: #bc202a;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
@@ -218,14 +239,21 @@ table tbody th {
     padding-top: 15px;
 }
 
+
 /*#empty-stack .selection-sidebar-section {*/
-    /*height: 50%;*/
-    /*padding-bottom: 15px;
+
+
+/*height: 50%;*/
+
+
+/*padding-bottom: 15px;
     overflow: auto;
     font-size: 14px;
     line-height: 15px;*/
-    
+
+
 /*}*/
+
 
 /*#empty-stack h2 {
     font-family: 'Overpass_Bold';
@@ -234,7 +262,9 @@ table tbody th {
     text-align: center;
     color: #bc202a;
     /**/
-    /*padding-top: 25px;
+
+
+/*padding-top: 25px;
 }*/
 
 .selection-sidebar-section .selection {
@@ -679,6 +709,10 @@ input[type="checkbox"].iaas-check:checked {
     background-image: url("/images/section-container.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.stack-text.active {
+    padding-left: 10px;
 }
 
 
