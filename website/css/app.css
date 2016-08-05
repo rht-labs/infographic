@@ -134,7 +134,8 @@ form .block-section h3.block-section-header span {
     font-family: 'Overpass_Light';
 }
 
-.selection-sidebar .selection-sidebar-block h4, .accordion-title {
+.selection-sidebar .selection-sidebar-block h4,
+.accordion-title {
     color: #020000;
     text-transform: uppercase;
     background: #d8dcdd;
@@ -155,11 +156,14 @@ form .block-section h3.block-section-header span {
     padding: 0px;
 }
 
-.accordion-item:first-child>:first-child, .accordion-item:last-child>:last-child {
+.accordion-item:first-child>:first-child,
+.accordion-item:last-child>:last-child {
     border-color: #D8DCDD;
 }
 
-dl, ol, ul {
+dl,
+ol,
+ul {
     margin-bottom: 0rem;
 }
 
@@ -185,6 +189,15 @@ table tbody th {
     font-family: 'Overpass_Bold';
 }
 
+.stack-text {
+    color: #bc202a;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: 'Overpass_Bold';
+    margin-bottom: 0rem;
+}
+
 
 /* home page - sidebar */
 
@@ -196,21 +209,33 @@ table tbody th {
 }
 
 #empty-stack {
-    display: block;
-}
-
-#empty-stack .selection-sidebar-section {
-    height: 150px;
-}
-
-#empty-stack h2 {
+    display: block;color: #bc202a;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
     font-family: 'Overpass_Bold';
-    font-size: 22px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+/*#empty-stack .selection-sidebar-section {*/
+    /*height: 50%;*/
+    /*padding-bottom: 15px;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 15px;*/
+    
+/*}*/
+
+/*#empty-stack h2 {
+    font-family: 'Overpass_Bold';
+    font-size: 20px;
     line-height: 22px;
     text-align: center;
     color: #bc202a;
-    padding-top: 45px;
-}
+    /**/
+    /*padding-top: 25px;
+}*/
 
 .selection-sidebar-section .selection {
     font-family: 'Overpass_Regular';
@@ -220,7 +245,9 @@ table tbody th {
 #application-development-sidebar,
 #devops-tools-sidebar,
 #container-platform-sidebar,
-#iaas-sidebar {
+#iaas-sidebar,
+#product-stack,
+#view-product-stack {
     display: none;
 }
 
@@ -250,7 +277,7 @@ table td.remove .locked-icon {
 }
 
 .selection-sidebar-header {
-    background: #020000;
+    background: url("/images/section-stack.png");
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -321,7 +348,9 @@ form h3 span {
 
 form #submit-button {
     color: #fff;
-    background: #bc202a;
+    background: url("/images/section-stack.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     text-transform: uppercase;
     text-align: center;
     padding: 20px 60px;
@@ -456,6 +485,51 @@ fieldset .row:nth-child(2) {
     text-transform: uppercase;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    /* Hides the default checkbox style */
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: .15s;
+    background-color: #fff;
+    border: 1px solid #7f83a2;
+}
+
+input[type="checkbox"]:before,
+input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5em;
+    text-align: center;
+    color: #fff;
+    content: '';
+}
+
+input[type="checkbox"]:checked:before {
+    content: '✔';
+}
+
+input[type="checkbox"].appdev-check:checked {
+    background-color: #8bc63f;
+}
+
+input[type="checkbox"].devops-check:checked {
+    background-color: #efa926;
+}
+
+input[type="checkbox"].container-check:checked {
+    background-color: #00bee4;
+}
+
+input[type="checkbox"].iaas-check:checked {
+    background-color: #402a7d;
+}
+
 
 /* these exist in form but should not be visible on front end */
 
@@ -476,7 +550,7 @@ fieldset .row:nth-child(2) {
 #tech-stack .ui-widget-content .ui-state-active,
 #tech-stack .ui-widget-header .ui-state-active {
     border: none;
-    background: #bc202a;
+    /*background: #bc202a;*/
     color: #fff;
     outline: none;
 }
@@ -488,7 +562,7 @@ fieldset .row:nth-child(2) {
 #tech-stack .ui-widget-content .ui-state-default,
 #tech-stack .ui-widget-header .ui-state-default {
     border: none;
-    background: #bc202a;
+    /*background: #bc202a;*/
     color: #fff;
     outline: none;
 }
@@ -497,11 +571,18 @@ fieldset .row:nth-child(2) {
 /* accordion content */
 
 .acc-header {
-    background: #bc202a !important;
+    /*background: #bc202a !important;*/
     overflow: auto;
     color: #fff;
     position: relative;
     margin-top: 20px;
+}
+
+.acc-header-selection {
+    /*background: #bc202a !important;*/
+    overflow: auto;
+    color: #fff;
+    position: relative;
 }
 
 .acc-left {
@@ -519,7 +600,7 @@ fieldset .row:nth-child(2) {
 .acc-sprite {
     display: block;
     width: 70px;
-    background: #981c1f;
+    /*background: #981c1f;*/
     color: #fff;
     height: 100%;
     float: left;
@@ -576,6 +657,30 @@ fieldset .row:nth-child(2) {
     overflow: visible;
 }
 
+.app-dev-header {
+    background-image: url("/images/section-appDev.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.dev-ops-header {
+    background-image: url("/images/section-devOps.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.host-infra-header {
+    background-image: url("/images/section-infrastructure.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.container-platform-header {
+    background-image: url("/images/section-container.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 
 /* tool tips */
 
@@ -584,28 +689,253 @@ fieldset .row:nth-child(2) {
     cursor: pointer;
 }
 
-.tool-tip {
+.tooltip-appdev {
     font-family: 'Overpass_Regular';
+    background-color: white !important;
+    color: #000000;
+    border: 5px solid #8bc63f !important;
 }
 
+.tooltip-devops {
+    font-family: 'Overpass_Regular';
+    background-color: white !important;
+    color: #000000;
+    border: 5px solid #efa926 !important;
+}
 
-/* fix foundation tooltip bug */
+.tooltip-container {
+    font-family: 'Overpass_Regular';
+    background-color: white !important;
+    color: #000000;
+    border: 5px solid #00bee4 !important;
+}
 
-.tooltip::before {
+.tooltip-iaas {
+    font-family: 'Overpass_Regular';
+    background-color: white !important;
+    color: #000000;
+    border: 5px solid #402a7d !important;
+}
+
+.tooltip::before,
+.tooltip.top::before,
+.tooltip.left::before,
+.tooltip.right::before,
+.tooltip-appdev::before,
+.tooltip-appdev.top::before,
+.tooltip-appdev.left::before,
+.tooltip-appdev.right::before,
+.tooltip-devops::before,
+.tooltip-devops.top::before,
+.tooltip-devops.left::before,
+.tooltip-devops.right::before,
+.tooltip-container::before,
+.tooltip-container.top::before,
+.tooltip-container.left::before,
+.tooltip-container.right::before,
+.tooltip-iaas::before,
+.tooltip-iaas.top::before,
+.tooltip-iaas.left::before,
+.tooltip-iaas.right::before {
     content: '';
     display: block;
     width: 0;
     height: 0;
     border: inset 0.75rem;
+    position: absolute
+}
+
+.tooltip::before,
+.tooltip.left::before,
+.tooltip.right::before,
+.tooltip-appdev::before,
+.tooltip-appdev.left::before,
+.tooltip-appdev.right::before,
+.tooltip-devops::before,
+.tooltip-devops.left::before,
+.tooltip-devops.right::before,
+.tooltip-container::before,
+.tooltip-container.left::before,
+.tooltip-container.right::before,
+.tooltip-iaas::before,
+.tooltip-iaas.left::before,
+.tooltip-iaas.right::before {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.tooltip.left::before,
+.tooltip.right::before,
+.tooltip-appdev.left::before,
+.tooltip-appdev.right::before,
+.tooltip-devops.left::before,
+.tooltip-devops.right::before,
+.tooltip-container.left::before,
+.tooltip-container.right::before,
+.tooltip-iaas.left::before,
+.tooltip-iaas.right::before {
+    bottom: auto;
+    top: 50%
+}
+
+.tooltip::before {
     border-color: transparent transparent #0a0a0a;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    left: 50%
+}
+
+.tooltip-appdev::before {
+    border-color: transparent transparent #8bc63f;
+    border-bottom-style: solid;
+    border-top-width: 0;
+    bottom: 100%;
+    left: 50%
+}
+
+.tooltip-devops::before {
+    border-color: transparent transparent #efa926;
+    border-bottom-style: solid;
+    border-top-width: 0;
+    bottom: 100%;
+    left: 50%
+}
+
+.tooltip-container::before {
+    border-color: transparent transparent #00bee4;
+    border-bottom-style: solid;
+    border-top-width: 0;
+    bottom: 100%;
+    left: 50%
+}
+
+.tooltip-iaas::before {
+    border-color: transparent transparent #402a7d;
+    border-bottom-style: solid;
+    border-top-width: 0;
+    bottom: 100%;
+    left: 50%
+}
+
+.tooltip.top::before {
+    border-color: #0a0a0a transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-appdev.top::before {
+    border-color: #8bc63f transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-devops.top::before {
+    border-color: #efa926 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-container.top::before {
+    border-color: #00bee4 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-iaas.top::before {
+    border-color: #402a7d transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip.left::before {
+    border-color: transparent transparent transparent #0a0a0a;
+    border-left-style: solid;
+    border-right-width: 0;
+    left: 100%
+}
+
+.tooltip-appdev.left::before {
+    border-color: #8bc63f transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-devops.left::before {
+    border-color: #efa926 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-container.left::before {
+    border-color: #00bee4 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-iaas.left::before {
+    border-color: #402a7d transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip.right::before {
+    border-color: transparent #0a0a0a transparent transparent;
+    border-right-style: solid;
+    border-left-width: 0;
+    left: auto;
+    right: 100%
+}
+
+.tooltip-appdev.right::before {
+    border-color: #8bc63f transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-devops.right::before {
+    border-color: #efa926 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-container.right::before {
+    border-color: #00bee4 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
+}
+
+.tooltip-iaas.right::before {
+    border-color: #402a7d transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    top: 100%;
+    bottom: auto
 }
 
 
@@ -981,7 +1311,7 @@ ul.parsley-errors-list li {
 }
 
 #links {
-    padding-top:30px;
+    padding-top: 30px;
     padding-bottom: 80px;
 }
 
@@ -1285,7 +1615,7 @@ ul.parsley-errors-list li {
     }
     /* back links */
     #links {
-        padding-top:30px;
+        padding-top: 30px;
         padding-bottom: 10px;
         text-align: center;
     }
@@ -1354,13 +1684,14 @@ ul.parsley-errors-list li {
     .jssocials-share-link {
         width: 200px;
     }
-     /* back links */
+    /* back links */
     #links {
-        padding-top:30px;
+        padding-top: 30px;
         padding-bottom: 10px;
         text-align: center;
     }
-    #links .float-left, #links .float-right {
+    #links .float-left,
+    #links .float-right {
         float: none !important;
     }
     #links.conf-body {
@@ -1379,7 +1710,6 @@ ul.parsley-errors-list li {
         padding: 20px;
         font-size: 14px;
     }
-
 }
 
 
