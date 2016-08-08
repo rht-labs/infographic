@@ -154,7 +154,8 @@ form .block-section h3.block-section-header span {
     font-family: 'Overpass_Bold';
 }
 
-.accordion-title:focus, .accordion-title:hover {
+.accordion-title:focus,
+.accordion-title:hover {
     background-color: #fff;
 }
 
@@ -234,30 +235,32 @@ table tbody th {
     padding-left: 0px;
     display: block;
     position: fixed;
-    right:0;
-    left: 83%;
+    right: 15px;
+    /*left: 83%;*/
 }
 
-.arrow_box:after, .arrow_box:before {
-      top: 100%;
-      left: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
+.arrow_box:after,
+.arrow_box:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
 }
 
 .arrow_box:after {
-      border-color: rgba(136, 183, 213, 0);
-      border-top-color: #A31916;
-      border-width: 20px;
-      margin-left: -20px;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #A31916;
+    border-width: 20px;
+    margin-left: -20px;
 }
+
 .arrow_box:before {
-      border-width: 26px;
-      margin-left: -26px;
+    border-width: 26px;
+    margin-left: -26px;
 }
 
 .stack-text {
@@ -299,6 +302,7 @@ table tbody th {
     left: 1rem;
     margin-right: 5px;
 }
+
 
 /* home page - sidebar */
 
@@ -375,6 +379,8 @@ table td.remove .locked-icon {
 
 .selection-sidebar-header {
     background: url("/images/section-stack.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -416,6 +422,7 @@ table tbody tr {
     background-color: #fff;
     /* foundation override */
 }
+
 
 /* form styles */
 
@@ -473,6 +480,7 @@ label .checkbox-image {
     height: auto;
 }
 
+
 /* checkbox image and related styles */
 
 form fieldset {
@@ -509,15 +517,18 @@ input#jenkins.locked {
     background-color: #efa926;
 }
 
-input#rh-openshift-ent.locked, input#kubernetes.locked,
-input#docker.locked, input#cluster-metrics.locked,
-input#elasticsearch.locked, input#fluentd.locked,
+input#rh-openshift-ent.locked,
+input#kubernetes.locked,
+input#docker.locked,
+input#cluster-metrics.locked,
+input#elasticsearch.locked,
+input#fluentd.locked,
 input#kibana.locked {
     background-color: #1FBAE0;
 }
 
 a.active {
-    color:red;
+    color: red;
 }
 
 .locked + label .checkbox-image {
@@ -639,6 +650,7 @@ input:focus {
 #accordion {
     margin-right: 20px;
 }
+
 
 /* active accordion */
 
@@ -774,6 +786,22 @@ input:focus {
 
 .stack-text.active {
     padding-left: 10px;
+}
+
+.appdev-span {
+    background-color: #6ca041;
+}
+
+.devops-span {
+    background-color: #b3822c;
+}
+
+.container-span {
+    background-color: #008bab;
+}
+
+.iaas-span {
+    background-color: #301e5f;
 }
 
 /* tool tips */
@@ -1049,6 +1077,7 @@ ul.parsley-errors-list li {
     color: #bc202a;
     ;
 }
+
 
 /* confirmation page styles */
 
@@ -1335,6 +1364,7 @@ ul.parsley-errors-list li {
     margin-right: 20px;
 }
 
+
 /* social share */
 
 .share-row {
@@ -1391,6 +1421,7 @@ ul.parsley-errors-list li {
     font-size: 25px;
 }
 
+
 /* back links */
 
 .links-row {
@@ -1438,6 +1469,7 @@ ul.parsley-errors-list li {
     border: none;
     font-size: 16px
 }
+
 
 /* vertical left side column */
 
@@ -1499,6 +1531,7 @@ ul.parsley-errors-list li {
     text-align: center;
 }
 
+
 /* print styles */
 
 @media print {
@@ -1557,6 +1590,9 @@ ul.parsley-errors-list li {
         font-size: 18px;
         line-height: 18px;
     }
+    .arrow_box {
+        right: 15px !important;
+    }
 }
 
 @media screen and (max-width: 63.9375em) {
@@ -1577,7 +1613,8 @@ ul.parsley-errors-list li {
         margin-bottom: 5px;
     }
     .acc-left,
-    .acc-right {
+    .acc-right
+    {
         width: 100%;
         float: none;
         display: block;
@@ -1585,6 +1622,25 @@ ul.parsley-errors-list li {
         height: 100px;
         border-width: 0;
         border: none;
+    }
+    #empty-stack {
+        display: block;
+        color: #bc202a;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-family: 'Overpass_Bold';
+        padding-top: 1% !important;
+    }
+
+    .stack-text {
+        line-height: 10px;
+
+    }
+
+    .stack-empty-text{
+        line-height: 35px;
+
     }
     .acc-right {
         padding: 15px;
@@ -1604,6 +1660,9 @@ ul.parsley-errors-list li {
         padding-left: 15px;
         padding-right: 15px;
     }
+    .arrow_box {
+        right: 15px !important;
+    }
 }
 
 @media screen and (min-width: 63.9375em) and (max-width: 80em) {
@@ -1615,6 +1674,9 @@ ul.parsley-errors-list li {
         font-size: 18px;
         line-height: 18px;
         margin-top: 44px;
+    }
+    .arrow_box {
+        right: 15px !important;
     }
 }
 
@@ -1726,6 +1788,7 @@ ul.parsley-errors-list li {
     }
 }
 
+
 /* CONFIRMATION PAGE - Medium only */
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -1800,6 +1863,7 @@ ul.parsley-errors-list li {
     }
 }
 
+
 /* CONFIRMATION PAGE - medium to almost large- custom query to fix some spacing issues */
 
 @media screen and (min-width: 64em) and (max-width: 1210px) {
@@ -1819,6 +1883,7 @@ ul.parsley-errors-list li {
         margin: 0 0 10px 0;
     }
 }
+
 
 /* CONFIRMATION PAGE small to almost large - shared styles */
 
@@ -1871,6 +1936,7 @@ ul.parsley-errors-list li {
         display: none;
     }
 }
+
 
 /* CONFIRMATION PAGE - Large and up */
 

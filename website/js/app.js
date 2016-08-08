@@ -3,6 +3,27 @@ $(document).ready(function() {
     // init foundation
     $(document).foundation()
 
+    var docWidth = $(document).width();
+    console.log(docWidth);
+
+    // window.onresize = getArrowPosition();
+
+    $(window).resize(function() {
+        if (docWidth >= 1250) {
+            var arrowRight = docWidth - 1200;
+            arrowRight = arrowRight / 2 + "px";
+            document.getElementById("arrowBox").style.right = arrowRight;
+            console.log(arrowRight + "set the right style");
+        }
+    });
+
+    if (docWidth >= 1250) {
+        var arrowRight = docWidth - 1230;
+        arrowRight = arrowRight / 2 + "px";
+        document.getElementById("arrowBox").style.right = arrowRight;
+        console.log(arrowRight + "set the right style");
+    }
+
 
     // init accordion
     $("#accordion").accordion({
