@@ -134,8 +134,15 @@ form .block-section h3.block-section-header span {
     font-family: 'Overpass_Light';
 }
 
-.selection-sidebar .selection-sidebar-block h4,
+.selection-sidebar .selection-sidebar-block,
 .accordion-title {
+    color: #020000;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-family: 'Overpass_Bold';
+}
+
+.sidebar {
     color: #020000;
     text-transform: uppercase;
     background: #d8dcdd;
@@ -147,9 +154,17 @@ form .block-section h3.block-section-header span {
     font-family: 'Overpass_Bold';
 }
 
+.accordion-title:focus, .accordion-title:hover {
+    background-color: #fff;
+}
+
+.checkbox-image {
+    left: 0px;
+}
+
 .accordion-title:hover {
     color: #020000;
-    background: #d8dcdd;
+    background: #fff;
 }
 
 .accordion-content {
@@ -162,10 +177,16 @@ form .block-section h3.block-section-header span {
     border-color: #D8DCDD;
 }
 
-.accordion-item.selection-sidebar-section.border-bottom.is-active {
-    /*padding-left: 0px;*/
+li.accordion-item.selection-sidebar-section.border-bottom.is-active,
+li.accordion-item.selection-sidebar-section.border-bottom {
+    padding-left: 0px;
     padding-right: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.remove {
+    padding-right: 5px;
 }
 
 dl,
@@ -194,6 +215,49 @@ table tbody th {
 #submit-button,
 .button {
     font-family: 'Overpass_Bold';
+    background: linear-gradient(to right bottom, #C91517 50%, #A31916 50%);
+}
+
+.arrow_box {
+    font-family: 'Overpass_Bold';
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right bottom, #C91517 50%, #A31916 50%);
+    padding: 20px 60px;
+    width: 125px;
+    height: 60px;
+    top: 87%;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    display: block;
+    position: fixed;
+    right:0;
+    left: 83%;
+}
+
+.arrow_box:after, .arrow_box:before {
+      top: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+}
+
+.arrow_box:after {
+      border-color: rgba(136, 183, 213, 0);
+      border-top-color: #A31916;
+      border-width: 20px;
+      margin-left: -20px;
+}
+.arrow_box:before {
+      border-width: 26px;
+      margin-left: -26px;
 }
 
 .stack-text {
@@ -203,9 +267,38 @@ table tbody th {
     text-transform: uppercase;
     font-family: 'Overpass_Bold';
     margin-bottom: 0rem;
-    padding-left: 0px;
+    margin-left: 20px;
+    padding-top: 1%;
 }
 
+.stack-empty-text {
+    color: #bc202a;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: 'Overpass_Bold';
+    margin-bottom: 0rem;
+    padding-left: 5px;
+}
+
+.open-close {
+    color: #bc202a;
+    font-family: 'Overpass_Bold';
+}
+
+.is-active > .open-close::before {
+    content: '–';
+}
+
+.open-close::before {
+    content: '+';
+    color: #bc202a;
+    font-size: 20px;
+    position: absolute;
+    top: 1.9rem;
+    left: 1rem;
+    margin-right: 5px;
+}
 
 /* home page - sidebar */
 
@@ -233,42 +326,16 @@ table tbody th {
     color: #bc202a;
     font-size: 20px;
     line-height: 20px;
+    height: 64.45px;
     text-transform: uppercase;
     font-family: 'Overpass_Bold';
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 5%;
 }
-
-
-/*#empty-stack .selection-sidebar-section {*/
-
-
-/*height: 50%;*/
-
-
-/*padding-bottom: 15px;
-    overflow: auto;
-    font-size: 14px;
-    line-height: 15px;*/
-
-
-/*}*/
-
-
-/*#empty-stack h2 {
-    font-family: 'Overpass_Bold';
-    font-size: 20px;
-    line-height: 22px;
-    text-align: center;
-    color: #bc202a;
-    /**/
-
-
-/*padding-top: 25px;
-}*/
 
 .selection-sidebar-section .selection {
     font-family: 'Overpass_Regular';
+    font-size: 14px;
+    text-transform: none;
 }
 
 #automation-sidebar,
@@ -350,7 +417,6 @@ table tbody tr {
     /* foundation override */
 }
 
-
 /* form styles */
 
 form .block-section {
@@ -378,7 +444,7 @@ form h3 span {
 
 form #submit-button {
     color: #fff;
-    background: url("/images/section-stack.png");
+    background-color: yellow;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     text-transform: uppercase;
@@ -407,7 +473,6 @@ label .checkbox-image {
     height: auto;
 }
 
-
 /* checkbox image and related styles */
 
 form fieldset {
@@ -431,34 +496,32 @@ fieldset .row:nth-child(2) {
 }
 
 .locked {
-    display: none;
+    content: '✔';
 }
 
-.locked + label {
-    background: url('../images/lock.png') no-repeat;
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-    background-size: cover;
-    left: -8px;
-    top: 3px;
+.btn-submit {
+    text-transform: uppercase;
+    background-color: transparent;
+    border-color: transparent;
 }
 
-.locked:checked + label {
-    background: url('../images/lock.png') no-repeat;
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-    background-size: cover;
-    left: -8px;
-    top: 3px;
+input#jenkins.locked {
+    background-color: #efa926;
+}
+
+input#rh-openshift-ent.locked, input#kubernetes.locked,
+input#docker.locked, input#cluster-metrics.locked,
+input#elasticsearch.locked, input#fluentd.locked,
+input#kibana.locked {
+    background-color: #1FBAE0;
+}
+
+a.active {
+    color:red;
 }
 
 .locked + label .checkbox-image {
     position: relative;
-    left: 25px;
 }
 
 .grayed-out {
@@ -523,8 +586,7 @@ input[type="checkbox"] {
     cursor: pointer;
     position: relative;
     -webkit-transition: .15s;
-    background-color: #fff;
-    border: 1px solid #7f83a2;
+    background-color: #9F9F9F;
 }
 
 input[type="checkbox"]:before,
@@ -540,6 +602,7 @@ input[type="checkbox"]:checked:before {
     content: '';
 }
 
+input[type="checkbox"]:before,
 input[type="checkbox"]:checked:before {
     content: '✔';
 }
@@ -560,6 +623,10 @@ input[type="checkbox"].iaas-check:checked {
     background-color: #402a7d;
 }
 
+input:focus {
+    outline: none;
+}
+
 
 /* these exist in form but should not be visible on front end */
 
@@ -573,14 +640,12 @@ input[type="checkbox"].iaas-check:checked {
     margin-right: 20px;
 }
 
-
 /* active accordion */
 
 #tech-stack .ui-state-active,
 #tech-stack .ui-widget-content .ui-state-active,
 #tech-stack .ui-widget-header .ui-state-active {
     border: none;
-    /*background: #bc202a;*/
     color: #fff;
     outline: none;
 }
@@ -592,7 +657,6 @@ input[type="checkbox"].iaas-check:checked {
 #tech-stack .ui-widget-content .ui-state-default,
 #tech-stack .ui-widget-header .ui-state-default {
     border: none;
-    /*background: #bc202a;*/
     color: #fff;
     outline: none;
 }
@@ -601,7 +665,6 @@ input[type="checkbox"].iaas-check:checked {
 /* accordion content */
 
 .acc-header {
-    /*background: #bc202a !important;*/
     overflow: auto;
     color: #fff;
     position: relative;
@@ -609,7 +672,6 @@ input[type="checkbox"].iaas-check:checked {
 }
 
 .acc-header-selection {
-    /*background: #bc202a !important;*/
     overflow: auto;
     color: #fff;
     position: relative;
@@ -630,7 +692,6 @@ input[type="checkbox"].iaas-check:checked {
 .acc-sprite {
     display: block;
     width: 70px;
-    /*background: #981c1f;*/
     color: #fff;
     height: 100%;
     float: left;
@@ -714,7 +775,6 @@ input[type="checkbox"].iaas-check:checked {
 .stack-text.active {
     padding-left: 10px;
 }
-
 
 /* tool tips */
 
@@ -989,7 +1049,6 @@ ul.parsley-errors-list li {
     color: #bc202a;
     ;
 }
-
 
 /* confirmation page styles */
 
@@ -1276,7 +1335,6 @@ ul.parsley-errors-list li {
     margin-right: 20px;
 }
 
-
 /* social share */
 
 .share-row {
@@ -1333,7 +1391,6 @@ ul.parsley-errors-list li {
     font-size: 25px;
 }
 
-
 /* back links */
 
 .links-row {
@@ -1381,7 +1438,6 @@ ul.parsley-errors-list li {
     border: none;
     font-size: 16px
 }
-
 
 /* vertical left side column */
 
@@ -1442,7 +1498,6 @@ ul.parsley-errors-list li {
     min-height: auto;
     text-align: center;
 }
-
 
 /* print styles */
 
@@ -1671,7 +1726,6 @@ ul.parsley-errors-list li {
     }
 }
 
-
 /* CONFIRMATION PAGE - Medium only */
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -1746,7 +1800,6 @@ ul.parsley-errors-list li {
     }
 }
 
-
 /* CONFIRMATION PAGE - medium to almost large- custom query to fix some spacing issues */
 
 @media screen and (min-width: 64em) and (max-width: 1210px) {
@@ -1766,7 +1819,6 @@ ul.parsley-errors-list li {
         margin: 0 0 10px 0;
     }
 }
-
 
 /* CONFIRMATION PAGE small to almost large - shared styles */
 
@@ -1819,7 +1871,6 @@ ul.parsley-errors-list li {
         display: none;
     }
 }
-
 
 /* CONFIRMATION PAGE - Large and up */
 
