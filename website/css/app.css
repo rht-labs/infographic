@@ -379,8 +379,9 @@ table td.remove .locked-icon {
 
 .selection-sidebar-header {
     background: url("/images/section-stack.png");
-    background-size: 100%;
+    background-position-x: 100%;
     background-repeat: no-repeat;
+    background-color: #C91517;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -763,25 +764,29 @@ input:focus {
 .app-dev-header {
     background-image: url("/images/section-appDev.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: 100%;
+    background-color: #8bc63f;
 }
 
 .dev-ops-header {
     background-image: url("/images/section-devOps.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: 100%;
+    background-color: #efa926;
 }
 
 .host-infra-header {
     background-image: url("/images/section-infrastructure.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: 100%;
+    background-color: #402a7d;
 }
 
 .container-platform-header {
     background-image: url("/images/section-container.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: 100%;
+    background-color: #00bee4;
 }
 
 .stack-text.active {
@@ -803,6 +808,7 @@ input:focus {
 .iaas-span {
     background-color: #301e5f;
 }
+
 
 /* tool tips */
 
@@ -1593,6 +1599,9 @@ ul.parsley-errors-list li {
     .arrow_box {
         right: 15px !important;
     }
+    .stack-text {
+        line-height: 10px;
+    }
 }
 
 @media screen and (max-width: 63.9375em) {
@@ -1613,8 +1622,7 @@ ul.parsley-errors-list li {
         margin-bottom: 5px;
     }
     .acc-left,
-    .acc-right
-    {
+    .acc-right {
         width: 100%;
         float: none;
         display: block;
@@ -1632,15 +1640,11 @@ ul.parsley-errors-list li {
         font-family: 'Overpass_Bold';
         padding-top: 1% !important;
     }
-
     .stack-text {
-        line-height: 10px;
-
+        line-height: 12px;
     }
-
-    .stack-empty-text{
+    .stack-empty-text {
         line-height: 35px;
-
     }
     .acc-right {
         padding: 15px;

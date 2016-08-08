@@ -20,7 +20,6 @@
 </head>
 
 <body id="tech-stack">
-
     <div id="home">
         <div class="row" id="row">
             <div class="large-12 columns">
@@ -102,7 +101,7 @@
                                     </fieldset>
                                 </span>
                                 <!--BLOCK 1 SECTION 2  -->
-                                <span id="best-in-class-open-source" class="block-section">
+                                 <span id="best-in-class-open-source" class="block-section">
                                     <h3 class="block-section-header">Best-in-class Open Source</h3>
                                     <!-- B1.S2.Row 1 -->
                                     <fieldset>
@@ -232,7 +231,7 @@
                                 </div>
                             </div>
                             <div class="acc-content border-left border-right border-bottom">
-                            <!--Block 2 SECTION 1-->
+                                <!--Block 2 SECTION 1-->
                                 <span id="continuous-integration" class="block-section">
                                     <h3 class="block-section-header">Continuous Integration/Continuous Delivery</h3>
                                     <fieldset>
@@ -250,7 +249,7 @@
                                 <span id="source-control-management" class="block-section">
                                     <h3 class="block-section-header">Source Control Management <span>(Must choose ONE)</span></h3>
                                     <fieldset>
-                                    <!-- B2.S2.Row 1 -->
+                                        <!-- B2.S2.Row 1 -->
                                         <div class="row">
                                             <div class="medium-3 columns">
                                                 <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
@@ -399,7 +398,7 @@
                                         </div>
                                     </fieldset>
                                 </span>
-                                <!--BLOCK 2 SECTION 7 -->
+                                 <!--BLOCK 2 SECTION 7 -->
                                 <span id="code-review" class="block-section">
                                     <h3  class="block-section-header">Code Review</h3>
                                     <!-- B2.S7.Row 1 -->
@@ -437,7 +436,7 @@
                             </div>
                             <div class="border-left border-right">
                                 <div class="acc-content">
-                                <!--Block 3 Section 1-->
+                                    <!--Block 3 Section 1-->
                                     <span id="rhel" class="block-section">
                                         <h3 class="block-section-header">RHEL</h3>
                                         <fieldset>
@@ -467,315 +466,315 @@
                                         <fieldset>
                                             <!-- B3.S2.Row 1 -->
                                             <div class="row">
+                                                <div class="medium-3 columns">
+                                                    <input id="cluster-metrics" type="checkbox" name="cluster-metrics" value="true" checked="checked" class="locked">
+                                                    <label for="cluster-metrics" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Cluster Metrics—a way to centralize metrics collected in a node cluster, yielding a single metrics report. "><img src="images/container-platform/monitoring-logging/cluster-metrics.png" class="checkbox-image" /></label>
+                                                    <span class="text">ClusterMetrics</span>
+                                                </div>
+                                                <div class="medium-3 columns">
+                                                    <input id="elasticsearch" type="checkbox" name="elasticsearch" value="true" checked="checked" class="locked">
+                                                    <label for="elasticsearch" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="ElasticSearch—a distributed, open source search and analytics engine designed for horizontal scalability, reliability, and easy management."><img src="images/container-platform/monitoring-logging/elasticsearch.png" class="checkbox-image" /></label>
+                                                    <span class="text">Elasticsearch</span>
+                                                </div>
+                                                <div class="medium-3 columns">
+                                                    <input id="fluentd" type="checkbox" name="fluentd" value="true" checked="checked" class="locked">
+                                                    <label for="fluentd" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Fluentd—an open source data collector that unifies data collection and consumption."><img src="images/container-platform/monitoring-logging/fluentd.png" class="checkbox-image" /></label>
+                                                    <span class="text">Fluentd</span>
+                                                </div>
+                                                <div class="medium-3 columns">
+                                                    <input id="kibana" type="checkbox" name="kibana" value="true" checked="checked" class="locked">
+                                                    <label for="kibana" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Kibana—an open source data visualization platform that shows data graphically in combined custom dashboards."><img src="images/container-platform/monitoring-logging/kibana.png" class="checkbox-image" /></label>
+                                                    <span class="text">Kibana</span>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </span>
+                                    <!-- BLOCK 3 SECTION 3  -->
+                                </div>
+                                <div class="border-bottom backed-by-rhel">
+                                    <p>BACKED BY RED HAT ENTERPRISE LINUX</p>
+                                </div>
+                            </div>
+                            <!-- ##### CLOSE THIRD BLOCK ##### -->
+                            <!-- ##### START FOURTH ACCORDION BLOCK ##### -->
+                             <div class="acc-header border-all" id="iaas-accordion-header">
+                                <div class="acc-left host-infra-header">
+                                    <div class="acc-sprite iaas-span">
+                                        <span onmouseover="" style="cursor: pointer;">+</span>
+                                    </div>
+                                    <!--BLOCK ONE-->
+                                    <div class="acc-title">
+                                        <h2>Hosting Infrastructure</h2>
+                                    </div>
+                                </div>
+                                <div class="acc-right">
+                                    <p>Select the provider of your choice (public or private) for your lab’s compute, storage, and network infrastructure. Options include bare metal, traditional virtualization, or Infrastructure-as-a-Service.</p>
+                                </div>
+                            </div>
+                            <div class="acc-content border-left border-right border-bottom">
+                            <!--Block 4 Section 1-->
+                            <span id="private" class="block-section">
+                                <h3 class="block-section-header">Private</h3>
+                                <fieldset>
+                                <!-- B4.S1.Row 1 -->
+                                    <div class="row">
                                         <div class="medium-3 columns">
-                                            <input id="cluster-metrics" type="checkbox" name="cluster-metrics" value="true" checked="checked" class="locked">
-                                            <label for="cluster-metrics" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Cluster Metrics—a way to centralize metrics collected in a node cluster, yielding a single metrics report. "><img src="images/container-platform/monitoring-logging/cluster-metrics.png" class="checkbox-image" /></label>
-                                            <span class="text">ClusterMetrics</span>
+                                            <input id="rh-osp" type="checkbox" class="iaas-check" class="iaas-check" name="rh-osp" value="true">
+                                            <label for="rh-osp" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat OpenStack® Platform—an open source product that delivers core IaaS and IaaS+ infrastructure for the private or public cloud."><img src="images/iaas/private/rh-osp.png" class="checkbox-image" /></label>
+                                            <span class="text">Red Hat OpenStack Platform</span>
                                         </div>
                                         <div class="medium-3 columns">
-                                            <input id="elasticsearch" type="checkbox" name="elasticsearch" value="true" checked="checked" class="locked">
-                                            <label for="elasticsearch" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="ElasticSearch—a distributed, open source search and analytics engine designed for horizontal scalability, reliability, and easy management."><img src="images/container-platform/monitoring-logging/elasticsearch.png" class="checkbox-image" /></label>
-                                            <span class="text">Elasticsearch</span>
+                                            <input id="rhe-virtualization" type="checkbox" class="iaas-check" name="rhe-virtualization" value="true">
+                                            <label for="rhe-virtualization" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Enterprise Virtualization—an open source product that provides complete virtualization management for servers and desktops that allows for eased migration to the cloud."><img src="images/iaas/private/rhe-virtualization.png" class="checkbox-image" /></label>
+                                            <span class="text">Red Hat Enterprise Virtualization</span>
                                         </div>
-                                        <div class="medium-3 columns">
-                                            <input id="fluentd" type="checkbox" name="fluentd" value="true" checked="checked" class="locked">
-                                            <label for="fluentd" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Fluentd—an open source data collector that unifies data collection and consumption."><img src="images/container-platform/monitoring-logging/fluentd.png" class="checkbox-image" /></label>
-                                            <span class="text">Fluentd</span>
+                                        <div class="medium-3 columns end">
+                                            <input id="baremetal" type="checkbox" class="iaas-check" name="baremetal" value="true">
+                                            <label for="baremetal" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Bare metal server—a server that provides a non-virtualized compute infrastructure, meaning that unlike a public cloud, there is no hypervisor that creates virtual machines."><img src="images/iaas/private/baremetal.png" class="checkbox-image" /></label>
+                                            <span class="text">Bare Metal</span>
                                         </div>
+                                        <!--
                                         <div class="medium-3 columns">
-                                            <input id="kibana" type="checkbox" name="kibana" value="true" checked="checked" class="locked">
-                                            <label for="kibana" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Kibana—an open source data visualization platform that shows data graphically in combined custom dashboards."><img src="images/container-platform/monitoring-logging/kibana.png" class="checkbox-image" /></label>
-                                            <span class="text">Kibana</span>
+                                            <input id="vmware" type="checkbox" class="iaas-check" name="vmware" checked="checked" class="grayed-out" value="true">
+                                            <label for="vmware" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="VMware—software that lets you quickly, seamlessly, and securely extend your datacenter into the cloud using the tools and processes you already have."><img src="images/iaas/private/vmware.png" class="checkbox-image" /></label>
+                                            <span class="text">VMWare</span>
+                                        </div>
+                                        -->
+                                    </div>
+                                </fieldset>
+                            </span>
+                            <!-- BLOCK 4 SECTION 2  -->
+                            <span id="public" class="block-section">
+                                <h3 class="block-section-header">Public</h3>
+                                <fieldset>
+                                <!-- B4.S2.Row 1 -->
+                                    <div class="row">
+                                        <div class="medium-3 columns end">
+                                            <input id="aws" type="checkbox" class="iaas-check" name="aws" value="true">
+                                            <label for="aws" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Amazon WebServices (AWS)—an on-demand computing platform that offers a suite of cloud computing services."><img src="images/iaas/public/aws.png" class="checkbox-image" /></label>
+                                            <span class="text">Amazon Web Services</span>
                                         </div>
                                     </div>
                                 </fieldset>
                             </span>
-                            <!-- BLOCK 3 SECTION 3  -->
+                            <!-- BLOCK 4 SECTION 3  -->
+                            <span id="management" class="block-section">
+                                <h3 class="block-section-header">Management</h3>
+                                <fieldset>
+                                <!-- B4.S3.Row 1 -->
+                                    <div class="row">
+                                        <div class="medium-3 columns">
+                                            <input id="rh-satellite" type="checkbox" name="rh-satellite" checked="checked" class="locked custom-checkbox" value="true">
+                                            <label for="rh-satellite" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Satellite—an open source systems management product that allows system administrators to deploy, manage, and monitor Red Hat Enterprise Linux® and Solaris hosts."><img src="images/iaas/management/rh-satellite.png" class="checkbox-image" /> </label>
+                                            <span class="text">Red Hat Satellite</span>
+                                        </div>
+                                        <div class="medium-3 columns end">
+                                            <input id="rh-cloudforms" type="checkbox" name="rh-cloudforms" checked="checked" class="locked" value="true">
+                                            <label for="rh-cloudforms" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat CloudForms—a hybrid cloud management product that manages private clouds, virtual environments, and public clouds all with one interface. "><img src="images/iaas/management/rh-cloudforms.png" class="checkbox-image" /></label>
+                                            <span class="text">Red Hat CloudForms</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </span>
+                            <!-- BLOCK 4 SECTION 4  -->
+                            <span id="networking" class="block-section">
+                                <h3 class="block-section-header">Networking</h3>
+                                <fieldset>
+                                <!-- B4.S3.Row 1 -->
+                                    <div class="row">
+                                        <div class="medium-3 columns end">
+                                            <input id="open-vswitch" type="checkbox" name="open-vswitch" checked="checked" class="locked" value="true">
+                                            <label for="open-vswitch" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Open vSwitch (OVS)—a production-quality open-source implementation of a distributed virtual multilayer switch."><img src="images/iaas/networking/open-vswitch.png" class="checkbox-image" /></label>
+                                            <span class="text">Open vSwitch</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </span>
+                            <!-- BLOCK 4 SECTION 5  -->
+                            <span id="storage" class="block-section">
+                                <h3 class="block-section-header">Storage</h3>
+                                <fieldset>
+                                <!-- B4.S3.Row 1 -->
+                                    <div class="row">
+                                        <div class="medium-3 columns">
+                                            <input id="rh-gluster-storage" type="checkbox" name="rh-gluster-storage" checked="checked" class="locked" value="true">
+                                            <label for="rh-gluster-storage" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Gluster Storage—an open source product that lets you easily manage a continuous storage platform for physical, virtual, and cloud resources."><img src="images/iaas/storage/rh-gluster-storage.png" class="checkbox-image" /></label>
+                                            <span class="text">Red Hat Gluster Storage</span>
+                                        </div>
+                                        <div class="medium-3 columns end">
+                                            <input id="rh-ceph-storage" type="checkbox" name="rh-ceph-storage" checked="checked" class="locked" value="true">
+                                            <label for="rh-ceph-storage" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Ceph Storage—an open source product of software-defined storage that flexibly and affordably manages data growth by storing data in the cloud."><img src="images/iaas/storage/rh-ceph-storage.png" class="checkbox-image" /></label>
+                                            <span class="text">Red Hat Ceph Storage</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </span>
                         </div>
-                        <div class="border-bottom backed-by-rhel">
-                            <p>BACKED BY RED HAT ENTERPRISE LINUX</p>
-                        </div>
+                        <!-- ##### CLOSE FOURTH BLOCK ##### -->
                     </div>
-                    <!-- ##### CLOSE THIRD BLOCK ##### -->
-                    <!-- ##### START FOURTH ACCORDION BLOCK ##### -->
-                    <div class="acc-header border-all" id="iaas-accordion-header">
-                        <div class="acc-left host-infra-header">
-                            <div class="acc-sprite iaas-span">
-                                <span onmouseover="" style="cursor: pointer;">+</span>
-                            </div>
-                            <!--BLOCK ONE-->
-                            <div class="acc-title">
-                                <h2>Hosting Infrastructure</h2>
-                            </div>
-                        </div>
-                        <div class="acc-right">
-                            <p>Select the provider of your choice (public or private) for your lab’s compute, storage, and network infrastructure. Options include bare metal, traditional virtualization, or Infrastructure-as-a-Service.</p>
-                        </div>
-                    </div>
-                    <div class="acc-content border-left border-right border-bottom">
-                    <!--Block 4 Section 1-->
-                        <span id="private" class="block-section">
-                            <h3 class="block-section-header">Private</h3>
-                            <fieldset>
-                            <!-- B4.S1.Row 1 -->
-                                <div class="row">
-                                    <div class="medium-3 columns">
-                                        <input id="rh-osp" type="checkbox" class="iaas-check" class="iaas-check" name="rh-osp" value="true">
-                                        <label for="rh-osp" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat OpenStack® Platform—an open source product that delivers core IaaS and IaaS+ infrastructure for the private or public cloud."><img src="images/iaas/private/rh-osp.png" class="checkbox-image" /></label>
-                                        <span class="text">Red Hat OpenStack Platform</span>
-                                    </div>
-                                    <div class="medium-3 columns">
-                                        <input id="rhe-virtualization" type="checkbox" class="iaas-check" name="rhe-virtualization" value="true">
-                                        <label for="rhe-virtualization" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Enterprise Virtualization—an open source product that provides complete virtualization management for servers and desktops that allows for eased migration to the cloud."><img src="images/iaas/private/rhe-virtualization.png" class="checkbox-image" /></label>
-                                        <span class="text">Red Hat Enterprise Virtualization</span>
-                                    </div>
-                                    <div class="medium-3 columns end">
-                                        <input id="baremetal" type="checkbox" class="iaas-check" name="baremetal" value="true">
-                                        <label for="baremetal" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Bare metal server—a server that provides a non-virtualized compute infrastructure, meaning that unlike a public cloud, there is no hypervisor that creates virtual machines."><img src="images/iaas/private/baremetal.png" class="checkbox-image" /></label>
-                                        <span class="text">Bare Metal</span>
-                                    </div>
-                                    <!--
-                                    <div class="medium-3 columns">
-                                        <input id="vmware" type="checkbox" class="iaas-check" name="vmware" checked="checked" class="grayed-out" value="true">
-                                        <label for="vmware" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="VMware—software that lets you quickly, seamlessly, and securely extend your datacenter into the cloud using the tools and processes you already have."><img src="images/iaas/private/vmware.png" class="checkbox-image" /></label>
-                                        <span class="text">VMWare</span>
-                                    </div>
-                                    -->
-                                </div>
-                            </fieldset>
-                        </span>
-                        <!-- BLOCK 4 SECTION 2  -->
-                        <span id="public" class="block-section">
-                            <h3 class="block-section-header">Public</h3>
-                            <fieldset>
-                            <!-- B4.S2.Row 1 -->
-                                <div class="row">
-                                    <div class="medium-3 columns end">
-                                        <input id="aws" type="checkbox" class="iaas-check" name="aws" value="true">
-                                        <label for="aws" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Amazon WebServices (AWS)—an on-demand computing platform that offers a suite of cloud computing services."><img src="images/iaas/public/aws.png" class="checkbox-image" /></label>
-                                        <span class="text">Amazon Web Services</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </span>
-                        <!-- BLOCK 4 SECTION 3  -->
-                        <span id="management" class="block-section">
-                            <h3 class="block-section-header">Management</h3>
-                            <fieldset>
-                            <!-- B4.S3.Row 1 -->
-                                <div class="row">
-                                    <div class="medium-3 columns">
-                                        <input id="rh-satellite" type="checkbox" name="rh-satellite" checked="checked" class="locked custom-checkbox" value="true">
-                                        <label for="rh-satellite" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Satellite—an open source systems management product that allows system administrators to deploy, manage, and monitor Red Hat Enterprise Linux® and Solaris hosts."><img src="images/iaas/management/rh-satellite.png" class="checkbox-image" /> </label>
-                                        <span class="text">Red Hat Satellite</span>
-                                    </div>
-                                    <div class="medium-3 columns end">
-                                        <input id="rh-cloudforms" type="checkbox" name="rh-cloudforms" checked="checked" class="locked" value="true">
-                                        <label for="rh-cloudforms" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat CloudForms—a hybrid cloud management product that manages private clouds, virtual environments, and public clouds all with one interface. "><img src="images/iaas/management/rh-cloudforms.png" class="checkbox-image" /></label>
-                                        <span class="text">Red Hat CloudForms</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </span>
-                        <!-- BLOCK 4 SECTION 4  -->
-                        <span id="networking" class="block-section">
-                            <h3 class="block-section-header">Networking</h3>
-                            <fieldset>
-                            <!-- B4.S3.Row 1 -->
-                                <div class="row">
-                                    <div class="medium-3 columns end">
-                                        <input id="open-vswitch" type="checkbox" name="open-vswitch" checked="checked" class="locked" value="true">
-                                        <label for="open-vswitch" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Open vSwitch (OVS)—a production-quality open-source implementation of a distributed virtual multilayer switch."><img src="images/iaas/networking/open-vswitch.png" class="checkbox-image" /></label>
-                                        <span class="text">Open vSwitch</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </span>
-                        <!-- BLOCK 4 SECTION 5  -->
-                        <span id="storage" class="block-section">
-                            <h3 class="block-section-header">Storage</h3>
-                            <fieldset>
-                            <!-- B4.S3.Row 1 -->
-                                <div class="row">
-                                    <div class="medium-3 columns">
-                                        <input id="rh-gluster-storage" type="checkbox" name="rh-gluster-storage" checked="checked" class="locked" value="true">
-                                        <label for="rh-gluster-storage" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Gluster Storage—an open source product that lets you easily manage a continuous storage platform for physical, virtual, and cloud resources."><img src="images/iaas/storage/rh-gluster-storage.png" class="checkbox-image" /></label>
-                                        <span class="text">Red Hat Gluster Storage</span>
-                                    </div>
-                                    <div class="medium-3 columns end">
-                                        <input id="rh-ceph-storage" type="checkbox" name="rh-ceph-storage" checked="checked" class="locked" value="true">
-                                        <label for="rh-ceph-storage" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Ceph Storage—an open source product of software-defined storage that flexibly and affordably manages data growth by storing data in the cloud."><img src="images/iaas/storage/rh-ceph-storage.png" class="checkbox-image" /></label>
-                                        <span class="text">Red Hat Ceph Storage</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </span>
-                    </div>
-                    <!-- ##### CLOSE FOURTH BLOCK ##### -->
+                    <!--close accordion-->
                 </div>
-                <!--close accordion-->
+                <!--close main-->
             </div>
-            <!--close main-->
-        </div>
-        <!--close left column-->
-        <div class="large-3 columns">
-            <div class="selection-sidebar">
-                <div class="border-all selection-sidebar-top">
-                    <div class="selection-sidebar-header border-bottom">
-                        My Open Innovation Lab Stack
-                    </div>
-                    <div class="selection-sidebar-block">
-                        <div class="selection-sidebar-section border-bottom">
-                            <img src="images/menu/openshift-logo-large-menu.png" />
+            <!--close left column-->
+            <div class="large-3 columns">
+                <div class="selection-sidebar">
+                    <div class="border-all selection-sidebar-top">
+                        <div class="selection-sidebar-header border-bottom">
+                            My Open Innovation Lab Stack
                         </div>
-                    </div>
-                    <div class="" id="empty-stack">
-                        <div class="selection-sidebar-section">
-                            <h2 class="stack-empty-text">Your Stack is Empty</h2>
+                        <div class="selection-sidebar-block">
+                            <div class="selection-sidebar-section border-bottom">
+                                <img src="images/menu/openshift-logo-large-menu.png" />
+                            </div>
                         </div>
+                        <div class="" id="empty-stack">
+                            <div class="selection-sidebar-section">
+                                <h2 class="stack-empty-text">Your Stack is Empty</h2>
+                            </div>
+                        </div>
+                        <!-- START Ansible Sidebar Block -->
+                        <ul class="accordion acc-header-selection" data-accordion="lq0bif-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist" id="view-product-stack">
+                            <li class="accordion-item" data-accordion-item="">
+                                <a href="#" class="accordion-title open-close" aria-controls="1ihrt4-accordion" role="tab" id="1ihrt4-accordion-label" aria-expanded="false" aria-selected="false"><h2 class="stack-text">VIEW PRODUCT STACK</h2></a>
+                                <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="1ihrt4-accordion-label" aria-hidden="true" id="1ihrt4-accordion" style="display: none;">
+                                    <!-- START Ansible Sidebar Block -->
+                                    <div class="selection-sidebar-block" id="automation-sidebar">
+                                        <h4 class="sidebar">Automation</h4>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <table id="automation-table">
+                                                <tr>
+                                                    <td class="selection">Ansible</td>
+                                                    <td class="remove"><img src="images/lock.png" class="locked-icon" /></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--START Application Development Sidebar Block -->
+                                    <div class="selection-sidebar-block" id="application-development-sidebar">
+                                        <h4 class="sidebar">Application Development</h4>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>RED HAT ENTERPRISE OPEN SOURCE</h5>
+                                            <table id="red-hat-enterprise-open-source-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Best-in-class Open Source</h5>
+                                            <table id="best-in-class-open-source-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Infrastructure</h5>
+                                            <table id="infrastructure-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Data Store</h5>
+                                            <table id="data-store-table">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--END Application Development Sidebar Block -->
+                                    <!--START Devop Development Sidebar Block -->
+                                    <div class="selection-sidebar-block" id="devops-tools-sidebar">
+                                        <h4 class="sidebar">Devops Tools</h4>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>CI/CD</h5>
+                                            <table id="continuous-integration-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Source Control Management</h5>
+                                            <table id="source-control-management-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Collaboration</h5>
+                                            <table id="collaboration-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Build And Artifact Management</h5>
+                                            <table id="build-and-artifact-management-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Testing</h5>
+                                            <table id="testing-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Code Quality</h5>
+                                            <table id="code-quality-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Code Review</h5>
+                                            <table id="code-review-table">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--END Devops Tools Sidebar Block -->
+                                    <!--START Container Platform Development Sidebar Block -->
+                                    <div class="selection-sidebar-block" id="container-platform-sidebar">
+                                        <h4 class="sidebar">Container Platform</h4>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>RHEL</h5>
+                                            <table id="rhel-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Monitoring and Logging </h5>
+                                            <table id="monitoring-and-logging-table">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--END Container Platform Development Sidebar Block -->
+                                    <!--START IaaS Development Sidebar Block -->
+                                    <div class="selection-sidebar-block" id="iaas-sidebar">
+                                        <h4 class="sidebar">Hosting Infrastructure</h4>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Private</h5>
+                                            <table id="private-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Public</h5>
+                                            <table id="public-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Management</h5>
+                                            <table id="management-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Networking</h5>
+                                            <table id="networking-table">
+                                            </table>
+                                        </div>
+                                        <div class="selection-sidebar-section border-bottom">
+                                            <h5>Storage</h5>
+                                            <table id="storage-table">
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--END PaaS Development Sidebar Block -->
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- START Ansible Sidebar Block -->
-                    <ul class="accordion acc-header-selection" data-accordion="lq0bif-accordion" data-allow-all-closed="true" data-accordion data-multi-expand="true" role="tablist" id="view-product-stack">
-                        <li class="accordion-item" data-accordion-item="">
-                            <a href="#" class="accordion-title open-close" aria-controls="1ihrt4-accordion" role="tab" id="1ihrt4-accordion-label" aria-expanded="false" aria-selected="false"><h2 class="stack-text">VIEW PRODUCT STACK</h2></a>
-                            <div class="accordion-content" data-tab-content="" role="tabpanel" aria-labelledby="1ihrt4-accordion-label" aria-hidden="true" id="1ihrt4-accordion" style="display: none;">
-                            <!-- START Ansible Sidebar Block -->
-                              <div class="selection-sidebar-block" id="automation-sidebar">
-                                  <h4 class="sidebar">Automation</h4>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <table id="automation-table">
-                                          <tr>
-                                              <td class="selection">Ansible</td>
-                                              <td class="remove"><img src="images/lock.png" class="locked-icon" /></td>
-                                          </tr>
-                                      </table>
-                                  </div>
-                              </div>
-                              <!--START Application Development Sidebar Block -->
-                              <div class="selection-sidebar-block" id="application-development-sidebar">
-                                  <h4 class="sidebar">Application Development</h4>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>RED HAT ENTERPRISE OPEN SOURCE</h5>
-                                      <table id="red-hat-enterprise-open-source-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Best-in-class Open Source</h5>
-                                      <table id="best-in-class-open-source-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Infrastructure</h5>
-                                      <table id="infrastructure-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Data Store</h5>
-                                      <table id="data-store-table">
-                                      </table>
-                                  </div>
-                              </div>
-                              <!--END Application Development Sidebar Block -->
-                              <!--START Devop Development Sidebar Block -->
-                              <div class="selection-sidebar-block" id="devops-tools-sidebar">
-                                  <h4 class="sidebar">Devops Tools</h4>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>CI/CD</h5>
-                                      <table id="continuous-integration-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Source Control Management</h5>
-                                      <table id="source-control-management-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Collaboration</h5>
-                                      <table id="collaboration-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Build And Artifact Management</h5>
-                                      <table id="build-and-artifact-management-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Testing</h5>
-                                      <table id="testing-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Code Quality</h5>
-                                      <table id="code-quality-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Code Review</h5>
-                                      <table id="code-review-table">
-                                      </table>
-                                  </div>
-                              </div>
-                              <!--END Devops Tools Sidebar Block -->
-                              <!--START Container Platform Development Sidebar Block -->
-                              <div class="selection-sidebar-block" id="container-platform-sidebar">
-                                  <h4 class="sidebar">Container Platform</h4>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>RHEL</h5>
-                                      <table id="rhel-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Monitoring and Logging </h5>
-                                      <table id="monitoring-and-logging-table">
-                                      </table>
-                                  </div>
-                              </div>
-                              <!--END Container Platform Development Sidebar Block -->
-                              <!--START IaaS Development Sidebar Block -->
-                              <div class="selection-sidebar-block" id="iaas-sidebar">
-                                  <h4 class="sidebar">Hosting Infrastructure</h4>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Private</h5>
-                                      <table id="private-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Public</h5>
-                                      <table id="public-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Management</h5>
-                                      <table id="management-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Networking</h5>
-                                      <table id="networking-table">
-                                      </table>
-                                  </div>
-                                  <div class="selection-sidebar-section border-bottom">
-                                      <h5>Storage</h5>
-                                      <table id="storage-table">
-                                      </table>
-                                  </div>
-                              </div>
-                              <!--END PaaS Development Sidebar Block -->
-                          </div>
-                      </li>
-                  </ul>
-              </div>
-              <div class="selection-sidebar-bottom">
-                  <div class="arrow_box" id="arrowBox">
-                      <input class="btn-submit" type="submit" name="submit" value="Submit">
-                  </div>
-                  <!--<button type="submit"  >Submit</button>-->
-                  <div class="source-control-management-error-container"></div>
-              </div>
-          </div>
+                    <div class="selection-sidebar-bottom">
+                        <div class="arrow_box" id="arrowBox">
+                            <input class="btn-submit" type="submit" name="submit" value="Submit">
+                        </div>
+                        <!--<button type="submit"  >Submit</button>-->
+                        <div class="source-control-management-error-container"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-     </div>
-  </form>
+    </form>
 </div>
 <!--close #home -->
 <!---
@@ -789,7 +788,7 @@
 <div class="row" id="main-graphic">
     <div id="confirmation">
         <div class="medium-12 large-2 columns no-padding match-height show-for-large">
-        <!-- vertical left column -->
+            <!-- vertical left column -->
             <div id="automation-vertical">
                 <div class="conf-block border-all" id="automation-conf">
                     <div class="conf-acc-header">
@@ -803,7 +802,7 @@
             </div>
         </div>
         <div class="medium-12 large-10 columns match-height">
-        <!-- start mobile automation tower row -->
+            <!-- start mobile automation tower row -->
             <div class="row hide-for-large">
                 <div class="small-12 medium-12 columns">
                     <div id="automation-vertical-mobile">
@@ -834,7 +833,7 @@
                                     <h3>RED HAT ENTERPRISE OPEN SOURCE</h3>
                                 </div>
                                 <div>
-                                <!--2 images across-->
+                                    <!--2 images across-->
                                     <img src="images/application-development/rhe-os/rhjb-amq-print-grey.png" class="rhjb-amq" />
                                     <img src="images/application-development/rhe-os/rhjb-brms-print-grey.png" class="rhjb-brms" />
                                 </div>
@@ -923,318 +922,317 @@
                 <div class="large-12 columns">
                     <div class="conf-block border-all">
                         <div id="automation-arrow-2" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-                            <div class="conf-acc-header">
-                                <h2>Devops Tools</h2>
-                            </div>
-                            <div class="conf-body">
-                                <div class="conf-section thin-border-right" id="ci-cd-conf">
-                                    <div class="conf-section-header">
-                                        <h3>CONTINUOUS <br />INTEGRATION/<br />CONTINUOUS <br />DELIVERY</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/cont-int-cont-del/jenkins-print.png" class="jenkins" />
-                                    </div>
-                                    <div>
-                                        <!-- empty -->
-                                    </div>
-                                    <div>
-                                        <!-- empty -->
-                                    </div>
-                                </div>
-                                <div class="conf-section thin-border-right" id="source-control-management-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Source Control <br />Management</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/source-control-management/bitbucket-print-grey.png" class="bitbucket" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/source-control-management/git-print-grey.png" class="git" /> </div>
-                                    <div>
-                                        <img src="images/devops-tools/source-control-management/github-print-grey.png" class="github" /> </div>
-                                    <div>
-                                        <img src="images/devops-tools/source-control-management/gitlab-print-grey.png" class="gitlab" />
-                                    </div>
-                                </div>
-                                <div class="conf-section thin-border-right" id="collaboration-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Collaboration</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/collaboration/mattermost-print-grey.png" class="mattermost" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/collaboration/atlassianjira-print-grey.png" class="atlassianjira" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/collaboration/slack-print-grey.png" class="slack" />
-                                    </div>
-                                    <div>
-                                        <!-- empty -->
-                                    </div>
-                                </div>
-                                <!-- close conf-section -->
-                                <div class="conf-section thin-border-right" id="build-and-artifact-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Build and <br />Artifact <br />Management</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/build-artifact-management/nexus-print-grey.png" class="nexus" />
-                                    </div>
-                                    <div><img src="images/devops-tools/build-artifact-management/maven-print-grey.png" class="maven" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/build-artifact-management/artifactory-print-grey.png" class="artifactory" />
-                                    </div>
-                                    <div>
-                                        <!-- empty -->
-                                    </div>
-                                </div>
-                                <!-- close conf-section -->
-                                <div class="conf-section thin-border-right" id="testing-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Testing</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/testing/arquillian-print-grey.png" class="arquillian" />
-                                        <img src="images/devops-tools/testing/cucumber-print-grey.png" class="cucumber" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/testing/grunt-print-grey.png" class="grunt" />
-                                        <img src="images/devops-tools/testing/gulp-print-grey.png" class="gulp" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/testing/jasmine-print-grey.png" class="jasmine" />
-                                        <img src="images/devops-tools/testing/junit-print-grey.png" class="junit" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/testing/selenium-print-grey.png" class="selenium" />
-                                        <img src="images/devops-tools/testing/mocha-print-grey.png" class="mocha" />
-                                    </div>
-                                </div>
-                                <!-- close conf-section -->
-                                <div class="conf-section thin-border-right" id="code-quality-conf">
-                                    <div class="conf-section-header">
-                                        <h3>CODE QUALITY</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/code-quality/sonarqube-print-grey.png" class="sonarqube" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/code-quality/jshint-print-grey.png" class="jshint" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/code-quality/complexity-print-grey.png" class="complexity" />
-                                    </div>
-                                    <div>
-                                        <!-- empty -->
-                                    </div>
-                                </div>
-                                <!-- close conf-section -->
-                                <div class="conf-section" id="code-review-conf">
-                                    <div class="conf-section-header">
-                                        <h3>CODE REVIEW</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/code-review/crucible-print-grey.png" class="crucible" />
-                                    </div>
-                                    <div>
-                                        <img src="images/devops-tools/code-review/gerrit-print-grey.png" class="gerrit" />
-                                    </div>
-                                    <div>
-                                        <!-- empty -->
-                                    </div>
-                                </div>
-                                <!-- ICONS END -->
-                            </div>
-                            <!--close conf-body-->
+                        <div class="conf-acc-header">
+                            <h2>Devops Tools</h2>
                         </div>
-                        <!--close conf-block-->
-                    </div>
-                    <!--close column-->
-                </div>
-                <!--close row-->
-                <!--end DEVOPS TOOLS-->
-                <!--start CONTAINER PLATFORM -->
-                <div class="row" id="container-platform-row">
-                    <div class="large-12 columns">
-                        <div class="conf-block border-left border-right border-top">
-                            <div id="automation-arrow-3" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-                            <div class="conf-acc-header">
-                                <h2>Container Platform</h2>
-                            </div>
-                            <div class="conf-body">
-                                <div class="conf-section thin-border-right" id="rhel-conf">
-                                    <div class="conf-section-header" style="display: none;">
-                                        <h3>RHEL</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/container-platform/rhel/openshift-kubernetes-docker-print.png" class="docker" />
-                                    </div>
+                        <div class="conf-body">
+                            <div class="conf-section thin-border-right" id="ci-cd-conf">
+                                <div class="conf-section-header">
+                                    <h3>CONTINUOUS <br />INTEGRATION/<br />CONTINUOUS <br />DELIVERY</h3>
                                 </div>
-                                <div class="conf-section text-center" id="monitoring-and-logging-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Monitoring and Logging</h3>
-                                    </div>
-                                    <div class="">
-                                        <img src="images/container-platform/monitoring-logging/cluster-metrics-print.png" class="cluster-metrics" />
-                                        <img src="images/container-platform/monitoring-logging/elasticsearch-print.png" class="elasticsearch" />
-                                        <img src="images/container-platform/monitoring-logging/fluentd-print.png" class="fluentd" />
-                                        <img src="images/container-platform/monitoring-logging/kibana.png" class="kibana" />
-                                    </div>
+                                <div>
+                                    <img src="images/devops-tools/cont-int-cont-del/jenkins-print.png" class="jenkins" />
                                 </div>
-                                <!-- ICONS END -->
+                                <div>
+                                    <!-- empty -->
+                                </div>
+                                <div>
+                                    <!-- empty -->
+                                </div>
                             </div>
-                            <!--close conf-body-->
-                            <div class="border-bottom backed-by-rhel">
-                                <p>BACKED BY RED HAT ENTERPRISE LINUX</p>
+                            <div class="conf-section thin-border-right" id="source-control-management-conf">
+                                <div class="conf-section-header">
+                                    <h3>Source Control <br />Management</h3>
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/source-control-management/bitbucket-print-grey.png" class="bitbucket" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/source-control-management/git-print-grey.png" class="git" /> </div>
+                                <div>
+                                    <img src="images/devops-tools/source-control-management/github-print-grey.png" class="github" /> </div>
+                                <div>
+                                    <img src="images/devops-tools/source-control-management/gitlab-print-grey.png" class="gitlab" />
+                                </div>
                             </div>
+                            <div class="conf-section thin-border-right" id="collaboration-conf">
+                                <div class="conf-section-header">
+                                    <h3>Collaboration</h3>
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/collaboration/mattermost-print-grey.png" class="mattermost" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/collaboration/atlassianjira-print-grey.png" class="atlassianjira" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/collaboration/slack-print-grey.png" class="slack" />
+                                </div>
+                                <div>
+                                    <!-- empty -->
+                                </div>
+                            </div>
+                            <!-- close conf-section -->
+                            <div class="conf-section thin-border-right" id="build-and-artifact-conf">
+                                <div class="conf-section-header">
+                                    <h3>Build and <br />Artifact <br />Management</h3>
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/build-artifact-management/nexus-print-grey.png" class="nexus" />
+                                </div>
+                                <div><img src="images/devops-tools/build-artifact-management/maven-print-grey.png" class="maven" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/build-artifact-management/artifactory-print-grey.png" class="artifactory" />
+                                </div>
+                                <div>
+                                    <!-- empty -->
+                                </div>
+                            </div>
+                            <!-- close conf-section -->
+                            <div class="conf-section thin-border-right" id="testing-conf">
+                                <div class="conf-section-header">
+                                    <h3>Testing</h3>
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/testing/arquillian-print-grey.png" class="arquillian" />
+                                    <img src="images/devops-tools/testing/cucumber-print-grey.png" class="cucumber" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/testing/grunt-print-grey.png" class="grunt" />
+                                    <img src="images/devops-tools/testing/gulp-print-grey.png" class="gulp" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/testing/jasmine-print-grey.png" class="jasmine" />
+                                    <img src="images/devops-tools/testing/junit-print-grey.png" class="junit" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/testing/selenium-print-grey.png" class="selenium" />
+                                    <img src="images/devops-tools/testing/mocha-print-grey.png" class="mocha" />
+                                </div>
+                            </div>
+                            <!-- close conf-section -->
+                            <div class="conf-section thin-border-right" id="code-quality-conf">
+                                <div class="conf-section-header">
+                                    <h3>CODE QUALITY</h3>
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/code-quality/sonarqube-print-grey.png" class="sonarqube" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/code-quality/jshint-print-grey.png" class="jshint" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/code-quality/complexity-print-grey.png" class="complexity" />
+                                </div>
+                                <div>
+                                    <!-- empty -->
+                                </div>
+                            </div>
+                            <!-- close conf-section -->
+                            <div class="conf-section" id="code-review-conf">
+                                <div class="conf-section-header">
+                                    <h3>CODE REVIEW</h3>
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/code-review/crucible-print-grey.png" class="crucible" />
+                                </div>
+                                <div>
+                                    <img src="images/devops-tools/code-review/gerrit-print-grey.png" class="gerrit" />
+                                </div>
+                                <div>
+                                    <!-- empty -->
+                                </div>
+                            </div>
+                            <!-- ICONS END -->
                         </div>
-                        <!--close conf-block-->
+                        <!--close conf-body-->
                     </div>
-                    <!--close column-->
+                    <!--close conf-block-->
                 </div>
-                <!--close row-->
-                <!--end CONTAINER PLATFORM -->
-                <!--start IAAS-->
-                <div class="row" id="iaas-row">
-                    <div class="large-12 columns">
-                        <div class="conf-block border-all">
-                            <div id="automation-arrow-4" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-                            <div class="conf-acc-header">
-                                <h2>Hosting Infrastructure</h2>
+                <!--close column-->
+            </div>
+            <!--close row-->
+            <!--end DEVOPS TOOLS-->
+            <!--start CONTAINER PLATFORM -->
+            <div class="row" id="container-platform-row">
+                <div class="large-12 columns">
+                    <div class="conf-block border-left border-right border-top">
+                        <div id="automation-arrow-3" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
+                        <div class="conf-acc-header">
+                            <h2>Container Platform</h2>
+                        </div>
+                        <div class="conf-body">
+                            <div class="conf-section thin-border-right" id="rhel-conf">
+                                <div class="conf-section-header" style="display: none;">
+                                    <h3>RHEL</h3>
+                                </div>
+                                <div>
+                                    <img src="images/container-platform/rhel/openshift-kubernetes-docker-print.png" class="docker" />
+                                </div>
                             </div>
-                            <div class="conf-body">
-                                <div class="conf-section thin-border-right" id="private-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Private</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/iaas/private/rh-osp-print-grey.png" class="rh-osp" />
-                                        <img src="images/iaas/private/rhe-virtualization-print-grey.png" class="rhe-virtualization" />
-                                    </div>
-                                    <div class="float-left">
-                                        <img src="images/iaas/private/baremetal-print-grey.png" class="baremetal" />
-                                    </div>
+                            <div class="conf-section text-center" id="monitoring-and-logging-conf">
+                                <div class="conf-section-header">
+                                    <h3>Monitoring and Logging</h3>
                                 </div>
-                                <div class="conf-section thin-border-right" id="public-conf">
-                                    <div class="conf-section-header">
-                                        <h3>Public</h3>
-                                    </div>
-                                    <div>
-                                        <img src="images/iaas/public/aws-print-grey.png" class="aws" />
-                                    </div>
+                                <div class="">
+                                    <img src="images/container-platform/monitoring-logging/cluster-metrics-print.png" class="cluster-metrics" />
+                                    <img src="images/container-platform/monitoring-logging/elasticsearch-print.png" class="elasticsearch" />
+                                    <img src="images/container-platform/monitoring-logging/fluentd-print.png" class="fluentd" />
+                                    <img src="images/container-platform/monitoring-logging/kibana.png" class="kibana" />
                                 </div>
-                                <!--- start final oddball sections in Iaas -->
-                                <div class="row" id="oddball-row">
-                                    <div class="large-12">
-                                        <div class="row">
-                                            <div class="large-8 columns">
-                                                <div class="odd-section-block" id="networking-conf">
-                                                    <div class="conf-section-header">
-                                                        <h3>Networking</h3>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <img src="images/iaas/networking/open-vswitch-print.png" class="open-vswitch" />
-                                                    </div>
+                            </div>
+                            <!-- ICONS END -->
+                        </div>
+                        <!--close conf-body-->
+                        <div class="border-bottom backed-by-rhel">
+                            <p>BACKED BY RED HAT ENTERPRISE LINUX</p>
+                        </div>
+                    </div>
+                    <!--close conf-block-->
+                </div>
+                <!--close column-->
+            </div>
+            <!--close row-->
+            <!--end CONTAINER PLATFORM -->
+            <!--start IAAS-->
+            <div class="row" id="iaas-row">
+                <div class="large-12 columns">
+                    <div class="conf-block border-all">
+                        <div id="automation-arrow-4" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
+                        <div class="conf-acc-header">
+                            <h2>Hosting Infrastructure</h2>
+                        </div>
+                        <div class="conf-body">
+                            <div class="conf-section thin-border-right" id="private-conf">
+                                <div class="conf-section-header">
+                                    <h3>Private</h3>
+                                </div>
+                                <div>
+                                    <img src="images/iaas/private/rh-osp-print-grey.png" class="rh-osp" />
+                                    <img src="images/iaas/private/rhe-virtualization-print-grey.png" class="rhe-virtualization" />
+                                </div>
+                                <div class="float-left">
+                                    <img src="images/iaas/private/baremetal-print-grey.png" class="baremetal" />
+                                </div>
+                            </div>
+                            <div class="conf-section thin-border-right" id="public-conf">
+                                <div class="conf-section-header">
+                                    <h3>Public</h3>
+                                </div>
+                                <div>
+                                    <img src="images/iaas/public/aws-print-grey.png" class="aws" />
+                                </div>
+                            </div>
+                            <!--- start final oddball sections in Iaas -->
+                            <div class="row" id="oddball-row">
+                                <div class="large-12">
+                                    <div class="row">
+                                        <div class="large-8 columns">
+                                            <div class="odd-section-block" id="networking-conf">
+                                                <div class="conf-section-header">
+                                                    <h3>Networking</h3>
                                                 </div>
-                                            </div>
-                                            <div class="large-4 columns">
-                                                <div class="odd-section-block odd-section-margin-left" id="identity-management-conf">
-                                                    <div class="conf-section-header">
-                                                        <h3>Identity Management</h3>
-                                                    </div>
+                                                <div class="text-center">
+                                                    <img src="images/iaas/networking/open-vswitch-print.png" class="open-vswitch" />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row odd-section-margin-top">
-                                            <div class="large-8 columns">
-                                                <div class="odd-section-block" id="storage-conf">
-                                                    <div class="conf-section-header">
-                                                        <h3>Storage</h3>
-                                                    </div>
-                                                    <div id="storage-img-container-conf">
-                                                        <img src="images/iaas/storage/rh-gluster-storage-print.png" class="rh-gluster-storage" />
-                                                        <img src="images/iaas/storage/rh-ceph-storage-print.png" class="rh-ceph-storage" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="large-4 columns">
-                                                <div class="conf-section-header odd-section-block odd-section-margin-left" id="certificate-management-conf">
-                                                    <h3>Certificate Management</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row odd-section-margin-top">
-                                            <div class="large-12 columns">
-                                                <div class="odd-section-block" id="management-conf">
-                                                    <div class="conf-section-header">
-                                                        <h3>Management</h3>
-                                                    </div>
-                                                    <img src="images/iaas/management/rh-satellite-print.png" class="rh-satellite" />
-                                                    <img src="images/iaas/management/rh-cloudforms-print.png" class="rh-cloudforms" />
+                                        <div class="large-4 columns">
+                                            <div class="odd-section-block odd-section-margin-left" id="identity-management-conf">
+                                                <div class="conf-section-header">
+                                                    <h3>Identity Management</h3>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row odd-section-margin-top">
+                                        <div class="large-8 columns">
+                                            <div class="odd-section-block" id="storage-conf">
+                                                <div class="conf-section-header">
+                                                    <h3>Storage</h3>
+                                                </div>
+                                                <div id="storage-img-container-conf">
+                                                    <img src="images/iaas/storage/rh-gluster-storage-print.png" class="rh-gluster-storage" />
+                                                    <img src="images/iaas/storage/rh-ceph-storage-print.png" class="rh-ceph-storage" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="large-4 columns">
+                                            <div class="conf-section-header odd-section-block odd-section-margin-left" id="certificate-management-conf">
+                                                <h3>Certificate Management</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row odd-section-margin-top">
+                                        <div class="large-12 columns">
+                                            <div class="odd-section-block" id="management-conf">
+                                                <div class="conf-section-header">
+                                                    <h3>Management</h3>
+                                                </div>
+                                                <img src="images/iaas/management/rh-satellite-print.png" class="rh-satellite" />
+                                                <img src="images/iaas/management/rh-cloudforms-print.png" class="rh-cloudforms" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!--- end final oddball sections in Iaas -->
-                                <!-- ICONS END -->
                             </div>
-                            <!--close conf-body-->
+                            <!--- end final oddball sections in Iaas -->
+                            <!-- ICONS END -->
                         </div>
-                        <!--close conf-block-->
+                        <!--close conf-body-->
                     </div>
-                    <!--close column-->
+                    <!--close conf-block-->
                 </div>
-                <!--end IAAS -->
+                <!--close column-->
             </div>
-            <!--close container 12 column div-->
+            <!--end IAAS -->
         </div>
-        <!-- start social share -->
-        <div class="share-row" data-html2canvas-ignore="true">
-            <div class="large-12 columns" data-html2canvas-ignore="true">
-                <div class="conf-block border-all" data-html2canvas-ignore="true">
-                    <div class="conf-body" id="share" data-html2canvas-ignore="true">
-                        <!--social share widget content dynamically added here-->
-                    </div>
-                    <!--close conf-body-->
-                </div>
-                <!--close conf-block-->
-            </div>
-            <!--close column-->
-        </div>
-        <!-- end social share -->
-        <!-- test -->
-        <div class="links-row" data-html2canvas-ignore="true">
-            <div class="large-12 columns" data-html2canvas-ignore="true">
-                <div id="links" data-html2canvas-ignore="true">
-                    <a href="http://redhat.cleandesign.com/my-open-innovation-lab-stack" class="button back-links float-left">Back</a>
-                    <a href="" onclick="return callStack()" class="button back-links float-right">Build my own community-powered tech stack</a>
-                </div>
-                <!--close links-->
-            </div>
-            <!--close column-->
-        </div>
-        <!-- test -->
+        <!--close container 12 column div-->
     </div>
-    <!-- start html2canvas -->
-    <div class="row">
-        <div id="confirmation-image">
-            <div class="image-container"></div>
+    <!-- start social share -->
+    <div class="share-row" data-html2canvas-ignore="true">
+        <div class="large-12 columns" data-html2canvas-ignore="true">
+            <div class="conf-block border-all" data-html2canvas-ignore="true">
+                <div class="conf-body" id="share" data-html2canvas-ignore="true">
+                    <!--social share widget content dynamically added here-->
+                </div>
+                <!--close conf-body-->
+            </div>
+            <!--close conf-block-->
         </div>
+        <!--close column-->
     </div>
-    <!-- end html2canvas -->
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.min.js"></script>
-    <script src="js/vendor/jquery-ui.min.js"></script>
-    <script src="js/vendor/parsley.min.js"></script>
-    <script type="text/javascript" src="js/vendor/jssocials.js"></script>
-    <script src="js/vendor/html2canvas.js"></script>
-    <script src="js/vendor/matchHeight.js"></script>
-    <script src="js/app.js"></script>
-
+    <!-- end social share -->
+    <!-- test -->
+    <div class="links-row" data-html2canvas-ignore="true">
+        <div class="large-12 columns" data-html2canvas-ignore="true">
+            <div id="links" data-html2canvas-ignore="true">
+                <a href="http://redhat.cleandesign.com/my-open-innovation-lab-stack" class="button back-links float-left">Back</a>
+                <a href="" onclick="return callStack()" class="button back-links float-right">Build my own community-powered tech stack</a>
+            </div>
+            <!--close links-->
+        </div>
+        <!--close column-->
+    </div>
+    <!-- test -->
+</div>
+<!-- start html2canvas -->
+<div class="row">
+    <div id="confirmation-image">
+        <div class="image-container"></div>
+    </div>
+</div>
+<!-- end html2canvas -->
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.min.js"></script>
+<script src="js/vendor/jquery-ui.min.js"></script>
+<script src="js/vendor/parsley.min.js"></script>
+<script type="text/javascript" src="js/vendor/jssocials.js"></script>
+<script src="js/vendor/html2canvas.js"></script>
+<script src="js/vendor/matchHeight.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
