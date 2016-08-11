@@ -515,7 +515,7 @@ fieldset .row:nth-child(2) {
 }
 
 input#jenkins.locked {
-    background-color: #efa926;
+    background-color: #f0ab00;
 }
 
 input#rh-openshift-ent.locked,
@@ -636,19 +636,19 @@ input[type="checkbox"]:checked:before {
 }
 
 input[type="checkbox"].appdev-check:checked {
-    background-color: #8bc63f;
+    background-color: #92d400;
 }
 
 input[type="checkbox"].devops-check:checked {
-    background-color: #efa926;
+    background-color: #f0ab00;
 }
 
 input[type="checkbox"].container-check:checked {
-    background-color: #00bee4;
+    background-color: #00b9e4;
 }
 
 input[type="checkbox"].iaas-check:checked {
-    background-color: #402a7d;
+    background-color: #3B0083;
 }
 
 input:focus {
@@ -781,28 +781,28 @@ input:focus {
     background-image: url("/images/section-appDev.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #8bc63f;
+    background-color: #92d400;
 }
 
 .dev-ops-header {
     background-image: url("/images/section-devOps.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #efa926;
+    background-color: #f0ab00;
 }
 
 .host-infra-header {
     background-image: url("/images/section-infrastructure.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #402a7d;
+    background-color: #3B0083;
 }
 
 .container-platform-header {
     background-image: url("/images/section-container.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #00bee4;
+    background-color: #00b9e4;
 }
 
 .stack-text.active {
@@ -810,7 +810,7 @@ input:focus {
 }
 
 .appdev-span {
-    background-color: #6ca041;
+    background-color: #6D9F00;
 }
 
 .devops-span {
@@ -818,11 +818,11 @@ input:focus {
 }
 
 .container-span {
-    background-color: #008bab;
+    background-color: #008BAB;
 }
 
 .iaas-span {
-    background-color: #301e5f;
+    background-color: #2D0062;
 }
 
 
@@ -837,28 +837,28 @@ input:focus {
     font-family: 'Overpass_Regular';
     background-color: white !important;
     color: #000000;
-    border: 5px solid #8bc63f !important;
+    border: 5px solid #92d400 !important;
 }
 
 .tooltip-devops {
     font-family: 'Overpass_Regular';
     background-color: white !important;
     color: #000000;
-    border: 5px solid #efa926 !important;
+    border: 5px solid #f0ab00 !important;
 }
 
 .tooltip-container {
     font-family: 'Overpass_Regular';
     background-color: white !important;
     color: #000000;
-    border: 5px solid #00bee4 !important;
+    border: 5px solid #00b9e4 !important;
 }
 
 .tooltip-iaas {
     font-family: 'Overpass_Regular';
     background-color: white !important;
     color: #000000;
-    border: 5px solid #402a7d !important;
+    border: 5px solid #3B0083 !important;
 }
 
 .tooltip::before,
@@ -932,7 +932,7 @@ input:focus {
 }
 
 .tooltip-appdev::before {
-    border-color: transparent transparent #8bc63f;
+    border-color: transparent transparent #92d400;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -940,7 +940,7 @@ input:focus {
 }
 
 .tooltip-devops::before {
-    border-color: transparent transparent #efa926;
+    border-color: transparent transparent #f0ab00;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -948,7 +948,7 @@ input:focus {
 }
 
 .tooltip-container::before {
-    border-color: transparent transparent #00bee4;
+    border-color: transparent transparent #00b9e4;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -956,7 +956,7 @@ input:focus {
 }
 
 .tooltip-iaas::before {
-    border-color: transparent transparent #402a7d;
+    border-color: transparent transparent #3B0083;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -972,7 +972,7 @@ input:focus {
 }
 
 .tooltip-appdev.top::before {
-    border-color: #8bc63f transparent transparent;
+    border-color: #92d400 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -980,7 +980,7 @@ input:focus {
 }
 
 .tooltip-devops.top::before {
-    border-color: #efa926 transparent transparent;
+    border-color: #f0ab00 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -988,7 +988,7 @@ input:focus {
 }
 
 .tooltip-container.top::before {
-    border-color: #00bee4 transparent transparent;
+    border-color: #00b9e4 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -996,7 +996,7 @@ input:focus {
 }
 
 .tooltip-iaas.top::before {
-    border-color: #402a7d transparent transparent;
+    border-color: #3B0083 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1011,7 +1011,7 @@ input:focus {
 }
 
 .tooltip-appdev.left::before {
-    border-color: #8bc63f transparent transparent;
+    border-color: #92d400 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1019,7 +1019,7 @@ input:focus {
 }
 
 .tooltip-devops.left::before {
-    border-color: #efa926 transparent transparent;
+    border-color: #f0ab00 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1027,7 +1027,7 @@ input:focus {
 }
 
 .tooltip-container.left::before {
-    border-color: #00bee4 transparent transparent;
+    border-color: #00b9e4 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1035,7 +1035,7 @@ input:focus {
 }
 
 .tooltip-iaas.left::before {
-    border-color: #402a7d transparent transparent;
+    border-color: #3B0083 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1051,7 +1051,7 @@ input:focus {
 }
 
 .tooltip-appdev.right::before {
-    border-color: #8bc63f transparent transparent;
+    border-color: #92d400 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1059,7 +1059,7 @@ input:focus {
 }
 
 .tooltip-devops.right::before {
-    border-color: #efa926 transparent transparent;
+    border-color: #f0ab00 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1067,7 +1067,7 @@ input:focus {
 }
 
 .tooltip-container.right::before {
-    border-color: #00bee4 transparent transparent;
+    border-color: #00b9e4 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1075,7 +1075,7 @@ input:focus {
 }
 
 .tooltip-iaas.right::before {
-    border-color: #402a7d transparent transparent;
+    border-color: #3B0083 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
