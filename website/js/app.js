@@ -165,7 +165,7 @@ function buildSidebar() {
             var tableRowClass = $(this).closest('.columns').find('input').attr('id');
 
             // build unique table row with that name
-            var buildRow = '<tr class=' + tableRowClass + '><td class="selection">' + $(this).text() + '</td><td class="remove"><span><img src="/images/delete.png"></span></td></tr>'
+            var buildRow = '<tr class=' + tableRowClass + '><td class="selection">' + $(this).text() + '</td><td class="remove"><span><img src="images/delete.png"></span></td></tr>'
 
             // update table in sidebar
             $(tableId).append(buildRow);
@@ -373,12 +373,24 @@ function equalizeHeights() {
     }
 }
 
-function callStack() {
-    var projectName = prompt('Enter project name');
+function callStack(){
+    if (window.internal && window.internal == true){
+        var projectName = prompt('Enter project name');
 
-    $.post("http://iig-integ.demo.innovation.redhat.com/stack", { projectName: projectName, getUrl: window.location.href }, function(result) {
-        alert(result);
-    })
+        $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
+            alert(result);
+        })
+        return false;
+    } else {
+        console.log('redirecting');
+        window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
+        return false;
+    }
 
-    return false;
+    
+}
+if (window.internal && window.internal == true){
+    $("#form").attr("action", 'internal.html');
+
+   
 }

@@ -378,7 +378,7 @@ table td.remove .locked-icon {
 }
 
 .selection-sidebar-header {
-    background: url("/images/section-stack.png");
+    background: url("../images/section-stack.png");
     background-position-x: 100%;
     background-repeat: no-repeat;
     background-color: #C91517;
@@ -778,28 +778,28 @@ input:focus {
 }
 
 .app-dev-header {
-    background-image: url("/images/section-appDev.png");
+    background-image: url("../images/section-appDev.png");
     background-repeat: no-repeat;
     background-position: 100%;
     background-color: #92d400;
 }
 
 .dev-ops-header {
-    background-image: url("/images/section-devOps.png");
+    background-image: url("../images/section-devOps.png");
     background-repeat: no-repeat;
     background-position: 100%;
     background-color: #f0ab00;
 }
 
 .host-infra-header {
-    background-image: url("/images/section-infrastructure.png");
+    background-image: url("../images/section-infrastructure.png");
     background-repeat: no-repeat;
     background-position: 100%;
     background-color: #3B0083;
 }
 
 .container-platform-header {
-    background-image: url("/images/section-container.png");
+    background-image: url("../images/section-container.png");
     background-repeat: no-repeat;
     background-position: 100%;
     background-color: #00b9e4;
