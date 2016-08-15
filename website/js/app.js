@@ -1,8 +1,28 @@
-
 $(document).ready(function() {
 
     // init foundation
     $(document).foundation()
+
+    var docWidth = $(document).width();
+    console.log(docWidth);
+
+    // window.onresize = getArrowPosition();
+
+    $(window).resize(function() {
+        if (docWidth >= 1250) {
+            var arrowRight = docWidth - 1200;
+            arrowRight = arrowRight / 2 + "px";
+            document.getElementById("arrowBox").style.right = arrowRight;
+            console.log(arrowRight + "set the right style");
+        }
+    });
+
+    if (docWidth >= 1250) {
+        var arrowRight = docWidth - 1230;
+        arrowRight = arrowRight / 2 + "px";
+        document.getElementById("arrowBox").style.right = arrowRight;
+        console.log(arrowRight + "set the right style");
+    }
 
 
     // init accordion
@@ -52,7 +72,7 @@ $(document).ready(function() {
 
     // uncheck selections on click 'remove'
     $('.remove').on('click', function(e) {
-        if ($(this).find("img").length > 0) {
+        if ($(this).find("a").length > 0) {
             // this is a locked item - do nothing
         } else {
             // otherwise - uncheck it and it'll be removed from sidebar
@@ -68,8 +88,14 @@ $(document).ready(function() {
         $('#empty-stack').hide();
     });
 
-    $('.acc-header').on('click', function(){
+    $('.acc-header').on('click', function() {
+        $('#view-product-stack').show();
+    });
+    $('.acc-header').on('click', function() {
         $('#automation-sidebar').show();
+    });
+    $('.acc-header').on('click', function() {
+        $('#product-stack').show();
     });
     $('#application-development-accordion-header').on('click', function() {
         $('#application-development-sidebar').show();
@@ -100,11 +126,11 @@ $(document).ready(function() {
         $('#home').show();
     }
 
-    $(window).resize(function(){
-            positionArrow('#application-development-row');
-            positionArrow('#devops-tools-row');
-            positionArrow('#container-platform-row');
-            positionArrow('#iaas-row');
+    $(window).resize(function() {
+        positionArrow('#application-development-row');
+        positionArrow('#devops-tools-row');
+        positionArrow('#container-platform-row');
+        positionArrow('#iaas-row');
     })
 
 });
@@ -139,7 +165,7 @@ function buildSidebar() {
             var tableRowClass = $(this).closest('.columns').find('input').attr('id');
 
             // build unique table row with that name
-            var buildRow = '<tr class=' + tableRowClass + '><td class="selection">' + $(this).text() + '</td><td class="remove"><span>Remove</span></td></tr>'
+            var buildRow = '<tr class=' + tableRowClass + '><td class="selection">' + $(this).text() + '</td><td class="remove"><span><img src="images/delete.png"></span></td></tr>'
 
             // update table in sidebar
             $(tableId).append(buildRow);
@@ -233,8 +259,9 @@ function buildScreenShot() {
             $('.image-container canvas').css("width", setWidth)
 
         },
-    }).then(function(){
-        window.print();return false;
+    }).then(function() {
+        window.print();
+        return false;
     })
 
 }
@@ -260,14 +287,14 @@ function positionArrow(row) {
 
     if (row === '#container-platform-row') {
         newHeight = newHeight + 20
-        arrow.css("top", newHeight )
+        arrow.css("top", newHeight)
     }
 }
 
 
 
-function centerAutomationImage(){
-        if ($(window).width() > 1024) {
+function centerAutomationImage() {
+    if ($(window).width() > 1024) {
         // center automation vertical image - css bug with printing html2canvas workaround
         var fixSpacing = 40
         var matchToContainerPlatform = $('#container-platform-row').offset().top - $('#automation-conf .conf-body').offset().top - fixSpacing
