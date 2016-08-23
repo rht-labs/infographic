@@ -377,9 +377,14 @@ function callStack(){
     if (window.internal && window.internal == true){
         var projectName = prompt('Enter project name');
 
-        $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
+        console.log( 'hello world' );
+        console.log( getLocation( window.location.href ).hostname );
+
+        $.post("http://infographic-node-app-infographic-stage.env3-1.innovation.labs.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
             alert(result);
         })
+
+
         return false;
     } else {
         console.log('redirecting');
@@ -389,8 +394,15 @@ function callStack(){
 
     
 }
+
+function getLocation( href ) {
+    var location = document.createElement("a");
+    location.href = href;
+    return location;
+};
+
+
 if (window.internal && window.internal == true){
     $("#form").attr("action", 'internal.html');
 
-   
 }
