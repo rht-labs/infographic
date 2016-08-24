@@ -1,0 +1,20 @@
+{
+  "name": "infographic-web-ui",
+  "version": "0.0.2",
+  "description": "Web UI to present the infographic",
+  "main": "index.html",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -w",
+    "ci": "node_modules/.bin/mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.1",
+    "mocha-jsdom": "^1.1.0"
+  },
+  "publishConfig": {
+    "registry": "http://cicd.env1.fsi.innovation.redhat.com/nexus/content/repositories/npm-internal/"
+  }
+}

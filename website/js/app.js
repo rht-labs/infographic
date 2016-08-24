@@ -377,9 +377,16 @@ function callStack(){
     if (window.internal && window.internal == true){
         var projectName = prompt('Enter project name');
 
-        $.post("http://iig-integ.demo.innovation.redhat.com/stack", {projectName: projectName, getUrl: window.location.href}, function(result){
+        console.log( getLocation( window.location.href ).hostname );
+
+        var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
+        console.log ( url )
+
+        $.post(url, {projectName: projectName, getUrl: window.location.href}, function(result){
             alert(result);
         })
+
+
         return false;
     } else {
         console.log('redirecting');
@@ -389,8 +396,11 @@ function callStack(){
 
     
 }
+
+
+
+
 if (window.internal && window.internal == true){
     $("#form").attr("action", 'internal.html');
 
-   
 }
