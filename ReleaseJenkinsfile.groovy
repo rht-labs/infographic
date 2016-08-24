@@ -1,7 +1,7 @@
 releasePipeline{
     buildCommands = [] 
-    ocHost = 'master1.env2-1.innovation.labs.redhat.com'
-	dockerRegistry = 'registry.apps.env2-1.innovation.labs.redhat.com'
+    ocHost = 'env3-1-master.innovation.labs.redhat.com'
+	dockerRegistry = 'registry.env3-1.innovation.labs.redhat.com'
     appName = 'infographic'
     
 	envs = [
