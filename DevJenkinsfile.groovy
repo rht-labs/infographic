@@ -3,6 +3,6 @@ developmentPipeline{
     unitTestCommand = //'npm test'
     ocHost = 'env3-1-master.innovation.labs.redhat.com'
     projectName = 'infographic'
-    appName = 'infographic'
+    appName = 'web'
     dockerRegistry = 'registry.env3-1.innovation.labs.redhat.com'
 }
