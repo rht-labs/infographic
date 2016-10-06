@@ -15,8 +15,8 @@ function getLocation(url) {
 function getBackendUrlBasedOnLocation( url ){
   const location = getLocation( url )
   
-  if (location.hostname.includes('localhost')) {
-      return 'localhost:3000'
+  if (location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1')) {
+      return 'http://localhost:3000'
   } else {
       const result = location.hostname.match( /(infographic-[a-z]+)/g );
       if ( result == null || result.length == 0 || result.length > 1 ){
@@ -40,6 +40,15 @@ function getOpenShiftHostFromHostName( hostName ){
   }
  
 }
+
+function passwordRequired(cb){
+  console.log(window.location.href );
+  var url = getBackendUrlBasedOnLocation( window.location.href ) + '/passwordRequired'
+  $.get(url,  function(result){
+        cb(result);
+  })
+}
+
 
 exports.getBackendUrlBasedOnLocation = getBackendUrlBasedOnLocation
 exports.getLocation = getLocation

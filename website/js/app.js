@@ -379,13 +379,18 @@ function callStack(){
 
         console.log( getLocation( window.location.href ).hostname );
 
-        var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
-        console.log ( url )
+        passwordRequired(function(passwordIsRequired){
+            var userPasswordHash;
+            if (passwordIsRequired === true){
+                var buildPassword = prompt('Enter build password');
+                var buildPasswordHash = Sha1.hash(buildPassword);
+            } 
+            var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
+            $.post(url, {projectName: projectName, buildPasswordHash: buildPasswordHash, getUrl: window.location.href}, function(result){
+                  alert(result);
+            });
 
-        $.post(url, {projectName: projectName, getUrl: window.location.href}, function(result){
-            alert(result);
-        })
-
+        });
 
         return false;
     } else {
@@ -396,8 +401,6 @@ function callStack(){
 
     
 }
-
-
 
 
 if (window.internal && window.internal == true){
