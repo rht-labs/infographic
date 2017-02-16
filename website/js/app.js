@@ -372,38 +372,55 @@ function equalizeHeights() {
         $('#automation-conf .ansible').css('padding', '20px')
     }
 }
+function callStack() {
 
-function callStack(){
     if (window.internal && window.internal == true){
-        var projectName = prompt('Enter project name');
-
-        console.log( getLocation( window.location.href ).hostname );
-
-        passwordRequired(function(passwordIsRequired){
-            var userPasswordHash;
-            if (passwordIsRequired === true){
-                var buildPassword = prompt('Enter build password');
-                var buildPasswordHash = Sha1.hash(buildPassword);
-            } 
-            var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
-            $.post(url, {projectName: projectName, buildPasswordHash: buildPasswordHash, getUrl: window.location.href}, function(result){
-                  alert(result);
+        vex.dialog.open({
+            message: "Additional Params",
+            className: 'vex-theme-plain',
+            input: [
+                '<fieldset>',
+                '<label for="gitRepo">Git Hub Repo</label>',
+                '<input type="text" name="gitRepo" id="gitRepo"/>',
+                '<label for="projectName">Project Name</label>',
+                '<input type="text" name="projectName" id="projectName"/>',
+                '<label for="password">Password</label>',
+                '<input type="password" name="password" id="password"/>',
+                '</fieldset>'
+            ].join(''),
+            buttons: [
+                $.extend({}, vex.dialog.buttons.YES, { text: 'Build' }),
+                $.extend({}, vex.dialog.buttons.NO, { text: 'Cancel' })
+            ],
+            callback: function (data) {
+                if (!data) {
+                    console.log('Cancelled')
+                } else {
+                    console.log(data);
+                    console.log("gitRepo " + data.gitRepo);
+                    console.log(getLocation( window.location.href ).hostname );
+                    passwordRequired(function(passwordIsRequired){
+                    var userPasswordHash;
+                    if (passwordIsRequired === true && data.password){
+                        var buildPasswordHash = Sha1.hash(data.password);
+                    } 
+                    var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
+                    $.post(url, {projectName: data.projectName, gitRepo: data.gitRepo, buildPasswordHash: buildPasswordHash, getUrl: window.location.href}, function(result){
+                    alert(result);
             });
 
         });
-
-        return false;
+                }
+            }
+        });
     } else {
         console.log('redirecting');
         window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
-        return false;
     }
 
-    
+    return false;
 }
-
 
 if (window.internal && window.internal == true){
     $("#form").attr("action", 'internal.html');
-
 }
