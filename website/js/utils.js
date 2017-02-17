@@ -29,7 +29,6 @@ function getBackendUrlBasedOnLocation( url ){
 }
 
 
-
 function getOpenShiftHostFromHostName( hostName ){
 
   const result = hostName.match(/(([.]{1})([a-z0-9\-]+))+/g);
@@ -40,15 +39,6 @@ function getOpenShiftHostFromHostName( hostName ){
   }
  
 }
-
-function passwordRequired(cb){
-  console.log(window.location.href );
-  var url = getBackendUrlBasedOnLocation( window.location.href ) + '/passwordRequired'
-  $.get(url,  function(result){
-        cb(result);
-  })
-}
-
 
 exports.getBackendUrlBasedOnLocation = getBackendUrlBasedOnLocation
 exports.getLocation = getLocation

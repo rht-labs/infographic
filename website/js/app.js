@@ -381,11 +381,13 @@ function callStack() {
             input: [
                 '<fieldset>',
                 '<label for="gitRepo">Git Hub Repo</label>',
-                '<input type="text" name="gitRepo" id="gitRepo"/>',
+                '<input type="text" name="gitRepo" id="gitRepo" required/>',
                 '<label for="projectName">Project Name</label>',
-                '<input type="text" name="projectName" id="projectName"/>',
+                '<input type="text" name="projectName" id="projectName" required/>',
+                '<label for="username">Username</label>',
+                '<input type="text" name="username" id="username" required/>',
                 '<label for="password">Password</label>',
-                '<input type="password" name="password" id="password"/>',
+                '<input type="password" name="password" id="password" required/>',
                 '</fieldset>'
             ].join(''),
             buttons: [
@@ -393,23 +395,16 @@ function callStack() {
                 $.extend({}, vex.dialog.buttons.NO, { text: 'Cancel' })
             ],
             callback: function (data) {
+
                 if (!data) {
                     console.log('Cancelled')
                 } else {
-                    console.log(data);
-                    console.log("gitRepo " + data.gitRepo);
                     console.log(getLocation( window.location.href ).hostname );
-                    passwordRequired(function(passwordIsRequired){
-                    var userPasswordHash;
-                    if (passwordIsRequired === true && data.password){
-                        var buildPasswordHash = Sha1.hash(data.password);
-                    } 
-                    var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
-                    $.post(url, {projectName: data.projectName, gitRepo: data.gitRepo, buildPasswordHash: buildPasswordHash, getUrl: window.location.href}, function(result){
-                    alert(result);
-            });
 
-        });
+                    var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
+                    $.post(url, {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
+                    vex.dialog.alert(result);
+                    }).fail(function() { vex.dialog.alert({ className: 'vex-theme-plain', message: "Failed to post"})});
                 }
             }
         });
