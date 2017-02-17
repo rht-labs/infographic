@@ -403,8 +403,8 @@ function callStack() {
 
                     var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
                     $.post(url, {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
-                    vex.dialog.alert(result);
-                    }).fail(function() { vex.dialog.alert({ className: 'vex-theme-plain', message: "Failed to post"})});
+                    vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>" + result + "</div>"});
+                    }).fail(function() { vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: '<div class="vex-labs-alert">Failed to Post!</div>'})});
                 }
             }
         });
