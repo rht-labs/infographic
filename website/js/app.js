@@ -380,14 +380,14 @@ function callStack() {
             className: 'vex-theme-plain',
             input: [
                 '<fieldset>',
-                '<label for="gitRepo">Git Hub Repo</label>',
-                '<input type="text" name="gitRepo" id="gitRepo" value="https://github.com/rht-labs/infographic" required/>',
                 '<label for="projectName">Project Name</label>',
                 '<input type="text" name="projectName" id="projectName" required/>',
                 '<label for="username">Username</label>',
                 '<input type="text" name="username" id="username" required/>',
                 '<label for="password">Password</label>',
                 '<input type="password" name="password" id="password" required/>',
+                '<label for="gitRepo">Git Hub Repo</label>',
+                '<input type="text" name="gitRepo" id="gitRepo" value="https://github.com/rht-labs/infographic" required/>',
                 '</fieldset>'
             ].join(''),
             buttons: [
