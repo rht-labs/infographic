@@ -381,7 +381,7 @@ function callStack() {
             input: [
                 '<fieldset>',
                 '<label for="gitRepo">Git Hub Repo</label>',
-                '<input type="text" name="gitRepo" id="gitRepo" required/>',
+                '<input type="text" name="gitRepo" id="gitRepo" value="https://github.com/rht-labs/infographic" required/>',
                 '<label for="projectName">Project Name</label>',
                 '<input type="text" name="projectName" id="projectName" required/>',
                 '<label for="username">Username</label>',
