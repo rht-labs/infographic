@@ -378,6 +378,7 @@ function callStack() {
         vex.dialog.open({
             message: "Additional Params",
             className: 'vex-theme-plain',
+            overlayClosesOnClick: false,
             input: [
                 '<fieldset>',
                 '<label for="projectName">Project Name</label>',
