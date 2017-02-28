@@ -372,7 +372,11 @@ function equalizeHeights() {
         $('#automation-conf .ansible').css('padding', '20px')
     }
 }
-function callStack() {
+function callStack(projName, username, gitRepo) {
+
+    projName  = (projName === undefined) ? "" : projName;
+    username  = (username === undefined) ? "" : username;
+    gitRepo  = (gitRepo === undefined) ? "https://github.com/rht-labs/infographic" : gitRepo;
 
     if (window.internal && window.internal == true){
         vex.dialog.open({
@@ -382,13 +386,13 @@ function callStack() {
             input: [
                 '<fieldset>',
                 '<label for="projectName">Project Name</label>',
-                '<input type="text" name="projectName" id="projectName" required/>',
+                '<input type="text" name="projectName" id="projectName" value="' + projName + '" required/>',
                 '<label for="username">Username</label>',
-                '<input type="text" name="username" id="username" required/>',
+                '<input type="text" name="username" id="username" value="' + username + '" required/>',
                 '<label for="password">Password</label>',
                 '<input type="password" name="password" id="password" required/>',
                 '<label for="gitRepo">Git Hub Repo</label>',
-                '<input type="text" name="gitRepo" id="gitRepo" value="https://github.com/rht-labs/infographic" required/>',
+                '<input type="text" name="gitRepo" id="gitRepo" value="' + gitRepo + '" required/>',
                 '</fieldset>'
             ].join(''),
             buttons: [
@@ -407,6 +411,9 @@ function callStack() {
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'><a href='" + result.url + "' target='_blank'>" + result.message + "</a>" + "</div>"});
                     }).fail(function(xhr, error) { 
                         var message = $.parseJSON(xhr.responseText).message;
+                        if(message == "Failed to obtain OpenShift token. Please check your credentials and try again.") {
+                            callStack(data.projectName, data.username, data.gitRepo);
+                        }
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>Failed: " + message + '</div>'})});
                 }
             }
