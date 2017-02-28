@@ -1,10 +1,14 @@
 
+const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
-const port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8443;
-const httpTlsKey = process.env.INFOGRAPHIC_HTTP_TLS_KEY;
-const httpTlsCert = process.env.INFOGRAPHIC_HTTP_TLS_CERTIFICATE;
+const httpPort = process.env.INFOGRAPHIC_HTTP_PORT || 8080;
+
+const httpsPort = process.env.INFOGRAPHIC_HTTPS_PORT || 8443;
+const httpsKey = process.env.INFOGRAPHIC_HTTPS_KEY || '';
+const httpsCert = process.env.INFOGRAPHIC_HTTPS_CERTIFICATE || '';
+
 const websiteDir = process.env.INFOGRAPHIC_DIR || 'website';
 
 var express = require('express');
@@ -31,10 +35,21 @@ app.post('/stack', function (req, res) {
 	});
 });
 
-const options = {
-	  key: fs.readFileSync(httpTlsKey),
-	  cert: fs.readFileSync(httpTlsCert)
-};
 
-https.createServer(options, app).listen(port);
+if (httpsCert.trim() && httpsKey.trim()) {
+	const options = {
+		  key: fs.readFileSync(httpsKey),
+		  cert: fs.readFileSync(httpsCert)
+	};
+
+	// Secure
+	https.createServer(options, app).listen(httpsPort, function () {
+		console.log('Listening on secure (https) port: ' + httpsPort);
+	});
+} else {
+	// non-Secure
+	http.createServer(app).listen(httpPort, function() {
+		console.log('Listening on UNSECURE (http) port: ' + httpPort);
+	});
+}
 
