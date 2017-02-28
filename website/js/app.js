@@ -376,7 +376,7 @@ function callStack() {
 
     if (window.internal && window.internal == true){
         vex.dialog.open({
-            message: "Additional Params",
+            message: "Build Parameters",
             className: 'vex-theme-plain',
             overlayClosesOnClick: false,
             input: [
@@ -404,8 +404,10 @@ function callStack() {
 
                     var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
                     $.post(url, {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
-                    vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>" + result + "</div>"});
-                    }).fail(function() { vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: '<div class="vex-labs-alert">Failed to Post!</div>'})});
+                        vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'><a href='" + result.url + "' target='_blank'>" + result.message + "</a>" + "</div>"});
+                    }).fail(function(xhr, error) { 
+                        var message = $.parseJSON(xhr.responseText).message;
+                        vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>Failed: " + message + '</div>'})});
                 }
             }
         });
