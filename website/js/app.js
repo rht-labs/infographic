@@ -372,35 +372,58 @@ function equalizeHeights() {
         $('#automation-conf .ansible').css('padding', '20px')
     }
 }
+function callStack(projName, username, gitRepo) {
 
-function callStack(){
+    projName  = (projName === undefined) ? "" : projName;
+    username  = (username === undefined) ? "" : username;
+    gitRepo  = (gitRepo === undefined) ? "https://github.com/rht-labs/infographic" : gitRepo;
+
     if (window.internal && window.internal == true){
-        var projectName = prompt('Enter project name');
+        vex.dialog.open({
+            message: "Build Parameters",
+            className: 'vex-theme-plain',
+            overlayClosesOnClick: false,
+            input: [
+                '<fieldset>',
+                '<label for="projectName">Project Name</label>',
+                '<input type="text" name="projectName" id="projectName" value="' + projName + '" required/>',
+                '<label for="username">Username</label>',
+                '<input type="text" name="username" id="username" value="' + username + '" required/>',
+                '<label for="password">Password</label>',
+                '<input type="password" name="password" id="password" required/>',
+                '<label for="gitRepo">Git Hub Repo</label>',
+                '<input type="text" name="gitRepo" id="gitRepo" value="' + gitRepo + '" required/>',
+                '</fieldset>'
+            ].join(''),
+            buttons: [
+                $.extend({}, vex.dialog.buttons.YES, { text: 'Build' }),
+                $.extend({}, vex.dialog.buttons.NO, { text: 'Cancel' })
+            ],
+            callback: function (data) {
 
-        console.log( getLocation( window.location.href ).hostname );
+                if (!data) {
+                    console.log('Cancelled')
+                } else {
+                    console.log(getLocation( window.location.href ).hostname );
 
-        var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
-        console.log ( url )
-
-        $.post(url, {projectName: projectName, getUrl: window.location.href}, function(result){
-            alert(result);
-        })
-
-
-        return false;
+                    var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
+                    $.post(url, {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
+                        vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'><p>" + result.message + "</p>[<a href='" + result.url + "' target='_blank'>open</a>]</div>"});
+                    }).fail(function(xhr, error) { 
+                        var message = $.parseJSON(xhr.responseText).message;
+                        callStack(data.projectName, data.username, data.gitRepo);
+                        vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>Failed: " + message + '</div>'})});
+                }
+            }
+        });
     } else {
         console.log('redirecting');
         window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
-        return false;
     }
 
-    
+    return false;
 }
-
-
-
 
 if (window.internal && window.internal == true){
     $("#form").attr("action", 'internal.html');
-
 }

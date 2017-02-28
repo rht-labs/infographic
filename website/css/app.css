@@ -1957,6 +1957,12 @@ ul.parsley-errors-list li {
     }
 }
 
+.vex-labs-alert {
+  margin-left: -.5em;
+  background-color: #fff;
+  color: black;
+}
+
 
 /* CONFIRMATION PAGE - Large and up */
 
