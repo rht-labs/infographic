@@ -1,20 +1,26 @@
 {
-  "name": "infographic-web-ui",
-  "version": "0.0.2",
-  "description": "Web UI to present the infographic",
-  "main": "index.html",
+  "name": "infographic",
+  "version": "1.0.0",
+  "description": "Infographic Frontend & Backend",
+  "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha -w",
-    "ci": "node_modules/.bin/mocha"
+    "start": "node index.js",
+    "validate": "node node_modules/esprima/bin/esvalidate.js index.js lib/*"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.5.1",
-    "mocha-jsdom": "^1.1.0"
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "request": "^2.73.0",
+    "url": "^0.11.0"
   },
-  "publishConfig": {
-    "registry": "http://cicd.env1.fsi.innovation.redhat.com/nexus/content/repositories/npm-internal/"
+  "devDependencies": {
+    "esprima": "^2.7.2",
+    "mocha": "^2.5.1",
+    "proxyquire": "^1.7.9",
+    "should": ">= 0.0.1"
   }
 }
