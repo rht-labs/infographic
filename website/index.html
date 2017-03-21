@@ -154,14 +154,19 @@
                 </span>
                 <!--BLOCK 1 SECTION 3  -->
                 <span id="infrastructure" class="block-section">
-                                    <h3 class="block-section-header">Infrastructure</h3>
+                                    <h3 class="block-section-header">Infrastructure And API Management</h3>
                                     <!-- B1.S3.Row 1 -->
                                     <fieldset>
                                         <div class="row">
-                                            <div class="medium-3 columns">
-                                                <input id="apache" value="true" type="checkbox" class="appdev-check" name="apache">
-                                                <label for="apache" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Apache HTTP Server—a Java web application framework that simplifies and eases development."><img src="images/application-development/infrastructure/apache.png" class="checkbox-image" /></label>
-                                                <span class="text">Apache</span>
+            <div class="medium-3 columns">
+                <input id="3scale" type="checkbox" class="appdev-check" name="3scale" value="true">
+                <label for="3scale" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="3scale-API Management platform that gives you the tools to take control of your API."><img src="images/application-development/infrastructure/3scale.png" class="checkbox-image" /></label>
+                <span class="text">3scale</span>
+            </div>
+            <div class="medium-3 columns">
+                <input id="apache" value="true" type="checkbox" class="appdev-check" name="apache">
+                <label for="apache" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Apache HTTP Server—a Java web application framework that simplifies and eases development."><img src="images/application-development/infrastructure/apache.png" class="checkbox-image" /></label>
+                <span class="text">Apache</span>
             </div>
             <div class="medium-3 columns">
                 <input id="apache-tomcat" type="checkbox" class="appdev-check" name="apache-tomcat" value="true">
@@ -173,19 +178,20 @@
                 <label for="express" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Express—a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications."><img src="images/application-development/infrastructure/express.png" class="checkbox-image" /></label>
                 <span class="text">Express</span>
             </div>
-            <div class="medium-3 columns">
-                <input id="haproxy" type="checkbox" class="appdev-check" name="haproxy" value="true">
-                <label for="haproxy" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="HA Proxy—a free, open source software that provides a high availability load balancer and proxy server for TCP and HTTP-based applications that spreads requests across multiple servers."><img src="images/application-development/infrastructure/haproxy.png" class="checkbox-image" /></label>
-                <span class="text">HAProxy</span>
-            </div>
+            
     </div>
     <!-- B1.S3 Row 2 -->
     <div class="row">
-        <div class="medium-3 columns last">
-            <input id="nginx" type="checkbox" class="appdev-check" name="nginx" value="true">
-            <label for="nginx" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="NGINX—a web server that accelerates content and application delivery, improves security, and facilitates availability and scalability."><img src="images/application-development/infrastructure/nginx.png" class="checkbox-image" /></label>
-            <span class="text">NGinX</span>
+        <div class="medium-3 columns">
+            <input id="haproxy" type="checkbox" class="appdev-check" name="haproxy" value="true">
+            <label for="haproxy" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="HA Proxy—a free, open source software that provides a high availability load balancer and proxy server for TCP and HTTP-based applications that spreads requests across multiple servers."><img src="images/application-development/infrastructure/haproxy.png" class="checkbox-image" /></label>
+            <span class="text">HAProxy</span>
         </div>
+        <div class="medium-3 columns end">
+                        <input id="nginx" type="checkbox" class="appdev-check" name="nginx" value="true">
+                        <label for="nginx" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="NGINX—a web server that accelerates content and application delivery, improves security, and facilitates availability and scalability."><img src="images/application-development/infrastructure/nginx.png" class="checkbox-image" /></label>
+                        <span class="text">NGinX</span>
+                    </div>
     </div>
     </fieldset>
     </span>
@@ -382,7 +388,7 @@
                                         <div class="row">
                                             <div class="medium-3 columns">
                                                 <input id="sonarqube" type="checkbox" class="devops-check" name="sonarqube" value="true">
-                                                <label for="sonarqube" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="SonarQube—an open source quality management platform that continuously analyzes and measures source code quality."><img src="images/devops-tools/code-quality/sonarqube.png" class="checkbox-image" /></label>
+                                                <label for="sonarqube" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="SonarQube—an open source quality management platform that continuously analyzes and meazures source code quality."><img src="images/devops-tools/code-quality/sonarqube.png" class="checkbox-image" /></label>
                                                 <span class="text">SonarQube</span>
     </div>
     <div class="medium-3 columns">
@@ -553,7 +559,17 @@
                                             <input id="aws" type="checkbox" class="iaas-check" name="aws" value="true">
                                             <label for="aws" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Amazon WebServices (AWS)—an on-demand computing platform that offers a suite of cloud computing services."><img src="images/iaas/public/aws.png" class="checkbox-image" /></label>
                                             <span class="text">Amazon Web Services</span>
-    </div>
+                                        </div>
+                                        <div class="medium-3 columns end">
+                                            <input id="google" type="checkbox" class="iaas-check" name="google" value="true">
+                                            <label for="google" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Google Cloud Platform (GCP)—a cloud computing service that offers hosting on the same infrastructure that Google uses."><img src="images/iaas/public/gcp.png" class="checkbox-image" /></label>
+                                            <span class="text">Google Cloud Platform</span>
+                                        </div>
+                                        <div class="medium-3 columns end">
+                                            <input id="asuzre" type="checkbox" class="iaas-check" name="azure" value="true">
+                                            <label for="azure" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure—a cloud computing service for managing services through Microsoft-managed data centers."><img src="images/iaas/public/ms_azure.png" class="checkbox-image" /></label>
+                                            <span class="text">Microsoft Azure</span>
+                                        </div>
     </div>
     </fieldset>
     </span>
@@ -665,7 +681,7 @@
                                     </table>
                                 </div>
                                 <div class="selection-sidebar-section border-bottom">
-                                    <h5>Infrastructure</h5>
+                                    <h5>Infrastructure And API Management</h5>
                                     <table id="infrastructure-table">
                                     </table>
                                 </div>
@@ -877,17 +893,18 @@
                                 <!-- close conf-section -->
                                 <div class="conf-section thin-border-right" id="infrastructure-conf">
                                     <div class="conf-section-header">
-                                        <h3>INFRASTRUCTURE</h3>
+                                        <h3>INFRASTRUCTURE AND <br/> API MANAGEMENT</h3>
                                     </div>
                                     <div>
+                                        <img src="images/application-development/infrastructure/3scale-print-grey.png" class="3scale" />
                                         <img src="images/application-development/infrastructure/apache-print-grey.png" class="apache" />
+                                    </div>
+                                    <div>
                                         <img src="images/application-development/infrastructure/apache-tomcat-print-grey.png" class="apache-tomcat" />
+                                        <img src="images/application-development/infrastructure/express-print-grey.png" class="express" />    
                                     </div>
                                     <div>
-                                        <img src="images/application-development/infrastructure/express-print-grey.png" class="express" />
                                         <img src="images/application-development/infrastructure/haproxy-print-grey.png" class="haproxy" />
-                                    </div>
-                                    <div>
                                         <img src="images/application-development/infrastructure/nginx-print-grey.png" class="nginx float-left" />
                                     </div>
                                     <div>
@@ -1124,6 +1141,12 @@
                                     </div>
                                     <div>
                                         <img src="images/iaas/public/aws-print-grey.png" class="aws" />
+                                    </div>
+                                    <div>
+                                        <img src="images/iaas/public/gcp-print-grey.png" class="google" />
+                                    </div>
+                                    <div>
+                                        <img src="images/iaas/public/ms_azure-print-grey.png" class="azure" />
                                     </div>
                                 </div>
                                 <!--- start final oddball sections in Iaas -->
