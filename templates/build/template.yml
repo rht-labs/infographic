@@ -11,14 +11,18 @@ labels:
   template: infographic-builder
 parameters:
 - name: NAMESPACE
-  description: The OpenShift Namespace where the Jenkins ImageStream resides.
-  displayName: Jenkins ImageStream Namespace
+  description: The OpenShift Namespace where the Infographic ImageStream resides.
+  displayName: Infographic ImageStream Namespace
   value: infographic-pipeline
 - name: HTTPD_BUILDER_NAME
   description: The name for the Apache HTTPD builder.
   displayName: Apache HTTPD builder name
   value: s2i-httpd
   required: true
+- name: IMAGE_TAG
+  description: The ImageStreamTag for the build source image
+  displayName: Image Tag
+  value: latest
 - name: HTTPD_BUILDER_SOURCE_REPOSITORY_URL
   description: Git source URI for HTTPD builder
   displayName: HTTPD builder source url
@@ -165,7 +169,7 @@ objects:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: "${HTTPD_BUILDER_NAME}:latest"
+          name: "${HTTPD_BUILDER_NAME}:${IMAGE_TAG}"
     output:
       to:
         kind: ImageStreamTag

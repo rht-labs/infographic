@@ -11,9 +11,13 @@ labels:
   template: infographic-deployer
 parameters:
 - name: NAMESPACE
-  description: The OpenShift Namespace where the Jenkins ImageStream resides.
-  displayName: Jenkins ImageStream Namespace
+  description: The OpenShift Namespace where the Infographic app will be Deployed
+  displayName: Infographic Deployment Namespace
   value: infographic-dev
+- name: IMAGE_TAG
+  description: The ImageStreamTag for the deployment
+  displayName: Image Tag
+  value: latest
 - name: HTTPD_APPLICATION_NAME
   description: The name for the HTTPD application.
   displayName: Apache application name
@@ -93,7 +97,7 @@ objects:
         - "${HTTPD_APPLICATION_NAME}"
         from:
           kind: ImageStreamTag
-          name: "${HTTPD_APPLICATION_NAME}:latest"
+          name: "${HTTPD_APPLICATION_NAME}:${IMAGE_TAG}"
     replicas: 1
     test: false
     selector:
