@@ -14,6 +14,10 @@ parameters:
   description: The OpenShift Namespace where the Infographic app will be Deployed
   displayName: Infographic Deployment Namespace
   value: infographic-dev
+- name: BUILD_NAMESPACE
+  description: The OpenShift Namespace where the app will be Built
+  displayName: Pipeline Namespace
+  value: infographic-pipeline
 - name: IMAGE_TAG
   description: The ImageStreamTag for the deployment
   displayName: Image Tag
@@ -122,3 +126,16 @@ objects:
         terminationGracePeriodSeconds: 30
         dnsPolicy: ClusterFirst
         securityContext: {}
+- kind: RoleBinding
+  apiVersion: v1
+  metadata:
+    name: jenkins_edit
+    namespace: ${NAMESPACE}
+  roleRef:
+    name: edit
+  subjects:
+  - kind: ServiceAccount
+    name: jenkins
+    namespace: ${BUILD_NAMESPACE}
+  userNames:
+  - system:serviceaccount:${BUILD_NAMESPACE}:jenkins
