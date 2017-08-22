@@ -16,30 +16,12 @@ function getBackendUrlBasedOnLocation( url ){
   const location = getLocation( url )
   
   if (location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1')) {
-      return 'http://localhost:3000'
+    return 'http://localhost:3000'
   } else {
-      const result = location.hostname.match( /(infographic-[a-z]+)/g );
-      if ( result == null || result.length == 0 || result.length > 1 ){
-        return ''
-      } else {
-        return 'http://node-app-' + result[0] + getOpenShiftHostFromHostName( location.hostname );
-      }
-  }
-
-}
-
-
-function getOpenShiftHostFromHostName( hostName ){
-
-  const result = hostName.match(/(([.]{1})([a-z0-9\-]+))+/g);
-  if ( result == null || result.length == 0 || result.length > 1 ){
     return ''
-  } else {
-    return result[0]
   }
- 
+
 }
 
 exports.getBackendUrlBasedOnLocation = getBackendUrlBasedOnLocation
 exports.getLocation = getLocation
-exports.getOpenShiftHostFromHostName = getOpenShiftHostFromHostName
