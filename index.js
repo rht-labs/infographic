@@ -37,7 +37,7 @@ var stackProcessingHandler = function(err, response) {
     } else {
         res.send(response);
     }
-}
+};
 
 /**
  * Handler for POST operations to `/stack` endpoint
@@ -46,7 +46,7 @@ var stackProcessingHandler = function(err, response) {
  */
 var processStack = function(req, res) {
     stack.processStack(req.body, stackProcessingHandler.apply(res));
-}
+};
 
 
 app.post('/stack', processStack);
