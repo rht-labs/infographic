@@ -45,7 +45,10 @@ var stackProcessingHandler = function(err, response) {
  * @param res The Response object
  */
 var processStack = function(req, res) {
-    stack.processStack(req.body, stackProcessingHandler.apply(res));
+	// Curry the response object into the callback function
+    var callback = stackProcessingHandler.apply(res);
+
+    stack.processStack(req.body, callback);
 };
 
 
