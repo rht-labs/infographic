@@ -23,17 +23,33 @@ app.use(bodyParser());
 
 app.use(express.static(websiteDir));
 
-app.post('/stack', function (req, res) {
-	stack.processStack(req.body,function(err, response){
-		if (err){
-			// TODO: make the return status code be more specific per the error
-			// - i.e.: not use "400 Bad Request" for all of it
-			res.status(400).send(err);
-		} else {
-			res.send(response);
-		}
-	});
-});
+
+/**
+ * Handle the response from Ansible Tower stack processing request
+ * @param err An error message, if present
+ * @param response The response body
+ */
+function stackProcessingHandler(err, response) {
+    if (err){
+        // TODO: make the return status code be more specific per the error
+        // - i.e.: not use "400 Bad Request" for all of it
+        res.status(400).send(err);
+    } else {
+        res.send(response);
+    }
+}
+
+/**
+ * Handler for POST operations to `/stack` endpoint
+ * @param req The Request object
+ * @param res The Response object
+ */
+function processStack(req, res) {
+    stack.processStack(req.body, stackProcessingHandler.apply(res));
+}
+
+
+app.post('/stack', processStack);
 
 
 if (httpsCert.trim() && httpsKey.trim()) {
