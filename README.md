@@ -26,15 +26,15 @@ environment variables. The configuration options are listed below:
 * INFOGRAPHIC_HTTPS_CERTIFICATE
   * Default: Undefined
 * INFOGRAPHIC_DIR
-  * Default: website (Do not change unless you know what you are doing)
+  * Default: `website` (Do not change unless you know what you are doing)
 * ANSIBLE_TOWER_URL
-  * Default: NONE (Required)
+  * Default: **NONE (Required)**
   * REST API base URL for Ansible Tower
 * ANSIBLE_TOWER_TEMPLATE_ID
-  * Default: NONE (Required)
+  * Default: **NONE (Required)**
   * The template ID of the template to be used in Ansible Tower
 * OPENSHIFT_API_URL
-  * Default: NONE (Required)
+  * Default: **NONE (Required)**
   * The base URL of the OpenShift REST API
 * NODE_TLS_REJECT_UNAUTHORIZED
   * Default: 0 (SSL Verification enabled)
