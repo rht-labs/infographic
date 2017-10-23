@@ -29,7 +29,7 @@ app.use(express.static(websiteDir));
  * @param err An error message, if present
  * @param response The response body
  */
-function stackProcessingHandler(err, response) {
+var stackProcessingHandler = function(err, response) {
     if (err){
         // TODO: make the return status code be more specific per the error
         // - i.e.: not use "400 Bad Request" for all of it
@@ -44,7 +44,7 @@ function stackProcessingHandler(err, response) {
  * @param req The Request object
  * @param res The Response object
  */
-function processStack(req, res) {
+var processStack = function(req, res) {
     stack.processStack(req.body, stackProcessingHandler.apply(res));
 }
 
