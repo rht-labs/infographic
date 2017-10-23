@@ -1,0 +1,176 @@
+---
+kind: Template
+apiVersion: v1
+metadata:
+  annotations:
+    description: HTTPD builder
+    iconClass: icon-apache
+    tags: quickstart,httpd,web
+  name: infographic-builder
+labels:
+  template: infographic-builder
+parameters:
+- name: NAMESPACE
+  description: The OpenShift Namespace where the Infographic ImageStream resides.
+  displayName: Infographic ImageStream Namespace
+  value: infographic-pipeline
+- name: HTTPD_BUILDER_NAME
+  description: The name for the Apache HTTPD builder.
+  displayName: Apache HTTPD builder name
+  value: s2i-httpd
+  required: true
+- name: IMAGE_TAG
+  description: The ImageStreamTag for the build source image
+  displayName: Image Tag
+  value: latest
+- name: HTTPD_BUILDER_SOURCE_REPOSITORY_URL
+  description: Git source URI for HTTPD builder
+  displayName: HTTPD builder source url
+  value: https://github.com/redhat-cop/containers-quickstarts.git
+  required: true
+- name: HTTPD_BUILDER_SOURCE_REPOSITORY_REF
+  description: HTTPD builder source branch/tag reference.
+  displayName: HTTPD source branch/tag reference.
+  value: master
+  required: false
+- name: HTTPD_BUILDER_CONTEXT_DIR
+  description: Path within Git project to build containing the HTTPD builder; empty
+    for root project directory.
+  displayName: HTTPD builder context directory.
+  value: s2i-httpd
+  required: false
+- name: HTTPD_APPLICATION_NAME
+  description: The name for the HTTPD application.
+  displayName: Apache application name
+  value: httpd-app
+  required: true
+- name: HTTPD_APPLICATION_SOURCE_REPOSITORY_URL
+  description: Git source URI for HTTPD application
+  displayName: HTTPD application source url
+  value: https://github.com/logandonley/infographic.git
+  required: true
+- name: HTTPD_APPLICATION_SOURCE_REPOSITORY_REF
+  description: HTTPD application source branch/tag reference.
+  displayName: HTTPD application source branch/tag reference.
+  value: master
+  required: false
+- name: HTTPD_APPLICATION_CONTEXT_DIR
+  description: Path within Git project to build containing the HTTPD application;
+    empty for root project directory.
+  displayName: HTTPD application context directory.
+  value: website
+  required: true
+- name: GITHUB_WEBHOOK_SECRET
+  displayName: GitHub Webhook Secret
+  description: A secret string used to configure the GitHub webhook.
+  generate: expression
+  from: "[a-zA-Z0-9]{40}"
+objects:
+- kind: ImageStream
+  apiVersion: v1
+  metadata:
+    name: sclorg-httpd-container
+    namespace: "${NAMESPACE}"
+    labels:
+      build: "${HTTPD_BUILDER_NAME}"
+  spec:
+    dockerImageRepository: registry.access.redhat.com/rhscl/httpd-24-rhel7
+- kind: ImageStream
+  apiVersion: v1
+  metadata:
+    name: "${HTTPD_BUILDER_NAME}"
+    namespace: "${NAMESPACE}"
+    labels:
+      build: "${HTTPD_BUILDER_NAME}"
+- kind: ImageStream
+  apiVersion: v1
+  metadata:
+    name: "${HTTPD_APPLICATION_NAME}"
+    namespace: "${NAMESPACE}"
+    labels:
+      application: "${HTTPD_APPLICATION_NAME}"
+- kind: BuildConfig
+  apiVersion: v1
+  metadata:
+    labels:
+      build: "${HTTPD_APPLICATION_NAME}"
+      name: "${HTTPD_APPLICATION_NAME}-pipeline"
+    name: "${HTTPD_APPLICATION_NAME}-pipeline"
+    namespace: "${NAMESPACE}"
+  spec:
+    nodeSelector: {}
+    output: {}
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      contextDir: "${HTTPD_APPLICATION_CONTEXT_DIR}"
+      git:
+        ref: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_REF}"
+        uri: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_URL}"
+      type: Git
+    strategy:
+      jenkinsPipelineStrategy:
+        jenkinsfilePath: Jenkinsfile
+      type: JenkinsPipeline
+    triggers:
+    - github:
+        secret: "${PIPELINE_GITHUB_WEBHOOK_SECRET}"
+      type: GitHub
+    - type: ConfigChange
+- kind: BuildConfig
+  apiVersion: v1
+  metadata:
+    name: "${HTTPD_BUILDER_NAME}"
+    namespace: "${NAMESPACE}"
+    labels:
+      build: "${HTTPD_BUILDER_NAME}"
+  spec:
+    triggers:
+    - type: ConfigChange
+    - type: ImageChange
+      imageChange: {}
+    source:
+      type: Git
+      git:
+        uri: "${HTTPD_BUILDER_SOURCE_REPOSITORY_URL}"
+        ref: "${HTTPD_BUILDER_SOURCE_REPOSITORY_REF}"
+      contextDir: "${HTTPD_BUILDER_CONTEXT_DIR}"
+    strategy:
+      type: Docker
+      dockerStrategy:
+        from:
+          kind: ImageStreamTag
+          name: sclorg-httpd-container:2.4
+    output:
+      to:
+        kind: ImageStreamTag
+        name: "${HTTPD_BUILDER_NAME}:latest"
+- kind: BuildConfig
+  apiVersion: v1
+  metadata:
+    name: "${HTTPD_APPLICATION_NAME}"
+    namespace: "${NAMESPACE}"
+    labels:
+      application: "${HTTPD_APPLICATION_NAME}"
+  spec:
+    triggers:
+    - type: ConfigChange
+    - type: ImageChange
+      imageChange: {}
+    source:
+      type: Git
+      git:
+        uri: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_URL}"
+        ref: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_REF}"
+      contextDir: "${HTTPD_APPLICATION_CONTEXT_DIR}"
+    strategy:
+      type: Source
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: "${HTTPD_BUILDER_NAME}:${IMAGE_TAG}"
+    output:
+      to:
+        kind: ImageStreamTag
+        name: "${HTTPD_APPLICATION_NAME}:latest"

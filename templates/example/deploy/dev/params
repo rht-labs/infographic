@@ -1,0 +1,3 @@
+NAMESPACE=infographic-dev
+HTTPD_APPLICATION_NAME=infographic
+HTTPD_APPLICATION_HOSTNAME=infographic-dev.apps.example.com
