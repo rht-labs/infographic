@@ -32,49 +32,5 @@ describe('Util Tests', function() {
             result.should.be.a( 'string')
             result.should.equal( 'localhost:3000')
     	});
-
-    	it('should return correct dev backend url', function() {
-    		const url = 'http://web-infographic-dev.apps.env2-1.innovation.labs.redhat.com';
-            const result = lib.getBackendUrlBasedOnLocation( url );
-            result.should.be.a( 'string')
-            result.should.equal( 'http://node-app-infographic-dev.apps.env2-1.innovation.labs.redhat.com')
-    	});
-
-
-    	it('should return correct stage backend url', function() {
-    		const url = 'http://web-infographic-stage.apps.env2-1.innovation.labs.redhat.com';
-            const result = lib.getBackendUrlBasedOnLocation( url );
-            result.should.be.a( 'string')
-            result.should.equal( 'http://node-app-infographic-stage.apps.env2-1.innovation.labs.redhat.com')
-    	});
-
-    	it('should return correct prod backend url', function() {
-    		const url = 'http://web-infographic-prod.apps.env2-1.innovation.labs.redhat.com';
-            const result = lib.getBackendUrlBasedOnLocation( url );
-            result.should.be.a( 'string')
-            result.should.equal( 'http://node-app-infographic-prod.apps.env2-1.innovation.labs.redhat.com')
-    	});
-
-    	it('should return correct developer backend url', function() {
-    		const url = 'http://web-infographic-developerlastname.apps.env2-1.innovation.labs.redhat.com';
-            const result = lib.getBackendUrlBasedOnLocation( url );
-            result.should.be.a( 'string')
-            result.should.equal( 'http://node-app-infographic-developerlastname.apps.env2-1.innovation.labs.redhat.com')
-    	});
     });
-
-    describe('#getOpenShiftHostFromLocation()', function(){
-    	it('should return the correct OpenShift host from the location', function(){
-    		const result = lib.getOpenShiftHostFromHostName( 'web-infographic-dev.env3-1.innovation.labs.redhat.com' );
-    		result.should.be.a( 'string' )
-    		result.should.equals( '.env3-1.innovation.labs.redhat.com' )
-    	});
-
-    	it('should return empty for localhost', function(){
-    		const result = lib.getOpenShiftHostFromHostName( 'localhost:8080' );
-    		result.should.be.a( 'string' )
-    		expect( result ).to.be.empty
-    	});
-    });
-
 });
