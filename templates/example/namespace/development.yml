@@ -1,0 +1,67 @@
+---
+kind: List
+apiVersion: v1
+metadata: {}
+items:
+- apiVersion: v1
+  kind: ProjectRequest
+  metadata:
+    annotations:
+      openshift.io/description: ''
+      openshift.io/display-name: Infographic Development
+    creationTimestamp:
+    name: infographic-dev
+  spec: {}
+  status: {}
+- apiVersion: v1
+  groupNames:
+  - system:serviceaccounts:infographic-dev
+  kind: RoleBinding
+  metadata:
+    creationTimestamp:
+    name: system:image-pullers
+    namespace: infographic-dev
+  roleRef:
+    name: system:image-puller
+  subjects:
+  - kind: SystemGroup
+    name: system:serviceaccounts:infographic-dev
+  userNames:
+- apiVersion: v1
+  groupNames:
+  kind: RoleBinding
+  metadata:
+    creationTimestamp:
+    name: system:image-builders
+    namespace: infographic-dev
+  roleRef:
+    name: system:image-builder
+  subjects:
+  - kind: ServiceAccount
+    name: builder
+  userNames:
+  - system:serviceaccount:infographic-dev:builder
+- apiVersion: v1
+  groupNames:
+  kind: RoleBinding
+  metadata:
+    creationTimestamp:
+    name: system:deployers
+    namespace: infographic-dev
+  roleRef:
+    name: system:deployer
+  subjects:
+  - kind: ServiceAccount
+    name: deployer
+  userNames:
+  - system:serviceaccount:infographic-dev:deployer
+- apiVersion: v1
+  groupNames:
+  kind: RoleBinding
+  metadata:
+    creationTimestamp:
+    name: edit
+    namespace: infographic-dev
+  roleRef:
+    name: edit
+  subjects:
