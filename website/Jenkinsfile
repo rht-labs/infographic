@@ -11,7 +11,7 @@ node (''){
     env.UAT_PROJECT = "infographic-uat"
 
 
-    env.APP_NAME = "httpd-app"
+    env.APP_NAME = "infographic"
 
     // these are defaults that will help run openshift automation
     env.OCP_API_SERVER = "${env.OPENSHIFT_API_URL}"
