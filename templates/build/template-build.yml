@@ -48,11 +48,6 @@ parameters:
   displayName: HTTPD application context directory.
   value: website
   required: true
-- name: GITHUB_WEBHOOK_SECRET
-  displayName: GitHub Webhook Secret
-  description: A secret string used to configure the GitHub webhook.
-  generate: expression
-  from: "[a-zA-Z0-9]{40}"
 objects:
 - kind: ImageStream
   apiVersion: v1
@@ -61,35 +56,6 @@ objects:
     namespace: "${NAMESPACE}"
     labels:
       application: "${HTTPD_APPLICATION_NAME}"
-- kind: BuildConfig
-  apiVersion: v1
-  metadata:
-    labels:
-      build: "${HTTPD_APPLICATION_NAME}"
-      name: "${HTTPD_APPLICATION_NAME}-pipeline"
-    name: "${HTTPD_APPLICATION_NAME}-pipeline"
-    namespace: "${NAMESPACE}"
-  spec:
-    nodeSelector: {}
-    output: {}
-    postCommit: {}
-    resources: {}
-    runPolicy: Serial
-    source:
-      contextDir: "${HTTPD_APPLICATION_CONTEXT_DIR}"
-      git:
-        ref: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_REF}"
-        uri: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_URL}"
-      type: Git
-    strategy:
-      jenkinsPipelineStrategy:
-        jenkinsfilePath: Jenkinsfile
-      type: JenkinsPipeline
-    triggers:
-    - github:
-        secret: "${PIPELINE_GITHUB_WEBHOOK_SECRET}"
-      type: GitHub
-    - type: ConfigChange
 - kind: BuildConfig
   apiVersion: v1
   metadata:
