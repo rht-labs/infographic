@@ -13,6 +13,21 @@ parameters:
   displayName: Infographic ImageStream Namespace
   value: infographic-pipeline
   required: true
+- name: NAMESPACE_DEV
+  description: The Dev Namespace
+  displayName: Infographic Dev Namespace
+  value: infographic-dev
+  required: true
+- name: NAMESPACE_TEST
+  description: The Test Namespace
+  displayName: Infographic Test Namespace
+  value: infographic-test
+  required: true
+- name: NAMESPACE_UAT
+  description: The UAT Namespace
+  displayName: Infographic UAT Namespace
+  value: infographic-uat
+  required: true
 - name: HTTPD_APPLICATION_NAME
   description: The name for the HTTPD application.
   displayName: Apache application name
@@ -62,6 +77,17 @@ objects:
       type: Git
     strategy:
       jenkinsPipelineStrategy:
+        env:
+        - name: "APP_NAME"
+          value: "${HTTPD_APPLICATION_NAME}"
+        - name: "NAMESPACE_BUILD"
+          value: "${NAMESPACE}"
+        - name: "NAMESPACE_DEV"
+          value: "${NAMESPACE_DEV}"
+        - name: "NAMESPACE_TEST"
+          value: "${NAMESPACE_TEST}"
+        - name: "NAMESPACE_UAT"
+          value: "${NAMESPACE_UAT}"
         jenkinsfilePath: Jenkinsfile
       type: JenkinsPipeline
     triggers:
