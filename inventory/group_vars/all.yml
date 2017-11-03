@@ -22,8 +22,12 @@ openshift_cluster_content:
 - object: builds
   content:
   - name: "infographic-pipeline"
-    template: "{{ inventory_dir }}/../templates/build/template.yml"
+    template: "{{ inventory_dir }}/../templates/build/template-pipeline.yml"
     params: "{{ inventory_dir }}/../templates/build/pipeline.params"
+    namespace: "infographic-pipeline"
+  - name: "infographic-build"
+    template: "{{ inventory_dir }}/../templates/build/template-build.yml"
+    params: "{{ inventory_dir }}/../templates/build/build.params"
     namespace: "infographic-pipeline"
 - object: deployments
   content:
