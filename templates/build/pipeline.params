@@ -1,4 +1,7 @@
 NAMESPACE=infographic-pipeline
+NAMESPACE_DEV=infographic-dev
+NAMESPACE_TEST=infographic-test
+NAMESPACE_UAT=infographic-uat
 HTTPD_APPLICATION_NAME=infographic
 HTTPD_APPLICATION_SOURCE_REPOSITORY_URL=https://github.com/rht-labs/infographic.git
 HTTPD_APPLICATION_SOURCE_REPOSITORY_REF=master
