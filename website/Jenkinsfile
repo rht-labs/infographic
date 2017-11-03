@@ -11,16 +11,15 @@ node (''){
     env.UAT_PROJECT = "infographic-uat"
 
 
-    env.APP_NAME = "httpd-app"
+    env.APP_NAME = "infographic"
 
     // these are defaults that will help run openshift automation
     env.OCP_API_SERVER = "${env.OPENSHIFT_API_URL}"
     env.OCP_TOKEN = readFile('/var/run/secrets/kubernetes.io/serviceaccount/token').trim()
 }
 
-// Using the nodejs slave because it is included by default with Jenkins. Due to no requirements
-// for these operations, any slave should be fine.
-node('nodejs') {
+// Building on the master for this demo
+node('') {
 
     stage('SCM Checkout') {
         checkout scm
