@@ -1,2 +1,4 @@
 node_modules
+*.retry
+*.swp
 .DS_Store
