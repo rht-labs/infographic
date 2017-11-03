@@ -3,11 +3,11 @@
 openshift_cluster_content:
 - object: projectrequest
   content:
-  - name: "infograhpic-pipeline"
+  - name: "infographic-pipeline"
     template: "{{ inventory_dir }}/../templates/projectrequest/template.yml"
     params: "{{ inventory_dir }}/../templates/projectrequest/pipeline.params"
     template_action: create
-  - name: "infograhpic-dev"
+  - name: "infographic-dev"
     template: "{{ inventory_dir }}/../templates/projectrequest/template.yml"
     params: "{{ inventory_dir }}/../templates/projectrequest/dev.params"
     template_action: create
