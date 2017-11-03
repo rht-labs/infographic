@@ -10,7 +10,7 @@ labels:
 parameters:
 - name: NAMESPACE
   description: The OpenShift Namespace Where this pipeline is deployed
-  displayName: Infographic Pipelin Namespace
+  displayName: Infographic Pipeline Namespace
   value: infographic-pipeline
   required: true
 - name: NAMESPACE_DEV
