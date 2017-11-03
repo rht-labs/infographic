@@ -18,9 +18,8 @@ node (''){
     env.OCP_TOKEN = readFile('/var/run/secrets/kubernetes.io/serviceaccount/token').trim()
 }
 
-// Using the nodejs slave because it is included by default with Jenkins. Due to no requirements
-// for these operations, any slave should be fine.
-node('nodejs') {
+// Building on the master for this demo
+node('') {
 
     stage('SCM Checkout') {
         checkout scm

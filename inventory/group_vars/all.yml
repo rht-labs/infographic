@@ -4,38 +4,38 @@ openshift_cluster_content:
 - object: projectrequest
   content:
   - name: "infograhpic-pipeline"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/pipeline.params"
+    template: "{{ inventory_dir }}/../templates/projectrequest/template.yml"
+    params: "{{ inventory_dir }}/../templates/projectrequest/pipeline.params"
     template_action: create
   - name: "infograhpic-dev"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/dev.params"
+    template: "{{ inventory_dir }}/../templates/projectrequest/template.yml"
+    params: "{{ inventory_dir }}/../templates/projectrequest/dev.params"
     template_action: create
   - name: "infographic-uat"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/uat.params"
+    template: "{{ inventory_dir }}/../templates/projectrequest/template.yml"
+    params: "{{ inventory_dir }}/../templates/projectrequest/uat.params"
     template_action: create
   - name: "infographic-test"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/projectrequest/test.params"
+    template: "{{ inventory_dir }}/../templates/projectrequest/template.yml"
+    params: "{{ inventory_dir }}/../templates/projectrequest/test.params"
     template_action: create
 - object: builds
   content:
   - name: "infographic-pipeline"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/build/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/build/pipeline.params"
+    template: "{{ inventory_dir }}/../templates/build/template.yml"
+    params: "{{ inventory_dir }}/../templates/build/pipeline.params"
     namespace: "infographic-pipeline"
 - object: deployments
   content:
   - name: "infographic-dev"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/deploy/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/deploy/dev.params"
+    template: "{{ inventory_dir }}/../templates/deploy/template.yml"
+    params: "{{ inventory_dir }}/../templates/deploy/dev.params"
     namespace: "infographic-dev"
   - name: "infographic-uat"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/deploy/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/deploy/uat.params"
+    template: "{{ inventory_dir }}/../templates/deploy/template.yml"
+    params: "{{ inventory_dir }}/../templates/deploy/uat.params"
     namespace: "infographic-uat"
   - name: "infographic-test"
-    template: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/deploy/template.yml"
-    params: "https://raw.githubusercontent.com/rht-labs/infographic/master/templates/deploy/test.params"
+    template: "{{ inventory_dir }}/../templates/deploy/template.yml"
+    params: "{{ inventory_dir }}/../templates/deploy/test.params"
     namespace: "infographic-test"
