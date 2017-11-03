@@ -9,8 +9,8 @@ labels:
   template: infographic-pipeline
 parameters:
 - name: NAMESPACE
-  description: The OpenShift Namespace where the Infographic ImageStream resides.
-  displayName: Infographic ImageStream Namespace
+  description: The OpenShift Namespace Where this pipeline is deployed
+  displayName: Infographic Pipelin Namespace
   value: infographic-pipeline
   required: true
 - name: NAMESPACE_DEV

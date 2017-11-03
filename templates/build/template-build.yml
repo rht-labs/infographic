@@ -9,8 +9,8 @@ labels:
   template: infographic-builder
 parameters:
 - name: NAMESPACE
-  description: The OpenShift Namespace where the Infographic ImageStream resides.
-  displayName: Infographic ImageStream Namespace
+  description: The OpenShift Namespace where the Infographic Build resides.
+  displayName: Infographic Build Namespace
   value: infographic-pipeline
 - name: HTTPD_BUILDER_NAME
   description: The name for the Apache HTTPD builder.
