@@ -15,16 +15,22 @@ parameters:
 - name: HTTPD_BUILDER_NAME
   description: The name for the Apache HTTPD builder.
   displayName: Apache HTTPD builder name
-  value: s2i-httpd
+  value: httpd
   required: true
 - name: HTTPD_BUILDER_IMAGE_TAG
   description: The ImageStreamTag for the build source image
   displayName: Image Tag
-  value: latest
+  value: '2.4'
+  required: true
+- name: HTTPD_BUILDER_NAMESPACE
+  description: The namespace for the Apache HTTPD builder.
+  displayName: Apache HTTPD builder namespace
+  value: openshift
+  required: true
 - name: HTTPD_APPLICATION_NAME
   description: The name for the HTTPD application.
   displayName: Apache application name
-  value: httpd-app
+  value: infographic
   required: true
 - name: HTTPD_APPLICATION_SOURCE_REPOSITORY_URL
   description: Git source URI for HTTPD application
@@ -108,6 +114,7 @@ objects:
         from:
           kind: ImageStreamTag
           name: "${HTTPD_BUILDER_NAME}:${HTTPD_BUILDER_IMAGE_TAG}"
+          namespace: "${HTTPD_BUILDER_NAMESPACE}"
     output:
       to:
         kind: ImageStreamTag
