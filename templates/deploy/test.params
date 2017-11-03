@@ -1,4 +1,3 @@
 NAMESPACE=infographic-test
 BUILD_NAMESPACE=infographic-pipeline
 HTTPD_APPLICATION_NAME=infographic
-HTTPD_APPLICATION_HOSTNAME=infographic-test.apps.example.com
