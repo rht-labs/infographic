@@ -1,2 +1,2 @@
-NAME=infographic-uat
-DISPLAY_NAME=Infographic UAT
+NAMESPACE=infographic-uat
+NAMESPACE_DISPLAY_NAME=Infographic UAT
