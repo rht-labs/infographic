@@ -13,7 +13,7 @@ parameters:
 - name: NAMESPACE
   description: The OpenShift Namespace where the Infographic app will be Deployed
   displayName: Infographic Deployment Namespace
-- name: BUILD_NAMESPACE
+- name: NAMESPACE_BUILD
   description: The OpenShift Namespace where the Infographic app will be Built
   displayName: Infographic Build Namespace
   value: infographic-pipeline
@@ -135,6 +135,6 @@ objects:
   subjects:
   - kind: ServiceAccount
     name: jenkins
-    namespace: ${BUILD_NAMESPACE}
+    namespace: ${NAMESPACE_BUILD}
   userNames:
-  - system:serviceaccount:${BUILD_NAMESPACE}:jenkins
+  - system:serviceaccount:${NAMESPACE_BUILD}:jenkins
