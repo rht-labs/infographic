@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node_modules/.bin/mocha -w",
     "start": "node index.js",
-    "validate": "node node_modules/esprima/bin/esvalidate.js index.js lib/*"
+    "validate": "node node_modules/esprima/bin/esvalidate.js index.js lib/*",
+    "ci": "node node_modules/esprima/bin/esvalidate.js index.js lib/* && node_modules/.bin/mocha"
   },
   "author": "",
   "license": "ISC",
@@ -18,8 +19,11 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "esprima": "^2.7.2",
+    "jsdom": "7.0.2",
     "mocha": "^2.5.1",
+    "mocha-jsdom": "^1.1.0",
     "proxyquire": "^1.7.9",
     "should": ">= 0.0.1"
   }
