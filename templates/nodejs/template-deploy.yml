@@ -1,0 +1,142 @@
+---
+kind: Template
+apiVersion: v1
+metadata:
+  annotations:
+    description: Infographic Deployer
+    iconClass: icon-apache
+    tags: quickstart,httpd,web
+  name: infographic-deployer
+labels:
+  template: infographic-deployer
+parameters:
+- name: NAMESPACE
+  description: The OpenShift Namespace where the Infographic app will be Deployed
+  displayName: Infographic Deployment Namespace
+  required: true
+- name: NAMESPACE_BUILD
+  description: The OpenShift Namespace where the Infographic app will be Built
+  displayName: Infographic Build Namespace
+  value: infographic-build
+- name: IMAGE_TAG
+  description: The ImageStreamTag for the deployment
+  displayName: Image Tag
+  value: latest
+  required: true
+- name: APPLICATION_NAME
+  description: The name for the Application.
+  displayName: Application name
+  value: infographic
+  required: true
+- name: APPLICATION_FQDN
+  displayName: Application route FQDN/hostname.
+  description: 'Custom FQDN for service route.  Leave blank for default
+    hostname, e.g.: <application-name>-<project>.<default-domain-suffix>'
+- name: ANSIBLE_TOWER_URL
+  description: The Ansible Tower URL used for automation
+  displayName: Ansible Tower URL
+- name: ANSIBLE_TOWER_TEMPLATE_ID
+  description: The Ansible Tower Template ID for automation
+  displayName: Ansible Tower Template id
+- name: OPENSHIFT_API_URL
+  description: The OpenShift API URL for automation
+  displayName: OpenShift API URL
+objects:
+- kind: ImageStream
+  apiVersion: v1
+  metadata:
+    name: "${APPLICATION_NAME}"
+    namespace: ${NAMESPACE}
+    labels:
+      application: "${APPLICATION_NAME}"
+- kind: Route
+  apiVersion: v1
+  metadata:
+    name: "${APPLICATION_NAME}"
+    namespace: ${NAMESPACE}
+    labels:
+      application: "${APPLICATION_NAME}"
+    annotations:
+      description: Route for application's service.
+      kubernetes.io/tls-acme: "true"
+  spec:
+    host: "${APPLICATION_FQDN}"
+    to:
+      kind: Service
+      name: "${APPLICATION_NAME}"
+    tls:
+      termination: edge
+- kind: Service
+  apiVersion: v1
+  metadata:
+    name: "${APPLICATION_NAME}"
+    namespace: ${NAMESPACE}
+    labels:
+      application: "${APPLICATION_NAME}"
+    annotations:
+      description: The server's port.
+  spec:
+    ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    selector:
+      application: "${APPLICATION_NAME}"
+      deploymentconfig: "${APPLICATION_NAME}"
+    type: ClusterIP
+    sessionAffinity: None
+- kind: DeploymentConfig
+  apiVersion: v1
+  metadata:
+    name: "${APPLICATION_NAME}"
+    namespace: ${NAMESPACE}
+    labels:
+      app: "${APPLICATION_NAME}"
+      deploymentconfig: "${APPLICATION_NAME}"
+  spec:
+    strategy:
+      type: Rolling
+      rollingParams: {}
+      resources: {}
+    triggers:
+    - type: ConfigChange
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        containerNames:
+        - "${APPLICATION_NAME}"
+        from:
+          kind: ImageStreamTag
+          name: "${APPLICATION_NAME}:${IMAGE_TAG}"
+    replicas: 1
+    test: false
+    selector:
+      application: "${APPLICATION_NAME}"
+      deploymentconfig: "${APPLICATION_NAME}"
+    template:
+      metadata:
+        labels:
+          application: "${APPLICATION_NAME}"
+          deploymentconfig: "${APPLICATION_NAME}"
+      spec:
+        containers:
+        - env:
+          - name: ANSIBLE_TOWER_TEMPLATE_ID
+            value: "${ANSIBLE_TOWER_TEMPLATE_ID}"
+          - name: ANSIBLE_TOWER_URL
+            value: "${ANSIBLE_TOWER_URL}"
+          - name: OPENSHIFT_API_URL
+            value: "${OPENSHIFT_API_URL}"
+          name: "${APPLICATION_NAME}"
+          image: "${APPLICATION_NAME}"
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          resources: {}
+          terminationMessagePath: "/dev/termination-log"
+          imagePullPolicy: Always
+        restartPolicy: Always
+        terminationGracePeriodSeconds: 30
+        dnsPolicy: ClusterFirst
+        securityContext: {}
