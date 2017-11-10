@@ -30,7 +30,7 @@ describe('Util Tests', function() {
     		const url = 'http://localhost:8080/internal.html';
             const result = lib.getBackendUrlBasedOnLocation( url );
             result.should.be.a( 'string')
-            result.should.equal( 'localhost:3000')
+            result.should.contain( 'localhost:3000')
     	});
     });
 });
