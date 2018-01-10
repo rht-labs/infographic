@@ -378,7 +378,7 @@ function callStack(projName, username, gitRepo) {
     username  = (username === undefined) ? "" : username;
     gitRepo  = (gitRepo === undefined) ? "https://github.com/rht-labs/infographic" : gitRepo;
 
-    if (window.internal && window.internal == true){
+    if (window.rhtLabsInternal){
         vex.dialog.open({
             message: "Build Parameters",
             className: 'vex-theme-plain',
@@ -422,6 +422,6 @@ function callStack(projName, username, gitRepo) {
     return false;
 }
 
-if (window.internal && window.internal == true){
+if (window.rhtLabsInternal){
     $("#form").attr("action", 'internal.html');
 }
