@@ -14,11 +14,11 @@ function getLocation(url) {
 
 function getBackendUrlBasedOnLocation( url ){
   const location = getLocation( url )
-  
+
   if (location.hostname.includes('localhost') || location.hostname.includes('127.0.0.1')) {
-    return 'http://localhost:3000'
+    return location.protocol + '//' + location.hostname + ':' + location.port;
   } else {
-    return ''
+    return '';
   }
 
 }
