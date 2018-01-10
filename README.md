@@ -5,7 +5,7 @@
 * npm
 
 ## Running
-Run: 
+Run:
 ```bash
 npm install
 npm start
@@ -19,8 +19,14 @@ This will start up a local http server to host the fron using the `website` dire
 - `/internal.html`: The "internal" version of infographic. Clicking the "build" button kicks off an Ansible job.
 - `/stack`: The node.js API that the front end hits when the user clicks the "build" button. This API passes the request on to Ansible.
 
+## Icon conventions
+
+- `[tool].png` - Full-color image, 300px wide, left-aligned. Shown on main page.
+- `[tool]-print.png` - Full-color image, 525px wide, centered. Shown on the printable "my technology stack" page if the tool is selected.
+- `[tool]-print-gray.png` - Grayscale image, 525px wide, centered, about 25% opacity. Shown on the printable "my technology stack" page if the tool is _not_ selected.
+
 ## Configuration
-Configuration of the running application is accomplished using 
+Configuration of the running application is accomplished using
 environment variables. The configuration options are listed below:
 
 * INFOGRAPHIC_HTTP_PORT
