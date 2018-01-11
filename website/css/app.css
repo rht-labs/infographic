@@ -1269,11 +1269,11 @@ ul.parsley-errors-list li {
 
 #infrastructure-conf {
     padding-left: 20px;
-    padding-right: 25px;
+    padding-right: 20px;
 }
 
 #databases-conf {
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
 #ci-cd-conf {
