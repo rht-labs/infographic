@@ -1208,6 +1208,10 @@ ul.parsley-errors-list li {
     text-align: center;
 }
 
+#application-development-row .conf-section {
+  min-height: 205px;
+}
+
 #devops-tools-row .conf-section img {
     max-width: 80px;
 }
