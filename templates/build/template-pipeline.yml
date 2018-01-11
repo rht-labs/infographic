@@ -28,22 +28,22 @@ parameters:
   displayName: Infographic UAT Namespace
   value: infographic-uat
   required: true
-- name: HTTPD_APPLICATION_NAME
+- name: APPLICATION_NAME
   description: The name for the HTTPD application.
   displayName: Apache application name
   value: infographic
   required: true
-- name: HTTPD_APPLICATION_SOURCE_REPOSITORY_URL
+- name: SCM_URL
   description: Git source URI for HTTPD application
   displayName: HTTPD application source url
   value: https://github.com/logandonley/infographic.git
   required: true
-- name: HTTPD_APPLICATION_SOURCE_REPOSITORY_REF
+- name: SCM_REF
   description: HTTPD application source branch/tag reference.
   displayName: HTTPD application source branch/tag reference.
   value: master
   required: false
-- name: HTTPD_APPLICATION_CONTEXT_DIR
+- name: SCM_CONTEXT_DIR
   description: Path within Git project to build containing the HTTPD application;
     empty for root project directory.
   displayName: HTTPD application context directory.
@@ -59,9 +59,9 @@ objects:
   apiVersion: v1
   metadata:
     labels:
-      build: "${HTTPD_APPLICATION_NAME}"
-      name: "${HTTPD_APPLICATION_NAME}-pipeline"
-    name: "${HTTPD_APPLICATION_NAME}-pipeline"
+      build: "${APPLICATION_NAME}"
+      name: "${APPLICATION_NAME}-pipeline"
+    name: "${APPLICATION_NAME}-pipeline"
     namespace: "${NAMESPACE}"
   spec:
     nodeSelector: {}
@@ -70,16 +70,16 @@ objects:
     resources: {}
     runPolicy: Serial
     source:
-      contextDir: "${HTTPD_APPLICATION_CONTEXT_DIR}"
+      contextDir: "${SCM_CONTEXT_DIR}"
       git:
-        ref: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_REF}"
-        uri: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_URL}"
+        ref: "${SCM_REF}"
+        uri: "${SCM_URL}"
       type: Git
     strategy:
       jenkinsPipelineStrategy:
         env:
         - name: "APP_NAME"
-          value: "${HTTPD_APPLICATION_NAME}"
+          value: "${APPLICATION_NAME}"
         - name: "NAMESPACE_BUILD"
           value: "${NAMESPACE}"
         - name: "NAMESPACE_DEV"
