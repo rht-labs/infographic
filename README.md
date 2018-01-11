@@ -21,9 +21,9 @@ This will start up a local http server to host the fron using the `website` dire
 
 ## Icon conventions
 
-- `[tool].png` - Full-color image, 300px wide, left-aligned. Shown on main page.
-- `[tool]-print.png` - Full-color image, 525px wide, centered. Shown on the printable "my technology stack" page if the tool is selected.
-- `[tool]-print-gray.png` - Grayscale image, 525px wide, centered, about 25% opacity. Shown on the printable "my technology stack" page if the tool is _not_ selected.
+- `[tool].png` - Full-color image, 300x106px, left-aligned. Shown on main page.
+- `[tool]-print.png` - Full-color image, 525x150px, centered. Shown on the printable "my technology stack" page if the tool is selected.
+- `[tool]-print-grey.png` - Grayscale image, 525x150px, centered, about 25% opacity. Shown on the printable "my technology stack" page if the tool is _not_ selected.
 
 ## Configuration
 Configuration of the running application is accomplished using
