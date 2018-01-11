@@ -27,22 +27,22 @@ parameters:
   displayName: Apache HTTPD builder namespace
   value: openshift
   required: true
-- name: HTTPD_APPLICATION_NAME
+- name: APPLICATION_NAME
   description: The name for the HTTPD application.
   displayName: Apache application name
   value: infographic
   required: true
-- name: HTTPD_APPLICATION_SOURCE_REPOSITORY_URL
+- name: SCM_URL
   description: Git source URI for HTTPD application
   displayName: HTTPD application source url
   value: https://github.com/logandonley/infographic.git
   required: true
-- name: HTTPD_APPLICATION_SOURCE_REPOSITORY_REF
+- name: SCM_REF
   description: HTTPD application source branch/tag reference.
   displayName: HTTPD application source branch/tag reference.
   value: master
   required: false
-- name: HTTPD_APPLICATION_CONTEXT_DIR
+- name: SCM_CONTEXT_DIR
   description: Path within Git project to build containing the HTTPD application;
     empty for root project directory.
   displayName: HTTPD application context directory.
@@ -52,17 +52,17 @@ objects:
 - kind: ImageStream
   apiVersion: v1
   metadata:
-    name: "${HTTPD_APPLICATION_NAME}"
+    name: "${APPLICATION_NAME}"
     namespace: "${NAMESPACE}"
     labels:
-      application: "${HTTPD_APPLICATION_NAME}"
+      application: "${APPLICATION_NAME}"
 - kind: BuildConfig
   apiVersion: v1
   metadata:
-    name: "${HTTPD_APPLICATION_NAME}"
+    name: "${APPLICATION_NAME}"
     namespace: "${NAMESPACE}"
     labels:
-      application: "${HTTPD_APPLICATION_NAME}"
+      application: "${APPLICATION_NAME}"
   spec:
     triggers:
     - type: ConfigChange
@@ -71,9 +71,9 @@ objects:
     source:
       type: Git
       git:
-        uri: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_URL}"
-        ref: "${HTTPD_APPLICATION_SOURCE_REPOSITORY_REF}"
-      contextDir: "${HTTPD_APPLICATION_CONTEXT_DIR}"
+        uri: "${SCM_URL}"
+        ref: "${SCM_REF}"
+      contextDir: "${SCM_CONTEXT_DIR}"
     strategy:
       type: Source
       sourceStrategy:
@@ -84,4 +84,4 @@ objects:
     output:
       to:
         kind: ImageStreamTag
-        name: "${HTTPD_APPLICATION_NAME}:latest"
+        name: "${APPLICATION_NAME}:latest"
