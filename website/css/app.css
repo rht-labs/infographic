@@ -492,11 +492,11 @@ form fieldset {
     max-width: 145px;
 }
 
-#red-hat-enterprise-open-source fieldset .row:nth-child(2) {
+#red-hat-enterprise-open-source fieldset .row:not(:first-child) {
     padding-top: 0;
 }
 
-fieldset .row:nth-child(2) {
+fieldset .row:not(:first-child) {
     padding-top: 25px;
 }
 

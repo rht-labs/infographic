@@ -11,7 +11,7 @@ npm install
 npm start
 ```
 
-This will start up a local http server to host the fron using the `website` directory as the root context of the front end application. This local devleopment server will also host the API. In OpenShift-based environments, the front end and back end are hosted as separate applications, using the templates in the `templates` directory.
+This will start up a local http server using the `website` directory as the root context of the front end application. This local development server will also host the API. In OpenShift-based environments, the front end and back end are hosted as separate applications, using the templates in the `templates` directory.
 
 ## Important paths
 
@@ -21,9 +21,11 @@ This will start up a local http server to host the fron using the `website` dire
 
 ## Icon conventions
 
-- `[tool].png` - Full-color image, 300x106px, left-aligned. Shown on main page.
+- `[tool].png` - Full-color image, 300x106px, top-left-aligned. Shown on main page.
 - `[tool]-print.png` - Full-color image, 525x150px, centered. Shown on the printable "my technology stack" page if the tool is selected.
 - `[tool]-print-grey.png` - Grayscale image, 525x150px, centered, about 25% opacity. Shown on the printable "my technology stack" page if the tool is _not_ selected.
+
+Some icons don't follow these conventions. When adding a new icon, prefer matching nearby icons over matching these conventions.
 
 ## Configuration
 Configuration of the running application is accomplished using
