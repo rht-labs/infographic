@@ -1,4 +1,4 @@
-# Infographic Infrastructure Automation Demo
+# Red Hat Open Innovation Labs Infographic
 
 ## Prerequisistes
 * NodeJS
