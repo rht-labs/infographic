@@ -13,11 +13,9 @@ npm start
 
 This will start up a local http server to host the fron using the `website` directory as the root context of the front end application. This local development server will also host the API.
 
-## Running in Production
+## Running in OpenShift
 
-The Labs Internal instance of Infographic is hosted in OpenShift. The front end and back end are hosted as separate applications, using the templates in the `templates` directory.
-
-The [public instance of Infographic](https://www.redhat.com/en/explore/my-open-innovation-lab-stack) is integrated into Drupal. It does not have the ability to start an Ansible Tower job, so only the back end code is not used here.
+In OpenShift, the front end and back end are hosted as separate applications, using the templates in the `templates` directory.
 
 ## Important paths
 
