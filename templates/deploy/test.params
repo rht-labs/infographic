@@ -1,3 +1,3 @@
 NAMESPACE=infographic-test
 NAMESPACE_BUILD=infographic-pipeline
-HTTPD_APPLICATION_NAME=infographic
+APPLICATION_NAME=infographic
