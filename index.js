@@ -44,12 +44,11 @@ if (httpsCert.trim() && httpsKey.trim()) {
 
 	// Secure
 	https.createServer(options, app).listen(httpsPort, function () {
-		console.log('Listening on secure (https) port: ' + httpsPort);
+		console.log('Listening on https://localhost:' + httpsPort);
 	});
 } else {
 	// non-Secure
 	http.createServer(app).listen(httpPort, function() {
-		console.log('Listening on UNSECURE (http) port: ' + httpPort);
+		console.log('Listening on UNSECURE http://localhost:' + httpPort);
 	});
 }
-

@@ -378,7 +378,7 @@ function callStack(projName, username, gitRepo) {
     username  = (username === undefined) ? "" : username;
     gitRepo  = (gitRepo === undefined) ? "https://github.com/rht-labs/infographic" : gitRepo;
 
-    if (window.internal && window.internal == true){
+    if (window.rhtLabsInternal){
         vex.dialog.open({
             message: "Build Parameters",
             className: 'vex-theme-plain',
@@ -404,12 +404,9 @@ function callStack(projName, username, gitRepo) {
                 if (!data) {
                     console.log('Cancelled')
                 } else {
-                    console.log(getLocation( window.location.href ).hostname );
-
-                    var url = getBackendUrlBasedOnLocation( 'window.location.href' ) + '/stack'
-                    $.post(url, {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
+                    $.post('/stack', {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'><p>" + result.message + "</p>[<a href='" + result.url + "' target='_blank'>open</a>]</div>"});
-                    }).fail(function(xhr, error) { 
+                    }).fail(function(xhr, error) {
                         var message = $.parseJSON(xhr.responseText).message;
                         callStack(data.projectName, data.username, data.gitRepo);
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>Failed: " + message + '</div>'})});
@@ -424,6 +421,6 @@ function callStack(projName, username, gitRepo) {
     return false;
 }
 
-if (window.internal && window.internal == true){
+if (window.rhtLabsInternal){
     $("#form").attr("action", 'internal.html');
 }
