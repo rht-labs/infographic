@@ -1263,17 +1263,17 @@ ul.parsley-errors-list li {
 }
 
 #rhe-os-conf {
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
 #bic-os-conf {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #infrastructure-conf {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #databases-conf {
