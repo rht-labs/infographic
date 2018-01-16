@@ -1,23 +1,27 @@
-# Infographic Infrastructure Automation Demo
+# Red Hat Open Innovation Labs Infographic
 
 ## Prerequisistes
 * NodeJS
 * npm
 
-## Running
+## Running Locally
 Run:
 ```bash
 npm install
 npm start
 ```
 
-This will start up a local http server using the `website` directory as the root context of the front end application. This local development server will also host the API. In OpenShift-based environments, the front end and back end are hosted as separate applications, using the templates in the `templates` directory.
+This will start up a local http server to host the fron using the `website` directory as the root context of the front end application. This local development server will also host the API.
+
+## Running in OpenShift
+
+In OpenShift, the front end and back end are hosted as separate applications, using the templates in the `templates` directory.
 
 ## Important paths
 
 - `/index.html`: The public-facing infographic page. Clicking the "build" button takes the user to the Open Innovation Labs website.
-- `/internal.html`: The "internal" version of infographic. Clicking the "build" button kicks off an Ansible job.
-- `/stack`: The node.js API that the front end hits when the user clicks the "build" button. This API passes the request on to Ansible.
+- `/internal.html`: The "internal" version of infographic. Clicking the "build" button kicks off an Ansible Tower job.
+- `/stack`: The node.js API that the front end hits when the user clicks the "build" button. This API passes the request on to Ansible Tower.
 
 ## Icon conventions
 

@@ -404,8 +404,7 @@ function callStack(projName, username, gitRepo) {
                 if (!data) {
                     console.log('Cancelled')
                 } else {
-                    var url = '/stack'
-                    $.post(url, {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
+                    $.post('/stack', {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'><p>" + result.message + "</p>[<a href='" + result.url + "' target='_blank'>open</a>]</div>"});
                     }).fail(function(xhr, error) {
                         var message = $.parseJSON(xhr.responseText).message;
