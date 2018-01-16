@@ -1,11 +1,11 @@
-# Infographic Infrastructure Automation Demo
+# Red Hat Open Innovation Labs Infographic
 
 ## Prerequisistes
 * NodeJS
 * npm
 
 ## Running
-Run: 
+Run:
 ```bash
 npm install
 npm start
@@ -20,7 +20,7 @@ This will start up a local http server to host the fron using the `website` dire
 - `/stack`: The node.js API that the front end hits when the user clicks the "build" button. This API passes the request on to Ansible.
 
 ## Configuration
-Configuration of the running application is accomplished using 
+Configuration of the running application is accomplished using
 environment variables. The configuration options are listed below:
 
 * INFOGRAPHIC_HTTP_PORT
