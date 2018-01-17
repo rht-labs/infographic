@@ -23,6 +23,14 @@ In OpenShift, the front end and back end are hosted as separate applications, us
 - `/internal.html`: The "internal" version of infographic. Clicking the "build" button kicks off an Ansible Tower job.
 - `/stack`: The node.js API that the front end hits when the user clicks the "build" button. This API passes the request on to Ansible Tower.
 
+## Icon conventions
+
+- `[tool].png` - Full-color image, 300x106px, top-left-aligned. Shown on main page.
+- `[tool]-print.png` - Full-color image, 525x150px, centered. Shown on the printable "my technology stack" page if the tool is selected.
+- `[tool]-print-grey.png` - Grayscale image, 525x150px, centered, about 25% opacity. Shown on the printable "my technology stack" page if the tool is _not_ selected.
+
+Some icons don't follow these conventions. When adding a new icon, prefer matching nearby icons over matching these conventions.
+
 ## Configuration
 Configuration of the running application is accomplished using
 environment variables. The configuration options are listed below:
