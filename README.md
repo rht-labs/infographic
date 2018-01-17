@@ -11,7 +11,7 @@ npm install
 npm start
 ```
 
-This will start up a local http server to host the fron using the `website` directory as the root context of the front end application. This local development server will also host the API.
+This will start up a local http server using the `website` directory as the root context of the front end application. This local development server will also host the API, which is stored in `index.js` and the `lib` directory.
 
 ## Running in OpenShift
 
