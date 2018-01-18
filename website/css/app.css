@@ -1266,9 +1266,15 @@ ul.parsley-errors-list li {
 #bic-os-conf {
   box-sizing: border-box;
   overflow: hidden;
-  border-bottom: 2px solid #d8dcdd;
   /* Leave about 2% for padding on container */
   width: 49%;
+}
+
+@media (min-width: 1160px) {
+  #rhe-os-conf,
+  #bic-os-conf {
+    border-bottom: 2px solid #d8dcdd;
+  }
 }
 
 #application-development-row #rhe-os-conf,
