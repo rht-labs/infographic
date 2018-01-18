@@ -1209,7 +1209,7 @@ ul.parsley-errors-list li {
 }
 
 #application-development-row .conf-section {
-  min-height: 205px;
+  min-height: 150px;
 }
 
 #devops-tools-row .conf-section img {
@@ -1262,33 +1262,50 @@ ul.parsley-errors-list li {
     margin-bottom: 20px;
 }
 
+#rhe-os-conf,
+#bic-os-conf {
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 2px solid #d8dcdd;
+  /* Leave about 2% for padding on container */
+  width: 49%;
+}
+
+#application-development-row #rhe-os-conf,
+#application-development-row #bic-os-conf {
+  min-height: 170px;
+}
+
+
 #rhe-os-conf {
     padding-right: 15px;
 }
 
 #bic-os-conf {
     padding-left: 15px;
-    padding-right: 15px;
+}
+
+#data-analytics-conf,
+#blockchain-conf,
+#infrastructure-conf,
+#databases-conf {
+  padding-top: 20px;
+  box-sizing: border-box;
+  width: 24.5%;
 }
 
 #data-analytics-conf {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 8px;
 }
 
-#blockchain-conf {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-
+#blockchain-conf,
 #infrastructure-conf {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 #databases-conf {
-    padding-left: 15px;
+    padding-left: 8px;
 }
 
 #ci-cd-conf {
@@ -1722,14 +1739,15 @@ ul.parsley-errors-list li {
 /* CONFIRMATION PAGE - Small only */
 
 @media screen and (max-width: 39.9375em) {
-    .conf-section,
-    .conf-body {
+    #confirmation .conf-block .conf-section,
+    #confirmation .conf-block .conf-body {
         float: none;
         text-align: center;
         min-height: auto;
         width: 100%;
         max-width: 100%;
         display: block;
+        border-bottom: none;
     }
     .conf-section-header h3 {
         margin: 20px;
