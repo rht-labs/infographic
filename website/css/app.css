@@ -1276,6 +1276,12 @@ ul.parsley-errors-list li {
   padding-right: 15px;
 }
 
+#blockchain-conf {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
 #infrastructure-conf {
     padding-left: 15px;
     padding-right: 15px;
