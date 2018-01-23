@@ -1355,6 +1355,11 @@ ul.parsley-errors-list li {
     padding-right: 25px;
 }
 
+#private-conf,
+#public-conf {
+  min-height: 210px;
+}
+
 #management-conf {
     display: block;
 }
