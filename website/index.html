@@ -143,8 +143,8 @@
                         <input id="react" value="true" type="checkbox" class="appdev-check" name="react">
                         <label for="react" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="React—a JavaScript library for building user interfaces."><img src="images/application-development/bic-os/react.png" class="checkbox-image" /></label>
                         <span class="text">React</span>
-                    </div>
-                    <div class="medium-3 columns">
+                      </div>
+                      <div class="medium-3 columns">
                         <input id="angular" value="true" type="checkbox" class="appdev-check" name="angular">
                         <label for="angular" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Angular—an open source, client-side web application framework that helps businesses address the challenges in developing single page apps."><img src="images/application-development/bic-os/angular.png" class="checkbox-image" /></label>
                         <span class="text">Angular</span>
@@ -624,6 +624,20 @@
               </div>
               <div class="acc-content border-left border-right border-bottom">
                 <!--Block 4 Section 1-->
+                <span id="managed" class="block-section">
+                  <h3 class="block-section-header">Managed</h3>
+                  <fieldset>
+                    <!-- B4.S1.Row 1 -->
+                    <div class="row">
+                      <div class="medium-3 columns">
+                        <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true">
+                        <label for="openshift-dedicated" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift Dedicated—Your own private, high availability OpenShift cluster, hosted in the cloud provider of your choice, and operated as a cloud service by Red Hat."><img src="images/iaas/managed/openshift-dedicated.png" class="checkbox-image" /></label>
+                        <span class="text">OpenShift Dedicated</span>
+                      </div>
+                    </div>
+              </fieldset>
+            </span>
+                <!--Block 4 Section 2-->
                 <span id="private" class="block-section">
                   <h3 class="block-section-header">Private</h3>
                   <fieldset>
@@ -654,11 +668,11 @@
                 </div>
               </fieldset>
             </span>
-            <!-- BLOCK 4 SECTION 2  -->
+            <!-- BLOCK 4 SECTION 3  -->
             <span id="public" class="block-section">
               <h3 class="block-section-header">Public</h3>
               <fieldset>
-                <!-- B4.S2.Row 1 -->
+                <!-- B4.S3.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
                     <input id="aws" type="checkbox" class="iaas-check" name="aws" value="true">
@@ -683,11 +697,11 @@
                 </div>
               </fieldset>
             </span>
-            <!-- BLOCK 4 SECTION 3  -->
+            <!-- BLOCK 4 SECTION 4  -->
             <span id="management" class="block-section">
               <h3 class="block-section-header">Management</h3>
               <fieldset>
-                <!-- B4.S3.Row 1 -->
+                <!-- B4.S4.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
                     <input id="rh-satellite" type="checkbox" name="rh-satellite" checked="checked" class="locked custom-checkbox" value="true">
@@ -702,11 +716,11 @@
                 </div>
               </fieldset>
             </span>
-            <!-- BLOCK 4 SECTION 4  -->
+            <!-- BLOCK 4 SECTION 5  -->
             <span id="networking" class="block-section">
               <h3 class="block-section-header">Networking</h3>
               <fieldset>
-                <!-- B4.S3.Row 1 -->
+                <!-- B4.S4.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns end">
                     <input id="open-vswitch" type="checkbox" name="open-vswitch" checked="checked" class="locked" value="true">
@@ -720,7 +734,7 @@
             <span id="storage" class="block-section">
               <h3 class="block-section-header">Storage</h3>
               <fieldset>
-                <!-- B4.S3.Row 1 -->
+                <!-- B4.S5.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
                     <input id="rh-gluster-storage" type="checkbox" name="rh-gluster-storage" checked="checked" class="locked" value="true">
@@ -871,6 +885,11 @@
                 <!--START IaaS Development Sidebar Block -->
                 <div class="selection-sidebar-block" id="iaas-sidebar">
                   <h4 class="sidebar">Hosting Infrastructure</h4>
+                  <div class="selection-sidebar-section border-bottom">
+                    <h5>Managed</h5>
+                    <table id="managed-table">
+                    </table>
+                  </div>
                   <div class="selection-sidebar-section border-bottom">
                     <h5>Private</h5>
                     <table id="private-table">
@@ -1277,6 +1296,14 @@ CONFIRMATION PAGE BELOW
                   <h2>Hosting Infrastructure</h2>
                 </div>
                 <div class="conf-body">
+                  <div class="conf-section thin-border-right" id="managed-conf">
+                    <div class="conf-section-header">
+                      <h3>Managed</h3>
+                    </div>
+                    <div>
+                      <img src="images/iaas/managed/openshift-dedicated.png" class="openshift-dedicated" />
+                    </div>
+                  </div>
                   <div class="conf-section thin-border-right" id="private-conf">
                     <div class="conf-section-header">
                       <h3>Private</h3>
