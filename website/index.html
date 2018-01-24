@@ -363,22 +363,22 @@
                     <!-- B2.S2.Row 1 -->
                     <div class="row">
                       <div class="medium-3 columns">
-                        <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                        <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
                         <label for="bitbucket" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="BitBucket—a web-based hosting service for projects that use either the Mercurial or Git revision control systems, and which offers both commercial plans and free accounts."><img src="images/devops-tools/source-control-management/bitbucket.png" class="checkbox-image" /></label>
                         <span class="text">Bitbucket</span>
                       </div>
                       <div class="medium-3 columns">
-                        <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                        <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
                         <label for="git" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Git—a free and open source distributed version control system designed to handle small and  very large projects with speed and efficiency."><img src="images/devops-tools/source-control-management/git.png" class="checkbox-image" /></label>
                         <span class="text">Git</span>
                       </div>
                       <div class="medium-3 columns">
-                        <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                        <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
                         <label for="github" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitHub (PUBLIC or PRIVATE)—a web-based Git repository hosting service that offers the distributed revision control and source code management (SCM) functionality of Git on top of its own features."><img src="images/devops-tools/source-control-management/github.png" class="checkbox-image" /></label>
                         <span class="text">GitHub</span>
                       </div>
                       <div class="medium-3 columns">
-                        <input id="gitlab" type="checkbox" class="devops-check" value="gitlab" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please check one option for Source Control Management.">
+                        <input id="gitlab" type="checkbox" class="devops-check" value="gitlab" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please check one option for Source Control Management.">
                         <label for="gitlab" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitLab—a manager for git repositories on a centralized server that offers complete control over repositories, allowing you to select public or private usage."><img src="images/devops-tools/source-control-management/gitlab.png" class="checkbox-image" /></label>
                         <span class="text">GitLab</span>
                       </div>
@@ -630,7 +630,7 @@
                     <!-- B4.S1.Row 1 -->
                     <div class="row">
                       <div class="medium-3 columns">
-                        <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true">
+                        <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
                         <label for="openshift-dedicated" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift Dedicated—Your own private, high availability OpenShift cluster, hosted in the cloud provider of your choice, and operated as a cloud service by Red Hat."><img src="images/iaas/managed/openshift-dedicated.png" class="checkbox-image" /></label>
                         <span class="text">OpenShift Dedicated</span>
                       </div>
@@ -675,22 +675,22 @@
                 <!-- B4.S3.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
-                    <input id="aws" type="checkbox" class="iaas-check" name="aws" value="true">
                     <label for="aws" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Amazon WebServices (AWS)—an on-demand computing platform that offers a suite of cloud computing services."><img src="images/iaas/public/aws.png" class="checkbox-image" /></label>
+                    <input id="aws" type="checkbox" class="iaas-check" name="public-cloud" value="aws" data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
                     <span class="text">Amazon Web Services</span>
                   </div>
                   <div class="medium-3 columns">
-                    <input id="google" type="checkbox" class="iaas-check" name="google" value="true">
+                    <input id="google" type="checkbox" class="iaas-check" name="public-cloud" value="google"data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
                     <label for="google" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Google Cloud Platform (GCP)—a cloud computing service that offers hosting on the same infrastructure that Google uses."><img src="images/iaas/public/gcp.png" class="checkbox-image" /></label>
                     <span class="text">Google Cloud Platform</span>
                   </div>
                   <div class="medium-3 columns">
-                    <input id="azure" type="checkbox" class="iaas-check" name="azure" value="true">
+                    <input id="azure" type="checkbox" class="iaas-check" name="public-cloud" value="azure"data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
                     <label for="azure" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure—a cloud computing service for managing services through Microsoft-managed data centers."><img src="images/iaas/public/azure.png" class="checkbox-image" /></label>
                     <span class="text">Microsoft Azure</span>
                   </div>
                   <div class="medium-3 columns end">
-                    <input id="azure-gov" type="checkbox" class="iaas-check" name="azure-gov" value="true">
+                    <input id="azure-gov" type="checkbox" class="iaas-check" name="public-cloud" value="azure-gov">
                     <label for="azure-gov" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure Government—a government-only cloud you can trust, exclusively for US federal, state, local and tribal government agencies and their partners."><img src="images/iaas/public/azure-gov.png" class="checkbox-image" /></label>
                     <span class="text">Microsoft Azure Government</span>
                   </div>
@@ -926,7 +926,7 @@
             <input class="btn-submit" type="submit" name="submit" value="Submit">
           </div>
           <!--<button type="submit"  >Submit</button>-->
-          <div class="source-control-management-error-container"></div>
+          <div class="error-container"></div>
         </div>
       </div>
     </div>
