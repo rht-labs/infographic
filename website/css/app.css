@@ -1252,7 +1252,7 @@ ul.parsley-errors-list li {
 
 .conf-section#monitoring-and-logging-conf img {
     margin-top: 15px;
-    margin-right: 20px;
+    margin-right: 15px;
     max-width: 85px;
 }
 
@@ -1342,7 +1342,7 @@ ul.parsley-errors-list li {
 }
 
 #monitoring-and-logging-conf {
-    padding-left: 100px;
+    padding-left: 30px;
 }
 
 #managed-conf {
