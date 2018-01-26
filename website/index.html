@@ -143,8 +143,8 @@
                         <input id="react" value="true" type="checkbox" class="appdev-check" name="react">
                         <label for="react" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="React—a JavaScript library for building user interfaces."><img src="images/application-development/bic-os/react.png" class="checkbox-image" /></label>
                         <span class="text">React</span>
-                    </div>
-                    <div class="medium-3 columns">
+                      </div>
+                      <div class="medium-3 columns">
                         <input id="angular" value="true" type="checkbox" class="appdev-check" name="angular">
                         <label for="angular" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Angular—an open source, client-side web application framework that helps businesses address the challenges in developing single page apps."><img src="images/application-development/bic-os/angular.png" class="checkbox-image" /></label>
                         <span class="text">Angular</span>
@@ -363,22 +363,22 @@
                     <!-- B2.S2.Row 1 -->
                     <div class="row">
                       <div class="medium-3 columns">
-                        <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                        <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
                         <label for="bitbucket" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="BitBucket—a web-based hosting service for projects that use either the Mercurial or Git revision control systems, and which offers both commercial plans and free accounts."><img src="images/devops-tools/source-control-management/bitbucket.png" class="checkbox-image" /></label>
                         <span class="text">Bitbucket</span>
                       </div>
                       <div class="medium-3 columns">
-                        <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                        <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
                         <label for="git" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Git—a free and open source distributed version control system designed to handle small and  very large projects with speed and efficiency."><img src="images/devops-tools/source-control-management/git.png" class="checkbox-image" /></label>
                         <span class="text">Git</span>
                       </div>
                       <div class="medium-3 columns">
-                        <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                        <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
                         <label for="github" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitHub (PUBLIC or PRIVATE)—a web-based Git repository hosting service that offers the distributed revision control and source code management (SCM) functionality of Git on top of its own features."><img src="images/devops-tools/source-control-management/github.png" class="checkbox-image" /></label>
                         <span class="text">GitHub</span>
                       </div>
                       <div class="medium-3 columns">
-                        <input id="gitlab" type="checkbox" class="devops-check" value="gitlab" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".source-control-management-error-container" data-parsley-error-message="Please check one option for Source Control Management.">
+                        <input id="gitlab" type="checkbox" class="devops-check" value="gitlab" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please check one option for Source Control Management.">
                         <label for="gitlab" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitLab—a manager for git repositories on a centralized server that offers complete control over repositories, allowing you to select public or private usage."><img src="images/devops-tools/source-control-management/gitlab.png" class="checkbox-image" /></label>
                         <span class="text">GitLab</span>
                       </div>
@@ -624,6 +624,20 @@
               </div>
               <div class="acc-content border-left border-right border-bottom">
                 <!--Block 4 Section 1-->
+                <span id="managed" class="block-section">
+                  <h3 class="block-section-header">Managed Services</h3>
+                  <fieldset>
+                    <!-- B4.S1.Row 1 -->
+                    <div class="row">
+                      <div class="medium-3 columns">
+                        <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                        <label for="openshift-dedicated" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift Dedicated—Your own private, high availability OpenShift cluster, hosted in the cloud provider of your choice, and operated as a cloud service by Red Hat."><img src="images/iaas/managed/openshift-dedicated.png" class="checkbox-image" /></label>
+                        <span class="text">OpenShift Dedicated</span>
+                      </div>
+                    </div>
+              </fieldset>
+            </span>
+                <!--Block 4 Section 2-->
                 <span id="private" class="block-section">
                   <h3 class="block-section-header">Private</h3>
                   <fieldset>
@@ -654,35 +668,40 @@
                 </div>
               </fieldset>
             </span>
-            <!-- BLOCK 4 SECTION 2  -->
+            <!-- BLOCK 4 SECTION 3  -->
             <span id="public" class="block-section">
               <h3 class="block-section-header">Public</h3>
               <fieldset>
-                <!-- B4.S2.Row 1 -->
+                <!-- B4.S3.Row 1 -->
                 <div class="row">
-                  <div class="medium-3 columns end">
-                    <input id="aws" type="checkbox" class="iaas-check" name="aws" value="true">
+                  <div class="medium-3 columns">
                     <label for="aws" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Amazon WebServices (AWS)—an on-demand computing platform that offers a suite of cloud computing services."><img src="images/iaas/public/aws.png" class="checkbox-image" /></label>
+                    <input id="aws" type="checkbox" class="iaas-check" name="public-cloud" value="aws" data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
                     <span class="text">Amazon Web Services</span>
                   </div>
-                  <div class="medium-3 columns end">
-                    <input id="google" type="checkbox" class="iaas-check" name="google" value="true">
+                  <div class="medium-3 columns">
+                    <input id="google" type="checkbox" class="iaas-check" name="public-cloud" value="google"data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
                     <label for="google" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Google Cloud Platform (GCP)—a cloud computing service that offers hosting on the same infrastructure that Google uses."><img src="images/iaas/public/gcp.png" class="checkbox-image" /></label>
                     <span class="text">Google Cloud Platform</span>
                   </div>
-                  <div class="medium-3 columns end">
-                    <input id="azure" type="checkbox" class="iaas-check" name="azure" value="true">
-                    <label for="azure" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure—a cloud computing service for managing services through Microsoft-managed data centers."><img src="images/iaas/public/ms_azure.png" class="checkbox-image" /></label>
+                  <div class="medium-3 columns">
+                    <input id="azure" type="checkbox" class="iaas-check" name="public-cloud" value="azure"data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
+                    <label for="azure" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure—a cloud computing service for managing services through Microsoft-managed data centers."><img src="images/iaas/public/azure.png" class="checkbox-image" /></label>
                     <span class="text">Microsoft Azure</span>
+                  </div>
+                  <div class="medium-3 columns end">
+                    <input id="azure-gov" type="checkbox" class="iaas-check" name="public-cloud" value="azure-gov">
+                    <label for="azure-gov" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure Government—a government-only cloud you can trust, exclusively for US federal, state, local and tribal government agencies and their partners."><img src="images/iaas/public/azure-gov.png" class="checkbox-image" /></label>
+                    <span class="text">Microsoft Azure Government</span>
                   </div>
                 </div>
               </fieldset>
             </span>
-            <!-- BLOCK 4 SECTION 3  -->
+            <!-- BLOCK 4 SECTION 4  -->
             <span id="management" class="block-section">
               <h3 class="block-section-header">Management</h3>
               <fieldset>
-                <!-- B4.S3.Row 1 -->
+                <!-- B4.S4.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
                     <input id="rh-satellite" type="checkbox" name="rh-satellite" checked="checked" class="locked custom-checkbox" value="true">
@@ -697,11 +716,11 @@
                 </div>
               </fieldset>
             </span>
-            <!-- BLOCK 4 SECTION 4  -->
+            <!-- BLOCK 4 SECTION 5  -->
             <span id="networking" class="block-section">
               <h3 class="block-section-header">Networking</h3>
               <fieldset>
-                <!-- B4.S3.Row 1 -->
+                <!-- B4.S4.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns end">
                     <input id="open-vswitch" type="checkbox" name="open-vswitch" checked="checked" class="locked" value="true">
@@ -715,7 +734,7 @@
             <span id="storage" class="block-section">
               <h3 class="block-section-header">Storage</h3>
               <fieldset>
-                <!-- B4.S3.Row 1 -->
+                <!-- B4.S5.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
                     <input id="rh-gluster-storage" type="checkbox" name="rh-gluster-storage" checked="checked" class="locked" value="true">
@@ -867,6 +886,11 @@
                 <div class="selection-sidebar-block" id="iaas-sidebar">
                   <h4 class="sidebar">Hosting Infrastructure</h4>
                   <div class="selection-sidebar-section border-bottom">
+                    <h5>Managed Services</h5>
+                    <table id="managed-table">
+                    </table>
+                  </div>
+                  <div class="selection-sidebar-section border-bottom">
                     <h5>Private</h5>
                     <table id="private-table">
                     </table>
@@ -902,7 +926,7 @@
             <input class="btn-submit" type="submit" name="submit" value="Submit">
           </div>
           <!--<button type="submit"  >Submit</button>-->
-          <div class="source-control-management-error-container"></div>
+          <div class="error-container"></div>
         </div>
       </div>
     </div>
@@ -1272,16 +1296,28 @@ CONFIRMATION PAGE BELOW
                   <h2>Hosting Infrastructure</h2>
                 </div>
                 <div class="conf-body">
+                  <div class="conf-section thin-border-right" id="managed-conf">
+                    <div class="conf-section-header">
+                      <h3>Managed Services</h3>
+                    </div>
+                    <div>
+                      <img src="images/iaas/managed/openshift-dedicated.png" class="openshift-dedicated" />
+                    </div>
+                  </div>
                   <div class="conf-section thin-border-right" id="private-conf">
                     <div class="conf-section-header">
                       <h3>Private</h3>
                     </div>
                     <div>
-                      <img src="images/iaas/private/rh-osp-print-grey.png" class="rh-osp" />
-                      <img src="images/iaas/private/rhe-virtualization-print-grey.png" class="rhe-virtualization" />
-                    </div>
-                    <div class="float-left">
-                      <img src="images/iaas/private/baremetal-print-grey.png" class="baremetal" />
+                      <div>
+                        <img src="images/iaas/private/rh-osp-print-grey.png" class="rh-osp" />
+                      </div>
+                      <div>
+                        <img src="images/iaas/private/rhe-virtualization-print-grey.png" class="rhe-virtualization" />
+                      </div>
+                      <div class="float-left">
+                        <img src="images/iaas/private/baremetal-print-grey.png" class="baremetal" />
+                      </div>
                     </div>
                   </div>
                   <div class="conf-section thin-border-right" id="public-conf">
@@ -1295,7 +1331,10 @@ CONFIRMATION PAGE BELOW
                       <img src="images/iaas/public/gcp-print-grey.png" class="google" />
                     </div>
                     <div>
-                      <img src="images/iaas/public/ms_azure-print-grey.png" class="azure" />
+                      <img src="images/iaas/public/azure-print-grey.png" class="azure" />
+                    </div>
+                    <div>
+                      <img src="images/iaas/public/azure-gov-print-grey.png" class="azure-gov" />
                     </div>
                   </div>
                   <!--- start final oddball sections in Iaas -->

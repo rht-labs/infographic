@@ -48,6 +48,16 @@ $(document).ready(function() {
         }
     });
 
+    // parsley custom validator
+    window.Parsley
+    .addValidator('labsRequireIfChecked', {
+      requirementType: 'string',
+      validateMultiple: function(values, requirement) {
+        var fieldChecked = values.some(function(value) { return value !== ''; });
+        var requirementMet = ( $(requirement + ':checked').length > 0 );
+        return ( (fieldChecked && requirementMet) || (!fieldChecked && !requirementMet) );
+      }
+    });
 
     // init parsley
     $('#form').parsley();
@@ -58,17 +68,39 @@ $(document).ready(function() {
 
 
     // show and hide sidebar selections based on checkbox selections
-    $('input:checkbox').on('click', function(e) {
-
-        if ($(this).hasClass('locked') || $(this).hasClass('grayed-out')) {
+    $('input:checkbox').on('change', function(e) {
+        var $this = $(this);
+        if ($this.hasClass('locked') || $this.hasClass('grayed-out')) {
             // this item is locked - do nothing
-        } else { // else toggle it in the sidebar
-            var classToShow = '.' + $(this).attr('id');
-            $(classToShow).toggle();
+            e.preventDefault();
+            return;
         }
-    })
+        // toggle item in the sidebar
+        var $elToChange = $( '.' + $this.attr('id') );
+        if ( $this.prop('checked') ) {
+          $elToChange.show();
+        } else {
+          $elToChange.hide();
+        }
+    });
 
-
+    // If OpenShift Dedicated is selected, disable private hosting options
+    function updateOpenshiftDedicated() {
+      let $privateChecks = $('#private .iaas-check');
+      if ( $('#openshift-dedicated').prop('checked') ) {
+        $privateChecks
+          .prop('checked', false)
+          .change()
+          .addClass('grayed-out');
+      } else {
+        $privateChecks.removeClass('grayed-out');
+      }
+    }
+    // Call the function on init in case the checkbox is already checked
+    updateOpenshiftDedicated();
+    $('#openshift-dedicated').on('change', function(e) {
+      updateOpenshiftDedicated();
+    });
 
     // uncheck selections on click 'remove'
     $('.remove').on('click', function(e) {
@@ -215,8 +247,8 @@ function buildConfirmationPage() {
         var string = vars[i].split("=")[0];
         var imageClass = $('#confirmation .' + string);
 
-        // exception to the pattern  - source control management
-        if (string === 'source-control-management') {
+        // exceptions to the pattern
+        if (string === 'source-control-management' || string === 'public-cloud') {
             var value = vars[i].split("=")[1];
             imageClass = $('#confirmation .' + value);
         }
@@ -323,55 +355,6 @@ function buildSocialLinks() {
 
 }
 
-
-
-
-
-
-
-
-
-/* for reference - not in use currently */
-function equalizeHeights() {
-    console.log('inside equalizeHeights...')
-    if ($(window).width() > 1024) {
-        console.log('inside equalizeHeights > 1024...')
-            // infrastructure sections with borders- make right side equal height of left side
-        $('#identity-management-conf').height($('#networking-conf').height()).css('padding-top', '25px');
-        $('#certificate-management-conf').height($('#storage-conf').height()).css('padding-top', '25px');
-
-        // make grey dividers equal heights
-        $('#private-conf.conf-section').height($('#oddball-row').height());
-        $('#public-conf.conf-section').height($('#oddball-row').height());
-
-        // make automation vertical same height as 4 stacked rows
-        /*var borderWidth = 10;
-        var startFromBottomOfDiv = $('#iaas-row .conf-body').offset().top + $('#iaas-row .conf-body')[0].offsetHeight - borderWidth;
-        var distance = startFromBottomOfDiv - $('#confirmation').offset().top;
-
-        $('#automation-conf').height(distance);*/
-
-        // center automation vertical image - css bug with printing html2canvas workaround
-        var fixSpacing = 40
-        var matchToContainerPlatform = $('#container-platform-row').offset().top - $('#automation-conf .conf-body').offset().top - fixSpacing
-
-        $('#automation-conf .ansible').css('padding-top', matchToContainerPlatform)
-    } else {
-
-        $('#identity-management-conf').css('height', 'auto').css('padding', '20px');
-        $('#certificate-management-conf').css('height', 'auto').css('padding', '20px');
-
-        // auto height on smaller screens
-        $('#private-conf.conf-section').css('height', 'auto');
-        $('#public-conf.conf-section').css('height', 'auto');
-
-        // auto height on smaller screens
-        $('#automation-conf').css('height', 'auto');
-
-        // padding on smaller screens
-        $('#automation-conf .ansible').css('padding', '20px')
-    }
-}
 function callStack(projName, username, gitRepo) {
 
     projName  = (projName === undefined) ? "" : projName;
