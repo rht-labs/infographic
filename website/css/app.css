@@ -1345,14 +1345,21 @@ ul.parsley-errors-list li {
     padding-left: 100px;
 }
 
-#private-conf {
-    padding-right: 25px;
-    padding-left: 5px;
+#managed-conf {
+  padding-right: 15px;
+  padding-left: 5px;
 }
 
+#private-conf,
 #public-conf {
-    padding-left: 25px;
-    padding-right: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#managed-conf,
+#private-conf,
+#public-conf {
+  min-height: 245px;
 }
 
 #management-conf {
