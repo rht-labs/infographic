@@ -369,7 +369,8 @@ function callStack(projName, username, gitRepo) {
             input: [
                 '<fieldset>',
                 '<label for="projectName">Project Name</label>',
-                '<input type="text" name="projectName" id="projectName" value="' + projName + '" required/>',
+                '<input type="text" name="projectName" id="projectName" value="' + projName + '"\
+                  required pattern="[a-z0-9]([-a-z0-9]*[a-z0-9])?" />',
                 '<label for="username">Username</label>',
                 '<input type="text" name="username" id="username" value="' + username + '" required/>',
                 '<label for="password">Password</label>',
@@ -395,6 +396,12 @@ function callStack(projName, username, gitRepo) {
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'>Failed: " + message + '</div>'})});
                 }
             }
+        });
+        $('#projectName').on('input', function() {
+          this.setCustomValidity('');
+          if (!this.validity.valid && this.value !== '') {
+            this.setCustomValidity('Please use only lowercase letters, numbers, and dashes.');
+          }
         });
     } else {
         console.log('redirecting');
