@@ -348,7 +348,7 @@
                     <!-- B2.S1.Row 1 -->
                     <div class="row">
                       <div class="medium-3 columns last">
-                        <input id="jenkins" type="checkbox" value="true" name="jenkins" checked="checked" class="locked">
+                        <input id="jenkins" type="checkbox" value="true" name="jenkins" checked="checked" disabled="disabled" class="locked devops-check">
                         <label for="jenkins" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Jenkins—a cross-platform, continuous integration and continuous delivery application that increases productivity."><img src="images/devops-tools/cont-int-cont-del/jenkins.png" class="checkbox-image" /></label>
                         <span class="text">Jenkins</span>
                       </div>
@@ -566,17 +566,17 @@
                       <!-- B3.S1.Row 1 -->
                       <div class="row">
                         <div class="medium-3 columns">
-                          <input id="rh-openshift-ent" type="checkbox" name="rh-openshift-ent" checked="checked" class="locked" value="true">
+                          <input id="rh-openshift-ent" type="checkbox" name="rh-openshift-ent" checked="checked" disabled="disabled" class="locked container-check" value="true">
                           <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/container-platform/rhel/rh-openshift-ent.png" class="checkbox-image" /></label>
                           <span class="text">OpenShift</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="kubernetes" type="checkbox" name="kubernetes" checked="checked" class="locked" value="true">
+                          <input id="kubernetes" type="checkbox" name="kubernetes" checked="checked" disabled="disabled" class="locked container-check" value="true">
                           <label for="kubernetes" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Kubernetes—an open source container cluster manager."><img src="images/container-platform/rhel/kubernetes.png" class="checkbox-image" /></label>
                           <span class="text">Kubernetes</span>
                         </div>
                         <div class="medium-3 columns end">
-                          <input id="docker" type="checkbox" name="docker" checked="checked" class="locked" value="true">
+                          <input id="docker" type="checkbox" name="docker" checked="checked" disabled="disabled" class="locked container-check" value="true">
                           <label for="docker" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Docker—an open platform for developers and system admins to build, ship, and run distributed applications on laptops, datacenter VMs, or in the cloud."><img src="images/container-platform/rhel/docker.png" class="checkbox-image" /></label>
                           <span class="text">Docker</span>
                         </div>
@@ -590,22 +590,22 @@
                       <!-- B3.S2.Row 1 -->
                       <div class="row">
                         <div class="medium-3 columns">
-                          <input id="cluster-metrics" type="checkbox" name="cluster-metrics" value="true" checked="checked" class="locked">
+                          <input id="cluster-metrics" type="checkbox" name="cluster-metrics" value="true" checked="checked"  disabled="disabled" class="locked container-check">
                           <label for="cluster-metrics" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Cluster Metrics—a way to centralize metrics collected in a node cluster, yielding a single metrics report. "><img src="images/container-platform/monitoring-logging/cluster-metrics.png" class="checkbox-image" /></label>
                           <span class="text">ClusterMetrics</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="elasticsearch" type="checkbox" name="elasticsearch" value="true" checked="checked" class="locked">
+                          <input id="elasticsearch" type="checkbox" name="elasticsearch" value="true" checked="checked"  disabled="disabled" class="locked container-check">
                           <label for="elasticsearch" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="ElasticSearch—a distributed, open source search and analytics engine designed for horizontal scalability, reliability, and easy management."><img src="images/container-platform/monitoring-logging/elasticsearch.png" class="checkbox-image" /></label>
                           <span class="text">Elasticsearch</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="fluentd" type="checkbox" name="fluentd" value="true" checked="checked" class="locked">
+                          <input id="fluentd" type="checkbox" name="fluentd" value="true" checked="checked" disabled="disabled" class="locked container-check">
                           <label for="fluentd" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Fluentd—an open source data collector that unifies data collection and consumption."><img src="images/container-platform/monitoring-logging/fluentd.png" class="checkbox-image" /></label>
                           <span class="text">Fluentd</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="kibana" type="checkbox" name="kibana" value="true" checked="checked" class="locked">
+                          <input id="kibana" type="checkbox" name="kibana" value="true" checked="checked" disabled="disabled" class="locked container-check">
                           <label for="kibana" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Kibana—an open source data visualization platform that shows data graphically in combined custom dashboards."><img src="images/container-platform/monitoring-logging/kibana.png" class="checkbox-image" /></label>
                           <span class="text">Kibana</span>
                         </div>
@@ -613,7 +613,7 @@
                       <!-- B3.S2 Row 2 -->
                       <div class="row">
                         <div class="medium-3 columns end">
-                          <input id="sysdig" type="checkbox" name="sysdig" value="true">
+                          <input id="sysdig" type="checkbox" name="sysdig" value="true" class="container-check">
                           <label for="sysdig" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Sysdig—a unified approach to container security, monitoring, and forensics."><img src="images/container-platform/monitoring-logging/sysdig.png" class="checkbox-image" /></label>
                           <span class="text">Sysdig</span>
                         </div>
@@ -678,13 +678,6 @@
                         <label for="baremetal" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Bare metal server—a server that provides a non-virtualized compute infrastructure, meaning that unlike a public cloud, there is no hypervisor that creates virtual machines."><img src="images/iaas/private/baremetal.png" class="checkbox-image" /></label>
                         <span class="text">Bare Metal</span>
                       </div>
-                      <!--
-                      <div class="medium-3 columns">
-                      <input id="vmware" type="checkbox" class="iaas-check" name="vmware" checked="checked" class="grayed-out" value="true">
-                      <label for="vmware" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="VMware—software that lets you quickly, seamlessly, and securely extend your datacenter into the cloud using the tools and processes you already have."><img src="images/iaas/private/vmware.png" class="checkbox-image" /></label>
-                      <span class="text">VMWare</span>
-                    </div>
-                  -->
                 </div>
               </fieldset>
             </span>
@@ -724,12 +717,12 @@
                 <!-- B4.S4.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
-                    <input id="rh-satellite" type="checkbox" name="rh-satellite" checked="checked" class="locked custom-checkbox" value="true">
+                    <input id="rh-satellite" type="checkbox" name="rh-satellite" checked="checked" disabled="disabled" class="locked custom-checkbox" value="true">
                     <label for="rh-satellite" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Satellite—an open source systems management product that allows system administrators to deploy, manage, and monitor Red Hat Enterprise Linux® and Solaris hosts."><img src="images/iaas/management/rh-satellite.png" class="checkbox-image" /> </label>
                     <span class="text">Red Hat Satellite</span>
                   </div>
                   <div class="medium-3 columns end">
-                    <input id="rh-cloudforms" type="checkbox" name="rh-cloudforms" checked="checked" class="locked" value="true">
+                    <input id="rh-cloudforms" type="checkbox" name="rh-cloudforms" checked="checked" disabled="disabled" class="locked" value="true">
                     <label for="rh-cloudforms" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat CloudForms—a hybrid cloud management product that manages private clouds, virtual environments, and public clouds all with one interface. "><img src="images/iaas/management/rh-cloudforms.png" class="checkbox-image" /></label>
                     <span class="text">Red Hat CloudForms</span>
                   </div>
@@ -743,7 +736,7 @@
                 <!-- B4.S4.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns end">
-                    <input id="open-vswitch" type="checkbox" name="open-vswitch" checked="checked" class="locked" value="true">
+                    <input id="open-vswitch" type="checkbox" name="open-vswitch" checked="checked" disabled="disabled" class="locked" value="true">
                     <label for="open-vswitch" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Open vSwitch (OVS)—a production-quality open-source implementation of a distributed virtual multilayer switch."><img src="images/iaas/networking/open-vswitch.png" class="checkbox-image" /></label>
                     <span class="text">Open vSwitch</span>
                   </div>
@@ -757,12 +750,12 @@
                 <!-- B4.S5.Row 1 -->
                 <div class="row">
                   <div class="medium-3 columns">
-                    <input id="rh-gluster-storage" type="checkbox" name="rh-gluster-storage" checked="checked" class="locked" value="true">
+                    <input id="rh-gluster-storage" type="checkbox" name="rh-gluster-storage" checked="checked" disabled="disabled" class="locked" value="true">
                     <label for="rh-gluster-storage" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Gluster Storage—an open source product that lets you easily manage a continuous storage platform for physical, virtual, and cloud resources."><img src="images/iaas/storage/rh-gluster-storage.png" class="checkbox-image" /></label>
                     <span class="text">Red Hat Gluster Storage</span>
                   </div>
                   <div class="medium-3 columns end">
-                    <input id="rh-ceph-storage" type="checkbox" name="rh-ceph-storage" checked="checked" class="locked" value="true">
+                    <input id="rh-ceph-storage" type="checkbox" name="rh-ceph-storage" checked="checked" disabled="disabled" class="locked" value="true">
                     <label for="rh-ceph-storage" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Ceph Storage—an open source product of software-defined storage that flexibly and affordably manages data growth by storing data in the cloud."><img src="images/iaas/storage/rh-ceph-storage.png" class="checkbox-image" /></label>
                     <span class="text">Red Hat Ceph Storage</span>
                   </div>

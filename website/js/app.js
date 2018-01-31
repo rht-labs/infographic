@@ -77,11 +77,6 @@ $(document).ready(function() {
     // show and hide sidebar selections based on checkbox selections
     $('input:checkbox').on('change', function(e) {
         var $this = $(this);
-        if ($this.hasClass('locked') || $this.hasClass('grayed-out')) {
-            // this item is locked - do nothing
-            e.preventDefault();
-            return;
-        }
         // toggle item in the sidebar
         var $elToChange = $( '.' + $this.attr('id') );
         if ( $this.prop('checked') ) {
@@ -97,10 +92,13 @@ $(document).ready(function() {
       if ( $('#openshift-dedicated').prop('checked') ) {
         $privateChecks
           .prop('checked', false)
-          .change()
-          .addClass('grayed-out');
+          .prop('disabled', true)
+          .addClass('locked')
+          .change();
       } else {
-        $privateChecks.removeClass('grayed-out');
+        $privateChecks
+          .removeClass('locked')
+          .prop('disabled', false);
       }
     }
     // Call the function on init in case the checkbox is already checked
@@ -224,25 +222,7 @@ function buildSidebar() {
         var lockedIcon = '<img src="images/lock.png" class="locked-icon" />'
         $('tr.' + tableRowToShow + ' td.remove').html(lockedIcon);
     });
-
-    // show grayed out forms items dynamically in sidebar w/ gray icon
-    $('input.grayed-out').each(function() {
-
-        // show the table row
-        var tableRowToShow = $(this).attr('id');
-        $('tr.' + tableRowToShow).show();
-
-        // replace the remove option with gray icon
-        var grayIcon = '<img src="images/gray.png" class="locked-icon" />'
-        $('tr.' + tableRowToShow + ' td.remove').html(grayIcon);
-    });
-
 }
-
-
-
-
-
 
 function buildConfirmationPage() {
 
