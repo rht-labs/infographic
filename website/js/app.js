@@ -67,8 +67,18 @@ $(document).ready(function() {
     });
 
     // init parsley
-    $('#form').parsley();
-
+    (function() {
+      var $errorContainer = $('.error-container');
+      var $page = $('html, body');
+      var errorOffset = 20;
+      $('#form')
+        .parsley()
+        .on('field:error', function() {
+          $page.animate({
+            scrollTop: $errorContainer.position().top - errorOffset
+          }, 300);
+        });
+    })();
 
     // dynamically build sidebar based on form HTML
     buildSidebar();
