@@ -3,6 +3,13 @@ $(document).ready(function() {
     // init foundation
     $(document).foundation()
 
+    // If this flag is set, allow the user to kick off an Ansible job
+    window.rhtLabsInternal = (getQueryVariable('internal') === 'true');
+    if (window.rhtLabsInternal) {
+      // Persist internal flag when form is submitted.
+      $('#form').append('<input type="hidden" name="internal" value="true" />');
+    }
+
     var docWidth = $(document).width();
     console.log(docWidth);
 
@@ -166,7 +173,6 @@ $(document).ready(function() {
     })
 
 });
-
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
