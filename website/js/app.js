@@ -406,7 +406,3 @@ function callStack(projName, username, gitRepo) {
 
     return false;
 }
-
-if (window.rhtLabsInternal){
-    $("#form").attr("action", 'internal.html');
-}
