@@ -1958,6 +1958,22 @@ ul.parsley-errors-list li {
   color: black;
 }
 
+.vex.vex-theme-plain .vex-dialog-form .vex-dialog-input input.dirty[type="text"]:invalid {
+  border: 2px solid #bc202a;
+}
+
+.custom-error {
+  display: none;
+  color: #bc202a;
+  font-size: .875rem;
+  line-height: 1rem;
+  margin-bottom: .25rem;
+}
+
+.dirty:invalid + .custom-error {
+  display: block;
+}
+
 
 /* CONFIRMATION PAGE - Large and up */
 

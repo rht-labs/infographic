@@ -367,6 +367,7 @@ function callStack(projName, username, gitRepo) {
                 '<label for="projectName">Project Name</label>',
                 '<input type="text" name="projectName" id="projectName" value="' + projName + '"\
                   required pattern="[a-z0-9]([-a-z0-9]*[a-z0-9])?" />',
+                '<span class="custom-error">Project name is required and must contain only lowercase letters, numbers, and dashes.</span>',
                 '<label for="username">Username</label>',
                 '<input type="text" name="username" id="username" value="' + username + '" required/>',
                 '<label for="password">Password</label>',
@@ -393,12 +394,16 @@ function callStack(projName, username, gitRepo) {
                 }
             }
         });
-        $('#projectName').on('input', function() {
-          this.setCustomValidity('');
-          if (!this.validity.valid && this.value !== '') {
-            this.setCustomValidity('Please use only lowercase letters, numbers, and dashes.');
-          }
-        });
+        $('#projectName')
+          .on('input', function() {
+            this.setCustomValidity('');
+            if (!this.validity.valid && this.value !== '') {
+              this.setCustomValidity('Please use only lowercase letters, numbers, and dashes.');
+            }
+          })
+          .on('blur', function() {
+            $(this).addClass('dirty');
+          });
     } else {
         console.log('redirecting');
         window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
