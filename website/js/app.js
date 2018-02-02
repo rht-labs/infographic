@@ -3,6 +3,13 @@ $(document).ready(function() {
     // init foundation
     $(document).foundation()
 
+    // If this flag is set, allow the user to kick off an Ansible job
+    window.rhtLabsInternal = (getQueryVariable('internal') === 'true');
+    if (window.rhtLabsInternal) {
+      // Persist internal flag when form is submitted.
+      $('#form').append('<input type="hidden" name="internal" value="true" />');
+    }
+
     var docWidth = $(document).width();
     console.log(docWidth);
 
@@ -60,8 +67,18 @@ $(document).ready(function() {
     });
 
     // init parsley
-    $('#form').parsley();
-
+    (function() {
+      var $errorContainer = $('.error-container');
+      var $page = $('html, body');
+      var errorOffset = 20;
+      $('#form')
+        .parsley()
+        .on('field:error', function() {
+          $page.animate({
+            scrollTop: $errorContainer.position().top - errorOffset
+          }, 300);
+        });
+    })();
 
     // dynamically build sidebar based on form HTML
     buildSidebar();
@@ -70,11 +87,6 @@ $(document).ready(function() {
     // show and hide sidebar selections based on checkbox selections
     $('input:checkbox').on('change', function(e) {
         var $this = $(this);
-        if ($this.hasClass('locked') || $this.hasClass('grayed-out')) {
-            // this item is locked - do nothing
-            e.preventDefault();
-            return;
-        }
         // toggle item in the sidebar
         var $elToChange = $( '.' + $this.attr('id') );
         if ( $this.prop('checked') ) {
@@ -90,10 +102,13 @@ $(document).ready(function() {
       if ( $('#openshift-dedicated').prop('checked') ) {
         $privateChecks
           .prop('checked', false)
-          .change()
-          .addClass('grayed-out');
+          .prop('disabled', true)
+          .addClass('locked')
+          .change();
       } else {
-        $privateChecks.removeClass('grayed-out');
+        $privateChecks
+          .removeClass('locked')
+          .prop('disabled', false);
       }
     }
     // Call the function on init in case the checkbox is already checked
@@ -167,7 +182,6 @@ $(document).ready(function() {
 
 });
 
-
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -218,25 +232,7 @@ function buildSidebar() {
         var lockedIcon = '<img src="images/lock.png" class="locked-icon" />'
         $('tr.' + tableRowToShow + ' td.remove').html(lockedIcon);
     });
-
-    // show grayed out forms items dynamically in sidebar w/ gray icon
-    $('input.grayed-out').each(function() {
-
-        // show the table row
-        var tableRowToShow = $(this).attr('id');
-        $('tr.' + tableRowToShow).show();
-
-        // replace the remove option with gray icon
-        var grayIcon = '<img src="images/gray.png" class="locked-icon" />'
-        $('tr.' + tableRowToShow + ' td.remove').html(grayIcon);
-    });
-
 }
-
-
-
-
-
 
 function buildConfirmationPage() {
 
@@ -369,7 +365,9 @@ function callStack(projName, username, gitRepo) {
             input: [
                 '<fieldset>',
                 '<label for="projectName">Project Name</label>',
-                '<input type="text" name="projectName" id="projectName" value="' + projName + '" required/>',
+                '<input type="text" name="projectName" id="projectName" value="' + projName + '"\
+                  required pattern="[a-z0-9]([-a-z0-9]*[a-z0-9])?" />',
+                '<span class="custom-error">Project name is required and must contain only lowercase letters, numbers, and dashes.</span>',
                 '<label for="username">Username</label>',
                 '<input type="text" name="username" id="username" value="' + username + '" required/>',
                 '<label for="password">Password</label>',
@@ -396,14 +394,20 @@ function callStack(projName, username, gitRepo) {
                 }
             }
         });
+        $('#projectName')
+          .on('input', function() {
+            this.setCustomValidity('');
+            if (!this.validity.valid && this.value !== '') {
+              this.setCustomValidity('Please use only lowercase letters, numbers, and dashes.');
+            }
+          })
+          .on('blur', function() {
+            $(this).addClass('dirty');
+          });
     } else {
         console.log('redirecting');
         window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
     }
 
     return false;
-}
-
-if (window.rhtLabsInternal){
-    $("#form").attr("action", 'internal.html');
 }
