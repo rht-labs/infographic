@@ -20,7 +20,7 @@ In OpenShift, the front end and back end are hosted as separate applications, us
 ## Important paths
 
 - `/index.html`: The public-facing infographic page. Clicking the "build" button takes the user to the Open Innovation Labs website.
-- `/internal.html`: The "internal" version of infographic. Clicking the "build" button kicks off an Ansible Tower job.
+- `/index.html?internal=true`: The "internal" version of infographic. Clicking the "build" button kicks off an Ansible Tower job.
 - `/stack`: The node.js API that the front end hits when the user clicks the "build" button. This API passes the request on to Ansible Tower.
 
 ## Icon conventions
