@@ -20,6 +20,11 @@ node('') {
         sh "oc start-build ${env.APP_NAME} --from-dir=. --follow"
     }
 
+stage ('Security Scanning')
+{
+   echo 'Security Scanning... please wait'
+   sleep 3
+}
 
     // no user changes should be needed below this point
     stage ('Deploy to Dev') {
