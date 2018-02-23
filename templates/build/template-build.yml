@@ -64,10 +64,6 @@ objects:
     labels:
       application: "${APPLICATION_NAME}"
   spec:
-    triggers:
-    - type: ConfigChange
-    - type: ImageChange
-      imageChange: {}
     source:
       type: Git
       git:
