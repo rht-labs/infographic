@@ -224,48 +224,24 @@ table tbody th {
     background: linear-gradient(to right bottom, #C91517 50%, #A31916 50%);
 }
 
-.arrow_box {
+.submit_box {
     font-family: 'Overpass_Bold';
     font-size: 22px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
+    line-height: 42px;
     background: linear-gradient(to right bottom, #C91517 50%, #A31916 50%);
     padding: 20px 60px;
     width: 125px;
     height: 60px;
-    top: 87%;
+    bottom: 15px;
     padding-top: 10px;
     padding-right: 0px;
     padding-left: 0px;
     display: block;
     position: fixed;
     right: 15px;
-    /*left: 83%;*/
-}
-
-.arrow_box:after,
-.arrow_box:before {
-    top: 100%;
-    left: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
-.arrow_box:after {
-    border-color: rgba(136, 183, 213, 0);
-    border-top-color: #A31916;
-    border-width: 20px;
-    margin-left: -20px;
-}
-
-.arrow_box:before {
-    border-width: 26px;
-    margin-left: -26px;
 }
 
 .stack-text {
@@ -1606,7 +1582,7 @@ ul.parsley-errors-list li {
         font-size: 18px;
         line-height: 18px;
     }
-    .arrow_box {
+    .submit_box {
         right: 15px !important;
     }
     .stack-text {
@@ -1674,7 +1650,7 @@ ul.parsley-errors-list li {
         padding-left: 15px;
         padding-right: 15px;
     }
-    .arrow_box {
+    .submit_box {
         right: 15px !important;
     }
 }
@@ -1689,7 +1665,7 @@ ul.parsley-errors-list li {
         line-height: 18px;
         margin-top: 44px;
     }
-    .arrow_box {
+    .submit_box {
         right: 15px !important;
     }
 }
