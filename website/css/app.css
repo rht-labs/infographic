@@ -695,6 +695,7 @@ input:focus {
     background: #fff;
     color: #020000;
     padding: 10px 15px;
+    min-height: 100px;
 }
 
 .acc-content {
@@ -1832,8 +1833,9 @@ ul.parsley-errors-list li {
         padding-left: 15px;
         padding-right: 15px;
     }
-    .submit_box {
-        right: 15px !important;
+
+    .acc-right {
+      min-height: 0;
     }
 }
 
