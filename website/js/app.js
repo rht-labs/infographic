@@ -15,22 +15,11 @@ $(document).ready(function() {
 
     // window.onresize = getArrowPosition();
 
-    $(window).resize(function() {
-        if (docWidth >= 1250) {
-            var arrowRight = docWidth - 1200;
-            arrowRight = arrowRight / 2 + "px";
-            document.getElementById("submitBox").style.right = arrowRight;
-            console.log(arrowRight + "set the right style");
-        }
+    $('#submitBox').on('click', function() {
+      // We have to place this box outside the form so that position: sticky works
+      // the way we want, so we'll hook up the submit via JS.
+      $('#form').submit();
     });
-
-    if (docWidth >= 1250) {
-        var arrowRight = docWidth - 1230;
-        arrowRight = arrowRight / 2 + "px";
-        document.getElementById("submitBox").style.right = arrowRight;
-        console.log(arrowRight + "set the right style");
-    }
-
 
     // init accordion
     $("#accordion").accordion({
@@ -160,8 +149,11 @@ $(document).ready(function() {
 
 
     // fancy stuff
-    var submitted = getQueryVariable('submit')
-    if (submitted == 'Submit') {
+    // "submitted" is a hidden field in the form that confirms that the form has
+    //  been submitted (as opposed to a query string such as "?internal=true"
+    // being added).
+    var submitted = getQueryVariable('submitted')
+    if (submitted == 'submitted') {
         console.log('loading page submitted with GET variables in URL');
         $('#confirmation').show();
         $('.share-row').show();

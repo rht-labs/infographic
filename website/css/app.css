@@ -240,9 +240,9 @@ table tbody th {
     padding-right: 0px;
     padding-left: 0px;
     display: block;
-    position: fixed;
-    right: 15px;
-    z-index: 2; /* Position over footer. Ideally, this should not overlap with the footer. */
+    position: sticky;
+    float: right;
+    margin-right: 15px;
 }
 
 .stack-text {
@@ -1564,7 +1564,7 @@ ul.parsley-errors-list li {
     background: #000;
     font-size: 18px;
     line-height: 1.444;
-    margin-top: 60px;
+    margin-top: 75px;
 
     color: #646464;
     font-family: "Overpass",Overpass,Helvetica,helvetica,arial,sans-serif;
