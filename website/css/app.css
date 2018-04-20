@@ -242,6 +242,7 @@ table tbody th {
     display: block;
     position: fixed;
     right: 15px;
+    z-index: 2; /* Position over footer. Ideally, this should not overlap with the footer. */
 }
 
 .stack-text {
@@ -1553,6 +1554,187 @@ ul.parsley-errors-list li {
         display: none !important;
     }
 }
+
+/* FOOTER */
+
+.footer-main {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: #000;
+    font-size: 18px;
+    line-height: 1.444;
+    margin-top: 60px;
+
+    color: #646464;
+    font-family: "Overpass",Overpass,Helvetica,helvetica,arial,sans-serif;
+}
+
+.footer-main * {
+  box-sizing: border-box;
+}
+
+.footer-main .traditional {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.footer-main .container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+  max-width: 1170px;
+}
+
+.footer-main section,
+.footer-main .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.footer-main .traditional-primary {
+  width: 33.33333%;
+  float: right;
+
+  display: none; /* TODO: Finish styling */
+
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer-main .event-logo {
+  float: left;
+  width: 50%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer-main ul {
+  margin: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.footer-main .social-links ul {
+  padding: 8px 0;
+}
+
+.footer-main .social-links li {
+  margin-right: 0;
+  padding: 0;
+  width: 20%;
+  float: left;
+  text-align: center;
+  display: inline-block;
+}
+
+.footer-main .social-links a {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-main .social-links a::before {
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.footer-main .icon-google-plus::before {
+  content: "\f112";
+}
+
+.footer-main .icon-linkedin-sign::before {
+  content: "\f117";
+}
+
+.footer-main .icon-youtube::before {
+  content: "\f127";
+}
+
+.footer-main .icon-facebook::before {
+  content: "\f10f";
+}
+
+.footer-main .icon-twitter::before {
+  content: "\f124";
+}
+
+.footer-main .menu > li > a {
+  /* Override foundation */
+  padding: 0;
+  display: inline;
+}
+
+.footer-main .legal .menu,
+.footer-main .legal .menu a {
+  line-height: 3.4;
+}
+
+.footer-main .legal,
+.footer-main .legal .menu {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer-main .legal {
+  line-height: 3.4;
+  float: left;
+  width: 66.66667%;
+}
+
+
+.footer-main .legal .menu {
+  float: right;
+  width: 66.66667%;
+}
+
+.footer-main .legal li:first-child {
+  margin-right: 22ppx;
+}
+
+.footer-main .legal li {
+  float: left;
+  padding: 0;
+  margin-right: 8px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.footer-main .legal .last a {
+  border-left: 1px solid #858585;
+  padding-left: 10px;
+}
+
+.footer-main .legal a {
+  color: #858585;
+  text-decoration: none;
+}
+
+.footer-main .legal .copyright {
+  float: left;
+  width: 33.33333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 12px;
+}
+
 
 
 /* HOME PAGE MEDIA QUERIES */
