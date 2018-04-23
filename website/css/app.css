@@ -1568,7 +1568,7 @@ ul.parsley-errors-list li {
     margin-top: 75px;
 
     color: #646464;
-    font-family: "Overpass",Overpass,Helvetica,helvetica,arial,sans-serif;
+    font-family: "Overpass_Regular",Overpass,Helvetica,helvetica,arial,sans-serif;
 }
 
 .footer-main * {
@@ -1705,7 +1705,7 @@ ul.parsley-errors-list li {
 }
 
 .footer-main .legal li:first-child {
-  margin-right: 22ppx;
+  margin-right: 22px;
 }
 
 .footer-main .legal li {
