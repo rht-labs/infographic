@@ -15,6 +15,26 @@
     src: url('../fonts/Overpass_Regular.woff2') format('woff2'), url('../fonts/Overpass_Regular.woff') format('woff'), url('../fonts/Overpass_Regular.ttf') format('truetype')
 }
 
+/* Icon files from https://git.io/vps4o */
+
+@font-face {
+  font-family: "rh-icons";
+  src: url("../fonts/rh-icons.eot");
+  src: url("../fonts/rh-icons.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/rh-icons.woff") format("woff"),
+       url("../fonts/rh-icons.ttf") format("truetype"),
+       url("../fonts/rh-icons.svg#rh-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "rh-icons";
+    src: url("../fonts/rh-icons.svg#rh-icons") format("svg");
+  }
+}
+
 html,
 body {
     height: 100%;
@@ -1599,8 +1619,6 @@ ul.parsley-errors-list li {
   width: 33.33333%;
   float: right;
 
-  display: none; /* TODO: Finish styling */
-
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1622,8 +1640,14 @@ ul.parsley-errors-list li {
   text-align: left;
 }
 
+.footer-main .social-links {
+  float: left;
+  width: 50%;
+}
+
 .footer-main .social-links ul {
-  padding: 8px 0;
+  padding: 4px 0;
+  overflow: hidden;
 }
 
 .footer-main .social-links li {
@@ -1642,6 +1666,10 @@ ul.parsley-errors-list li {
   text-decoration: none;
 }
 
+.footer-main .social-links a:hover {
+  color: #d2d3d4;
+}
+
 .footer-main .social-links a::before {
   speak: none;
   font-style: normal;
@@ -1651,26 +1679,27 @@ ul.parsley-errors-list li {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'rh-icons';
 }
 
 .footer-main .icon-google-plus::before {
-  content: "\f112";
+  content: "\f1be";
 }
 
 .footer-main .icon-linkedin-sign::before {
-  content: "\f117";
+  content: "\f1c3";
 }
 
 .footer-main .icon-youtube::before {
-  content: "\f127";
+  content: "\f1d3";
 }
 
 .footer-main .icon-facebook::before {
-  content: "\f10f";
+  content: "\f1bb";
 }
 
 .footer-main .icon-twitter::before {
-  content: "\f124";
+  content: "\f1d0";
 }
 
 .footer-main .menu > li > a {
@@ -1681,7 +1710,7 @@ ul.parsley-errors-list li {
 
 .footer-main .legal .menu,
 .footer-main .legal .menu a {
-  line-height: 3.4;
+  line-height: 3.3;
 }
 
 .footer-main .legal,
@@ -1735,8 +1764,6 @@ ul.parsley-errors-list li {
   padding-right: 15px;
   font-size: 12px;
 }
-
-
 
 /* HOME PAGE MEDIA QUERIES */
 
