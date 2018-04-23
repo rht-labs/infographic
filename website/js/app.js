@@ -260,6 +260,13 @@ function buildConfirmationPage() {
     positionArrow('#container-platform-row');
     positionArrow('#iaas-row');
 
+    $('#back-home').on('click', function(event) {
+      // Remove query string, navigating from the confirmation page back to the
+      // homepage.
+      event.preventDefault();
+      window.location = window.location.toString().split('?')[0];
+    })
+
     buildSocialLinks();
 
     $('.links-row').show();
