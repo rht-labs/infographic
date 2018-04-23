@@ -389,11 +389,6 @@ table td.remove .locked-icon {
     padding: 10px;
 }
 
-.selection-sidebar-bottom {
-    text-align: right;
-    margin-bottom: 200px;
-}
-
 table {
     margin: 0;
     padding: 0;
@@ -1039,14 +1034,12 @@ ul.parsley-errors-list {
 
 ul.parsley-errors-list li {
     background: #fff;
-    padding: 20px;
+    padding: 10px;
     margin: 20px 0;
     border: 10px solid #d8dcdd;
     list-style-type: none;
     color: #bc202a;
-    ;
 }
-
 
 /* confirmation page styles */
 
@@ -1763,6 +1756,67 @@ ul.parsley-errors-list li {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 12px;
+}
+
+/* Footer on medium screens */
+
+@media screen and (max-width: 1200px) {
+  .footer-main .container {
+    max-width: 970px;
+  }
+
+  .footer-main .legal .copyright {
+    float: none;
+    width: 100%;
+    clear: both;
+  }
+
+  .footer-main .legal .menu {
+    float: none;
+    width: auto;
+  }
+
+  .footer-main .legal .menu,
+  /* .footer-main .legal .menu li, */
+  .footer-main .legal .menu a,
+  .footer-main .copyright {
+    line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer-main .container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer-main .container {
+    max-width: none;
+  }
+
+  .footer-main .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .footer-main .legal,
+  .footer-main .traditional-primary,
+  .footer-main .event-logo,
+  .footer-main .social-links {
+    float: none;
+    width: 100%;
+  }
+
+  .footer-main .social-links li {
+    width: auto;
+    margin-right: 24px;
+  }
+
+  .footer-main .social-links {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 /* HOME PAGE MEDIA QUERIES */
