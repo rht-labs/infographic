@@ -1841,6 +1841,7 @@ ul.parsley-errors-list li {
     }
     .acc-title {
         padding-left: 10px;
+        max-width: calc(100% - 35px);
     }
     .acc-title h2 {
         font-size: 18px;
