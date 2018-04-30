@@ -562,7 +562,7 @@
                   </div>
                 </div>
                 <div class="acc-right">
-                  <p>The Container Platform layer, powered by Red Hat® OpenShift, provides Docker and Kubernetes, along with a rich set of tools for monitoring and logging.</p>
+                  <p>The Container Platform layer, powered by Red Hat<sup>®</sup> OpenShift, provides Docker and Kubernetes, along with a rich set of tools for monitoring and logging.</p>
                 </div>
               </div>
               <div class="border-left border-right">
@@ -943,15 +943,57 @@
           </ul>
         </div>
         <div class="selection-sidebar-bottom">
-          <div class="arrow_box" id="arrowBox">
-            <input class="btn-submit" type="submit" name="submit" value="Submit">
-          </div>
           <div class="error-container"></div>
         </div>
       </div>
     </div>
   </div>
-</form>
+  <input type="hidden" name="submitted" value="submitted">
+  </form>
+  <div class="submit_box" id="submitBox">
+    <button class="btn-submit" type="button">Submit</button>
+  </div>
+
+  <footer class="footer-main">
+    <section class="traditional">
+      <div class="content">
+        <div class="container">
+          <section>
+            <div class="traditional-primary">
+              <div class="row">
+                <div class="event-logo">
+                  <div id="block-block-5" class="block block-block block-footer-promote">
+                    <a href="https://www.redhat.com/summit/"><img src="images/logo-summit.png" alt="Red Hat Summit" style="float: right;"></a>
+                  </div>
+                </div>
+                <div class="social-links">
+                  <nav id="foot-social">
+                    <ul>
+                      <li class="first leaf"><a href="https://plus.google.com/+RedHat" class="icon-google-plus"></a></li>
+                      <li class="leaf"><a href="http://www.linkedin.com/company/red-hat" class="icon-linkedin-sign"></a></li>
+                      <li class="leaf"><a href="http://www.youtube.com/user/RedHatVideos" class="icon-youtube"></a></li>
+                      <li class="leaf"><a href="https://www.facebook.com/redhatinc" class="icon-facebook"></a></li>
+                      <li class="last leaf"><a href="https://twitter.com/RedHat" class="icon-twitter"></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div id="legal" class="legal">
+              <div class="row">
+                <ul class="menu">
+                  <li class="first leaf"><a href="https://www.redhat.com/en/about/privacy-policy">Privacy statement</a></li>
+                  <li class="leaf"><a href="https://www.redhat.com/en/about/terms-use">Terms of use</a></li>
+                  <li class="last leaf"><a href="https://www.redhat.com/en/about/all-policies-guidelines">All policies and guidelines</a></li>
+                </ul>
+                <div class="copyright">Copyright ©2018 Red Hat, Inc.</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </footer>
 </div>
 <!--close #home -->
 <!---
@@ -1447,7 +1489,7 @@ CONFIRMATION PAGE BELOW
       <div class="links-row" data-html2canvas-ignore="true">
         <div class="large-12 columns" data-html2canvas-ignore="true">
           <div id="links" data-html2canvas-ignore="true">
-            <a href="http://redhat.cleandesign.com/my-open-innovation-lab-stack" class="button back-links float-left">Back</a>
+            <button class="button back-links float-left" id="back-home">Back</button>
             <a href="" onclick="return callStack()" class="button back-links float-right">Build my own community-powered tech stack</a>
           </div>
           <!--close links-->
