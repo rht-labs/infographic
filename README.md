@@ -17,6 +17,10 @@ This will start up a local http server using the `website` directory as the root
 
 In OpenShift, the front end and back end are hosted as separate applications, using the templates in the `templates` directory.
 
+## Deploying to Production
+
+On redhat.com, only the front end of the application is hosted. For more information on deploying to this environment, see the [Updating Infographic](https://docs.google.com/document/d/1xPXiBo7X5qTdaMqBCAaapf4RFFIag2Ob5bbg2VITy_A/edit?usp=sharing) document. (This document is available only to users with an `@redhat.com` email address.)
+
 ## Important paths
 
 - `/index.html`: The public-facing infographic page. Clicking the "build" button takes the user to the Open Innovation Labs website.
