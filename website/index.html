@@ -13,7 +13,6 @@
   <meta property="og:image:height" content="600">
   <title>My Open Innovation Labs Technology Stack</title>
   <link rel="stylesheet" href="css/foundation.min.css">
-  <script src="https://use.fontawesome.com/4e2c0cebba.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials.css" />
   <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.2.1/jssocials-theme-flat.css" />
   <link rel="stylesheet" href="css/app.css" type="text/css">
@@ -954,6 +953,17 @@
     <div class="submit_box" id="submitBox">
       <button class="btn-submit" type="button">Submit</button>
     </div>
+    
+    <!-- BEGIN TEMPLATES -->
+    <!-- When JS needs an image URL, store that URL in HTML so that the URL can
+    change across environments. -->
+    <template id="tpl-locked-icon">
+      <img src="images/lock.png" class="locked-icon" />
+    </template>
+    <template id="tpl-delete-icon">
+      <img src="images/delete.png" />
+    </template>
+    <!-- END TEMPLATES -->
 
     <footer class="footer-main">
       <section class="traditional">
