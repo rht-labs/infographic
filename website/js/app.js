@@ -10,11 +10,6 @@ $(document).ready(function() {
       $('#form').append('<input type="hidden" name="internal" value="true" />');
     }
 
-    var docWidth = $(document).width();
-    console.log(docWidth);
-
-    // window.onresize = getArrowPosition();
-
     $('#submitBox').on('click', function() {
       // We have to place this box outside the form so that position: sticky works
       // the way we want, so we'll hook up the submit via JS.
@@ -154,14 +149,11 @@ $(document).ready(function() {
     // being added).
     var submitted = getQueryVariable('submitted')
     if (submitted == 'submitted') {
-        console.log('loading page submitted with GET variables in URL');
         $('#confirmation').show();
         $('.share-row').show();
         buildConfirmationPage();
         $('.match-height').matchHeight();
-        //$('.odd-section-block').matchHeight();
     } else {
-        console.log('loading page CLEAN')
         $('#home').show();
     }
 
@@ -190,6 +182,9 @@ function getQueryVariable(variable) {
 
 
 function buildSidebar() {
+    var lockedIcon = $('#tpl-locked-icon').html();
+    var deleteIcon = $('#tpl-delete-icon').html();
+    
     // for each block section in the form
     $('.block-section').each(function() {
 
@@ -203,14 +198,12 @@ function buildSidebar() {
             var tableRowClass = $(this).closest('.columns').find('input').attr('id');
 
             // build unique table row with that name
-            var buildRow = '<tr class=' + tableRowClass + '><td class="selection">' + $(this).text() + '</td><td class="remove"><span><img src="images/delete.png"></span></td></tr>'
+            var buildRow = '<tr class=' + tableRowClass + '><td class="selection">' + $(this).text() + '</td><td class="remove"><span>' + deleteIcon + '</span></td></tr>';
 
             // update table in sidebar
             $(tableId).append(buildRow);
 
         });
-
-
     });
 
     // show locked forms items dynamically in sidebar w/ lock icon
@@ -221,7 +214,6 @@ function buildSidebar() {
         $('tr.' + tableRowToShow).show();
 
         // replace the remove option with lock icon
-        var lockedIcon = '<img src="images/lock.png" class="locked-icon" />'
         $('tr.' + tableRowToShow + ' td.remove').html(lockedIcon);
     });
 }
@@ -281,7 +273,6 @@ function buildScreenShot() {
         allowTaint: true,
         onrendered: function(canvas) {
             var setWidth = $('#main-graphic').width() + 'px';
-            console.log(setWidth);
             $('.image-container').html(canvas);
             $('.image-container canvas').css("width", setWidth)
 
@@ -382,7 +373,7 @@ function callStack(projName, username, gitRepo) {
             callback: function (data) {
 
                 if (!data) {
-                    console.log('Cancelled')
+                    console.log('Cancelled');
                 } else {
                     $.post('/stack', {projectName: data.projectName, username: data.username, gitRepo: data.gitRepo, buildPassword: data.password, getUrl: window.location.href}, function(result){
                         vex.dialog.alert({ className: 'vex-theme-plain', unsafeMessage: "<div class='vex-labs-alert'><p>" + result.message + "</p>[<a href='" + result.url + "' target='_blank'>open</a>]</div>"});
@@ -404,7 +395,6 @@ function callStack(projName, username, gitRepo) {
             $(this).addClass('dirty');
           });
     } else {
-        console.log('redirecting');
         window.location = 'https://www.redhat.com/en/explore/open-innovation-labs';
     }
 
