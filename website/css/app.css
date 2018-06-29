@@ -1167,7 +1167,7 @@ ul.parsley-errors-list li {
 }
 
 #container-platform-row .conf-section {
-    min-height: auto;
+    min-height: 140px;
 }
 
 #container-platform-row .stripe-border {
