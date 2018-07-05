@@ -2,3 +2,5 @@ node_modules
 *.retry
 *.swp
 .DS_Store
+# index.fragment is a temporary workspace we use when deploying the site.
+index.fragment.html
