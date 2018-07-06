@@ -268,8 +268,8 @@ table tbody th {
     padding-left: 0px;
     display: block;
     position: sticky;
-    float: right;
     margin-right: 15px;
+    margin-left: auto;
 }
 
 .stack-text {
@@ -1585,7 +1585,7 @@ ul.parsley-errors-list li {
     background: #000;
     font-size: 18px;
     line-height: 1.444;
-    margin-top: 75px;
+    margin-top: 15px;
 
     color: #646464;
     font-family: "Overpass_Regular",Overpass,Helvetica,helvetica,arial,sans-serif;
