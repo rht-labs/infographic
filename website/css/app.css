@@ -56,7 +56,10 @@ body {
     padding-right: 0px;
 }
 
-#tech-stack {
+#main-graphic,
+#confirmation-row,
+#home > .row,
+#form {
   overflow: hidden;
 }
 
