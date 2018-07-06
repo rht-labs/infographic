@@ -370,17 +370,17 @@
                       <!-- B2.S2.Row 1 -->
                       <div class="row">
                         <div class="medium-3 columns">
-                          <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                          <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose one option for Source Control Management under Devops Tools.">
                           <label for="bitbucket" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="BitBucket—a web-based hosting service for projects that use either the Mercurial or Git revision control systems, and which offers both commercial plans and free accounts."><img src="images/devops-tools/source-control-management/bitbucket.png" class="checkbox-image" /></label>
                           <span class="text">Bitbucket</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                          <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose one option for Source Control Management under Devops Tools.">
                           <label for="git" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Git—a free and open source distributed version control system designed to handle small and  very large projects with speed and efficiency."><img src="images/devops-tools/source-control-management/git.png" class="checkbox-image" /></label>
                           <span class="text">Git</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose an option for Source Control Management under Devops Tools.">
+                          <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose one option for Source Control Management under Devops Tools.">
                           <label for="github" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitHub (PUBLIC or PRIVATE)—a web-based Git repository hosting service that offers the distributed revision control and source code management (SCM) functionality of Git on top of its own features."><img src="images/devops-tools/source-control-management/github.png" class="checkbox-image" /></label>
                           <span class="text">GitHub</span>
                         </div>
@@ -620,10 +620,15 @@
                         </div>
                         <!-- B3.S2 Row 2 -->
                         <div class="row">
-                          <div class="medium-3 columns end">
+                          <div class="medium-3 columns">
                             <input id="sysdig" type="checkbox" name="sysdig" value="true" class="container-check">
                             <label for="sysdig" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Sysdig—a unified approach to container security, monitoring, and forensics."><img src="images/container-platform/monitoring-logging/sysdig.png" class="checkbox-image" /></label>
                             <span class="text">Sysdig</span>
+                          </div>
+                          <div class="medium-3 columns end">
+                            <input id="dynatrace" type="checkbox" name="dynatrace" value="true" class="container-check">
+                            <label for="dynatrace" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Dynatrace—Full-stack monitoring for applications in the enterprise cloud."><img src="images/container-platform/monitoring-logging/dynatrace.png" class="checkbox-image" /></label>
+                            <span class="text">Dynatrace</span>
                           </div>
                         </div>
                       </fieldset>
@@ -953,7 +958,7 @@
     <div class="submit_box" id="submitBox">
       <button class="btn-submit" type="button">Submit</button>
     </div>
-    
+
     <!-- BEGIN TEMPLATES -->
     <!-- When JS needs an image URL, store that URL in HTML so that the URL can
     change across environments. -->
@@ -1345,12 +1350,15 @@
                       <div class="conf-section-header">
                         <h3>Monitoring and Logging</h3>
                       </div>
-                      <div class="">
+                      <div>
                         <img src="images/container-platform/monitoring-logging/cluster-metrics-print.png" class="cluster-metrics" />
                         <img src="images/container-platform/monitoring-logging/elasticsearch-print.png" class="elasticsearch" />
                         <img src="images/container-platform/monitoring-logging/fluentd-print.png" class="fluentd" />
                         <img src="images/container-platform/monitoring-logging/kibana-print.png" class="kibana" />
                         <img src="images/container-platform/monitoring-logging/sysdig-print-grey.png" class="sysdig" />
+                      </div>
+                      <div>
+                        <img src="images/container-platform/monitoring-logging/dynatrace-print-grey.png" class="dynatrace" />
                       </div>
                     </div>
                     <!-- ICONS END -->
@@ -1517,6 +1525,7 @@
       </div>
       <!-- end html2canvas -->
   </div><!-- end #tech-stack -->
+  <script src="https://use.fontawesome.com/4e2c0cebba.js"></script>
   <script src="js/vendor/jquery.js"></script>
   <script src="js/vendor/what-input.js"></script>
   <script src="js/vendor/foundation.min.js"></script>

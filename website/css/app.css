@@ -56,6 +56,10 @@ body {
     padding-right: 0px;
 }
 
+#tech-stack {
+  overflow: hidden;
+}
+
 .border-all {
     border: 10px solid #d8dcdd !important;
 }
@@ -1163,7 +1167,7 @@ ul.parsley-errors-list li {
 }
 
 #container-platform-row .conf-section {
-    min-height: auto;
+    min-height: 140px;
 }
 
 #container-platform-row .stripe-border {
