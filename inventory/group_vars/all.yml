@@ -6,19 +6,19 @@ openshift_cluster_content:
   - name: "infographic-pipeline"
     template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
     params: "{{ inventory_dir }}/../templates/projectrequest/pipeline.params"
-    template_action: create
+    action: create
   - name: "infographic-dev"
     template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
     params: "{{ inventory_dir }}/../templates/projectrequest/dev.params"
-    template_action: create
+    action: create
   - name: "infographic-uat"
     template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
     params: "{{ inventory_dir }}/../templates/projectrequest/uat.params"
-    template_action: create
+    action: create
   - name: "infographic-test"
     template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
     params: "{{ inventory_dir }}/../templates/projectrequest/test.params"
-    template_action: create
+    action: create
 - object: builds
   content:
   - name: "infographic-pipeline"
