@@ -108,7 +108,7 @@
   .vex.vex-theme-plain .vex-dialog-form .vex-dialog-message {
     margin-bottom: .5em; 
     padding-left: .5em;
-    background-color: #bc202a;
+    background-color: #ee0000;
     color: white;
   }
   .vex.vex-theme-plain .vex-dialog-form .vex-dialog-input {
@@ -166,7 +166,7 @@
           -o-animation: none;
           -webkit-backface-visibility: hidden; } }
     .vex.vex-theme-plain .vex-dialog-button.vex-dialog-button-primary {
-      background: #bc202a;
+      background: #ee0000;
       color: #fff; }
     .vex.vex-theme-plain .vex-dialog-button.vex-dialog-button-secondary {
       background: #000000;
