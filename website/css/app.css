@@ -102,7 +102,7 @@ body {
     font-size: 44px;
     line-height: 48px;
     text-transform: uppercase;
-    color: #bc202a;
+    color: #ee0000;
     padding: 0;
     margin: 0;
 }
@@ -116,7 +116,7 @@ body {
 .top-section h3 {
     font-size: 20px;
     font-family: 'Overpass_Bold';
-    color: #bc202a;
+    color: #ee0000;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
@@ -233,7 +233,7 @@ a#l11leu-accordion-label {
 }
 
 .selection-sidebar .selection-sidebar-section h5 {
-    color: #bc202a;
+    color: #ee0000;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 14px;
@@ -248,7 +248,7 @@ table tbody th {
 #submit-button,
 .button {
     font-family: 'Overpass_Bold';
-    background: linear-gradient(to right bottom, #C91517 50%, #A31916 50%);
+    background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
 }
 
 .submit_box {
@@ -258,7 +258,7 @@ table tbody th {
     text-align: center;
     text-transform: uppercase;
     line-height: 42px;
-    background: linear-gradient(to right bottom, #C91517 50%, #A31916 50%);
+    background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
     padding: 20px 60px;
     width: 125px;
     height: 60px;
@@ -273,7 +273,7 @@ table tbody th {
 }
 
 .stack-text {
-    color: #bc202a;
+    color: #ee0000;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
@@ -284,7 +284,7 @@ table tbody th {
 }
 
 .stack-empty-text {
-    color: #bc202a;
+    color: #ee0000;
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
@@ -294,7 +294,7 @@ table tbody th {
 }
 
 .open-close {
-    color: #bc202a;
+    color: #ee0000;
     font-family: 'Overpass_Bold';
 }
 
@@ -304,7 +304,7 @@ table tbody th {
 
 .open-close::before {
     content: '+';
-    color: #bc202a;
+    color: #ee0000;
     font-size: 20px;
     position: absolute;
     top: 1.9rem;
@@ -316,9 +316,9 @@ table tbody th {
 /* home page - sidebar */
 
 .selection-sidebar-section {
-    padding-left: 0px;
+    padding-left: 10px;
     padding: 10px;
-    padding-right: 0px;
+    padding-right: 10px;
     overflow: auto;
     font-size: 14px;
     line-height: 15px;
@@ -336,7 +336,7 @@ table tbody th {
 
 #empty-stack {
     display: block;
-    color: #bc202a;
+    color: #ee0000;
     font-size: 20px;
     line-height: 20px;
     height: 64.45px;
@@ -390,7 +390,7 @@ table td.remove .locked-icon {
     background: url("../images/section-stack.png");
     background-position-x: 100%;
     background-repeat: no-repeat;
-    background-color: #C91517;
+    background-color: #ee0000;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -445,7 +445,7 @@ form .block-section:first-child .block-section-header {
 }
 
 form h3 {
-    color: #bc202a
+    color: #ee0000
 }
 
 form h3 span {
@@ -1045,7 +1045,7 @@ ul.parsley-errors-list li {
     margin: 20px 0;
     border: 10px solid #d8dcdd;
     list-style-type: none;
-    color: #bc202a;
+    color: #ee0000;
 }
 
 /* confirmation page styles */
@@ -1066,7 +1066,7 @@ ul.parsley-errors-list li {
 
 .conf-acc-header {
     text-align: center;
-    background: #bc202a;
+    background: #ee0000;
     padding: 15px;
 }
 
@@ -1101,7 +1101,7 @@ ul.parsley-errors-list li {
 }
 
 .conf-section-header h3 {
-    color: #bc202a;
+    color: #ee0000;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 14px;
@@ -1475,7 +1475,7 @@ ul.parsley-errors-list li {
 
 #links .button {
     color: #fff;
-    background: #bc202a;
+    background: #ee0000;
     text-transform: uppercase;
     text-align: center;
     padding: 20px 60px;
@@ -1891,7 +1891,7 @@ ul.parsley-errors-list li {
     }
     #empty-stack {
         display: block;
-        color: #bc202a;
+        color: #ee0000;
         font-size: 20px;
         line-height: 20px;
         text-transform: uppercase;
@@ -2208,12 +2208,12 @@ ul.parsley-errors-list li {
 }
 
 .vex.vex-theme-plain .vex-dialog-form .vex-dialog-input input.dirty[type="text"]:invalid {
-  border: 2px solid #bc202a;
+  border: 2px solid #ee0000;
 }
 
 .custom-error {
   display: none;
-  color: #bc202a;
+  color: #ee0000;
   font-size: .875rem;
   line-height: 1rem;
   margin-bottom: .25rem;
