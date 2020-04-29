@@ -20,7 +20,7 @@ parameters:
 - name: BUILD_IMAGE_TAG
   description: The ImageStreamTag for the build source image
   displayName: Build Image Tag
-  value: '4'
+  value: '10'
   required: true
 - name: BUILD_IMAGE_NAMESPACE
   description: The namespace for the build source image
