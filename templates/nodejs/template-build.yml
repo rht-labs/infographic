@@ -40,12 +40,12 @@ parameters:
 - name: APPLICATION_SOURCE_REPO_URL
   description: Git source URL for application
   displayName: Application source url
-  value: https://github.com/rht-labs/infographic.git
+  value: https://github.com/ostefek99/infographic.git
   required: true
 - name: APPLICATION_SOURCE_REPO_REF
   description: Application source branch/tag reference.
   displayName: Application source branch/tag reference.
-  value: master
+  value: add-crw
   required: false
 objects:
 - kind: ImageStream
