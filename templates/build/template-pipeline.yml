@@ -36,7 +36,7 @@ parameters:
 - name: SCM_URL
   description: Git source URI for HTTPD application
   displayName: HTTPD application source url
-  value: https://github.com/logandonley/infographic.git
+  value: https://github.com/ostefek99/infographic
   required: true
 - name: SCM_REF
   description: HTTPD application source branch/tag reference.
