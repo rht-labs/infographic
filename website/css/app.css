@@ -1267,7 +1267,7 @@ ul.parsley-errors-list li {
 
 #ci-cd-conf {
     padding-left: 0px;
-    padding-right: 8px;
+    padding-right: 15px;
 }
 
 #source-control-management-conf,
@@ -1276,12 +1276,12 @@ ul.parsley-errors-list li {
 #build-and-artifact-conf,
 #testing-conf,
 #code-quality-conf {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #code-review-conf {
-    padding-left: 8px;
+    padding-left: 15px;
 }
 
 #rhel-conf {
