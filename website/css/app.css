@@ -1093,7 +1093,7 @@ ul.parsley-errors-list li {
     display: block;
     float: left;
     width: auto;
-    min-height: 175px;
+    min-height: 313px;
 }
 
 .conf-section-header {
@@ -1267,7 +1267,7 @@ ul.parsley-errors-list li {
 
 #ci-cd-conf {
     padding-left: 0px;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
 #source-control-management-conf,
@@ -1276,12 +1276,12 @@ ul.parsley-errors-list li {
 #build-and-artifact-conf,
 #testing-conf,
 #code-quality-conf {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #code-review-conf {
-    padding-left: 5px;
+    padding-left: 8px;
 }
 
 #rhel-conf {
