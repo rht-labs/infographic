@@ -1267,25 +1267,21 @@ ul.parsley-errors-list li {
 
 #ci-cd-conf {
     padding-left: 0px;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 #source-control-management-conf,
 #collaboration-conf,
 #code-development-conf,
 #build-and-artifact-conf,
+#testing-conf,
 #code-quality-conf {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#testing-conf {
-    padding-left: 0px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #code-review-conf {
-    padding-left: 20px;
+    padding-left: 5px;
 }
 
 #rhel-conf {
