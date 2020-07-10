@@ -1276,8 +1276,8 @@ ul.parsley-errors-list li {
 #build-and-artifact-conf,
 #testing-conf,
 #code-quality-conf {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 11px;
+    padding-right: 11px;
 }
 
 #code-review-conf {
