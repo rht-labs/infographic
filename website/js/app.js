@@ -345,7 +345,7 @@ function callStack(projName, username, gitRepo) {
 
     projName  = (projName === undefined) ? "" : projName;
     username  = (username === undefined) ? "" : username;
-    gitRepo  = (gitRepo === undefined) ? "https://github.com/ostefek99/infographic" : gitRepo;
+    gitRepo  = (gitRepo === undefined) ? "" : gitRepo;
 
     if (window.rhtLabsInternal){
         vex.dialog.open({
