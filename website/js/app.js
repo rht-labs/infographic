@@ -240,6 +240,7 @@ function buildConfirmationPage() {
                 var newSource = $(imageClass).attr('src').replace('-grey', ''); // remove it
                 $(imageClass).attr('src', newSource) // and update the source
             }
+            $(imageClass).removeClass('greyed-out')
         }
         // now show those updates images
         $(imageClass).show();
