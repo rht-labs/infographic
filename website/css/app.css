@@ -1215,8 +1215,12 @@ ul.parsley-errors-list li {
 
 @media (min-width: 1160px) {
   #rhe-os-conf,
-  #bic-os-conf {
-    border-bottom: 2px solid #d8dcdd;
+  #bic-os-conf,
+  #ci-cd-conf,
+  #source-control-management-conf,
+  #build-and-artifact-conf,
+  #testing-conf {
+   border-bottom: 2px solid #d8dcdd;
   }
 }
 
