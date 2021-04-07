@@ -371,9 +371,6 @@ table td.remove .locked-icon {
 }
 
 .selection-sidebar-header {
-    background: url("../images/section-stack.png");
-    background-position-x: 100%;
-    background-repeat: no-repeat;
     background-color: #ee0000;
     color: #fff;
     text-align: center;
@@ -525,7 +522,6 @@ a.active {
     width: 100%;
     padding: 20px;
     text-align: center;
-    border-top: 10px solid #d8dcdd;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -578,23 +574,23 @@ input[type="checkbox"]:checked + label:before {
 }
 
 input.appdev-check[type="checkbox"]:checked + label:before {
-    background-color: #92d400;
+    background-color: #ee0000;
 }
 
 input.devops-check[type="checkbox"]:checked + label:before {
-    background-color: #f0ab00;
+    background-color: #316dc1;
 }
 
 input.container-check:checked[type="checkbox"] + label:before {
-    background-color: #00b9e4;
+    background-color: #96662f;
 }
 
 input.iaas-check:checked[type="checkbox"] + label:before {
-    background-color: #3B0083;
+    background-color: #faaa4f;
 }
 
 input.container-check:checked[type="checkbox"] + label:before {
-  background-color: #1FBAE0;
+  background-color: #96662f;
 }
 
 input:focus {
@@ -724,53 +720,36 @@ input:focus {
 }
 
 .app-dev-header {
-    background-image: url("../images/section-appDev.png");
+    background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #92d400;
+    background-color: #ee0000;
 }
 
 .dev-ops-header {
-    background-image: url("../images/section-devOps.png");
+    background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #f0ab00;
+    background-color: #316dc1;
 }
 
 .host-infra-header {
-    background-image: url("../images/section-infrastructure.png");
+    background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #3B0083;
+    background-color: #faaa4f;
 }
 
 .container-platform-header {
-    background-image: url("../images/section-container.png");
+    background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #00b9e4;
+    background-color: #96662f;
 }
 
 .stack-text.active {
     padding-left: 10px;
 }
-
-.appdev-span {
-    background-color: #6D9F00;
-}
-
-.devops-span {
-    background-color: #b3822c;
-}
-
-.container-span {
-    background-color: #008BAB;
-}
-
-.iaas-span {
-    background-color: #2D0062;
-}
-
 
 /* tool tips */
 
@@ -782,25 +761,25 @@ input:focus {
 .tooltip-appdev {
     background-color: white !important;
     color: #000000;
-    border: 5px solid #92d400 !important;
+    border: 2px solid #ee0000 !important;
 }
 
 .tooltip-devops {
     background-color: white !important;
     color: #000000;
-    border: 5px solid #f0ab00 !important;
+    border: 2px solid #316dc1 !important;
 }
 
 .tooltip-container {
     background-color: white !important;
     color: #000000;
-    border: 5px solid #00b9e4 !important;
+    border: 2px solid #96662f !important;
 }
 
 .tooltip-iaas {
     background-color: white !important;
     color: #000000;
-    border: 5px solid #3B0083 !important;
+    border: 2px solid #faaa4f !important;
 }
 
 .tooltip::before,
@@ -874,7 +853,7 @@ input:focus {
 }
 
 .tooltip-appdev::before {
-    border-color: transparent transparent #92d400;
+    border-color: transparent transparent #ee0000;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -882,7 +861,7 @@ input:focus {
 }
 
 .tooltip-devops::before {
-    border-color: transparent transparent #f0ab00;
+    border-color: transparent transparent #316dc1;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -890,7 +869,7 @@ input:focus {
 }
 
 .tooltip-container::before {
-    border-color: transparent transparent #00b9e4;
+    border-color: transparent transparent #96662f;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -898,7 +877,7 @@ input:focus {
 }
 
 .tooltip-iaas::before {
-    border-color: transparent transparent #3B0083;
+    border-color: transparent transparent #faaa4f;
     border-bottom-style: solid;
     border-top-width: 0;
     bottom: 100%;
@@ -914,7 +893,7 @@ input:focus {
 }
 
 .tooltip-appdev.top::before {
-    border-color: #92d400 transparent transparent;
+    border-color: #ee0000 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -922,7 +901,7 @@ input:focus {
 }
 
 .tooltip-devops.top::before {
-    border-color: #f0ab00 transparent transparent;
+    border-color: #316dc1 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -930,7 +909,7 @@ input:focus {
 }
 
 .tooltip-container.top::before {
-    border-color: #00b9e4 transparent transparent;
+    border-color: #96662f transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -938,7 +917,7 @@ input:focus {
 }
 
 .tooltip-iaas.top::before {
-    border-color: #3B0083 transparent transparent;
+    border-color: #faaa4f transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -953,7 +932,7 @@ input:focus {
 }
 
 .tooltip-appdev.left::before {
-    border-color: #92d400 transparent transparent;
+    border-color: #ee0000 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -961,7 +940,7 @@ input:focus {
 }
 
 .tooltip-devops.left::before {
-    border-color: #f0ab00 transparent transparent;
+    border-color: #316dc1 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -969,7 +948,7 @@ input:focus {
 }
 
 .tooltip-container.left::before {
-    border-color: #00b9e4 transparent transparent;
+    border-color: #96662f transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -977,7 +956,7 @@ input:focus {
 }
 
 .tooltip-iaas.left::before {
-    border-color: #3B0083 transparent transparent;
+    border-color: #faaa4f transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -993,7 +972,7 @@ input:focus {
 }
 
 .tooltip-appdev.right::before {
-    border-color: #92d400 transparent transparent;
+    border-color: #ee0000 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1001,7 +980,7 @@ input:focus {
 }
 
 .tooltip-devops.right::before {
-    border-color: #f0ab00 transparent transparent;
+    border-color: #316dc1 transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1009,7 +988,7 @@ input:focus {
 }
 
 .tooltip-container.right::before {
-    border-color: #00b9e4 transparent transparent;
+    border-color: #96662f transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
@@ -1017,7 +996,7 @@ input:focus {
 }
 
 .tooltip-iaas.right::before {
-    border-color: #3B0083 transparent transparent;
+    border-color: #faaa4f transparent transparent;
     border-top-style: solid;
     border-bottom-width: 0;
     top: 100%;
