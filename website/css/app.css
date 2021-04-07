@@ -1554,7 +1554,9 @@ ul.parsley-errors-list li {
 /* FOOTER */
 
 .footer-main {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    bottom:0;
     overflow: hidden;
     z-index: 1;
     background: #000;
