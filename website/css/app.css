@@ -220,23 +220,21 @@ table tbody th {
 
 .submit_box {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.25rem;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     line-height: 42px;
     background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
     padding: 20px 60px;
-    width: 125px;
+    
     height: 60px;
     bottom: 15px;
+    margin-bottom: 1rem;
     padding-top: 10px;
     padding-right: 0px;
     padding-left: 0px;
     display: block;
-    position: sticky;
-    margin-right: 15px;
-    margin-left: auto;
 }
 
 .stack-text {
@@ -283,14 +281,15 @@ table tbody th {
 /* home page - sidebar */
 
 .selection-sidebar-section {
-    padding-left: 10px;
-    padding: 10px;
-    padding-right: 10px;
+    padding: .75rem;
     overflow: auto;
     font-size: 14px;
     line-height: 15px;
 }
 
+.selection-sidebar-logo {
+    margin: 0 1rem 0 1rem;
+}
 .stack-section {
     padding: 10px;
     padding-left: 0px;
@@ -1831,9 +1830,6 @@ ul.parsley-errors-list li {
     }
     .submit_box {
         right: 15px !important;
-    }
-    .stack-text {
-        line-height: 10px;
     }
 }
 

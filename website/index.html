@@ -623,7 +623,7 @@
                         <div class="row">
                           <div class="medium-3 columns">
                             <input id="rh-openshift-ent" type="checkbox" name="rh-openshift-ent" checked="checked" disabled="disabled" class="locked container-check" value="true">
-                            <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/menu/openshift-logo-large-menu.png" class="checkbox-image" /></label>
+                            <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/openshift-logo.svg" class="checkbox-image" /></label>
                             <span class="text">OpenShift</span>
                           </div>
                           <div class="medium-3 columns">
@@ -834,13 +834,17 @@
       <!--close left column-->
       <div class="large-3 columns">
         <div class="selection-sidebar">
+         <div class="submit_box" id="submitBox">
+                  <button class="btn-submit" type="button">Submit</button>
+                 </div>
           <div class="border-all selection-sidebar-top">
-            <div class="selection-sidebar-header border-bottom">
-              My Open Innovation Lab Stack
-            </div>
+               
             <div class="selection-sidebar-block">
-              <div class="selection-sidebar-section border-bottom">
-                <img src="images/menu/openshift-logo-large-menu.png" />
+              <div class="selection-sidebar-section">
+                <div class="selection-sidebar-logo">
+                  <img src="images/openshift-logo.svg" />
+                </div>
+                
               </div>
             </div>
             <div class="" id="empty-stack">
@@ -1003,9 +1007,7 @@
     </div>
     <input type="hidden" name="submitted" value="submitted">
     </form>
-    <div class="submit_box" id="submitBox">
-      <button class="btn-submit" type="button">Submit</button>
-    </div>
+
 
     <!-- BEGIN TEMPLATES -->
     <!-- When JS needs an image URL, store that URL in HTML so that the URL can
