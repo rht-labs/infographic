@@ -23,7 +23,6 @@ body {
     height: 100%;
     background-color: #142c4d;
     background-repeat: repeat;
-    background-size: 38rem;
     background-image: url("../images/background.svg");
     font-family: 'Red Hat Display', sans-serif;
 }
