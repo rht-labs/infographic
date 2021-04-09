@@ -641,8 +641,9 @@ input:focus {
 }
 
 .acc-sprite {
+    background: rgba(0, 0, 0, 0.5);
     display: block;
-    width: 70px;
+    width: 4rem;
     color: #fff;
     height: 100%;
     float: left;
