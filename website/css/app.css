@@ -46,7 +46,8 @@ body {
 #confirmation-row,
 #home > .row,
 #form {
-  overflow: hidden;
+    overflow: hidden;
+    margin-bottom: 4rem;
 }
 
 .border-all {
@@ -94,10 +95,6 @@ body {
 .top-section p {
     color: #4C4D4D;
     font-size: 16px;
-}
-
-.acc-title h2 {
-    font-weight: bold;
 }
 
 .acc-title h2,
@@ -214,7 +211,7 @@ table tbody th {
 
 #submit-button,
 .button {
-    font-weight: bold;
+    
     background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
 }
 
@@ -224,16 +221,13 @@ table tbody th {
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    line-height: 42px;
+    line-height: 3rem;
     background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
-    padding: 20px 60px;
-    
-    height: 60px;
-    bottom: 15px;
+    padding: 2rem 4rem;
+    height: 4rem;
+    bottom: 1rem;
     margin-bottom: 1rem;
-    padding-top: 10px;
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-top: .5rem;
     display: block;
 }
 
@@ -1043,10 +1037,9 @@ ul.parsley-errors-list li {
 .conf-acc-header h2 {
     color: #fff;
     text-align: center;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
-    font-weight: bold;
     padding: 0;
     margin: 0;
 }
