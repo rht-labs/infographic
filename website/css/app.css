@@ -705,6 +705,9 @@ input:focus {
     background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
+}
+
+.bg-red {
     background-color: #ee0000;
 }
 
@@ -712,21 +715,30 @@ input:focus {
     background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #316dc1;
 }
 
-.host-infra-header {
-    background-image: url("../images/section.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-color: #faaa4f;
+.bg-blue {
+    background-color: #316dc1;
 }
 
 .container-platform-header {
     background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
+}
+
+.bg-brown {
     background-color: #96662f;
+}
+
+.host-infra-header {
+    background-image: url("../images/section.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.bg-light-orange {
+    background-color: #faaa4f;
 }
 
 .stack-text.active {
@@ -1025,8 +1037,7 @@ ul.parsley-errors-list li {
 
 .conf-acc-header {
     text-align: center;
-    background: #ee0000;
-    padding: 15px;
+    padding: 1rem;
 }
 
 .conf-acc-header h2 {
