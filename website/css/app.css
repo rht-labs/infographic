@@ -60,8 +60,8 @@ body {
 }
 
 .top-section .rh-logo {
-    max-width: 150px;
-    margin-bottom: 15px;
+    max-width: 20rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -288,7 +288,8 @@ table tbody th {
 }
 
 .selection-sidebar-logo {
-    margin: 0 1rem 0 1rem;
+    max-width: 10rem;
+    margin:auto;
 }
 .stack-section {
     padding: 10px;
