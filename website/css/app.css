@@ -46,7 +46,8 @@ body {
 #confirmation-row,
 #home > .row,
 #form {
-  overflow: hidden;
+    overflow: hidden;
+    margin-bottom: 4rem;
 }
 
 .border-all {
@@ -60,8 +61,8 @@ body {
 }
 
 .top-section .rh-logo {
-    max-width: 150px;
-    margin-bottom: 15px;
+    max-width: 20rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -94,10 +95,6 @@ body {
 .top-section p {
     color: #4C4D4D;
     font-size: 16px;
-}
-
-.acc-title h2 {
-    font-weight: bold;
 }
 
 .acc-title h2,
@@ -214,29 +211,24 @@ table tbody th {
 
 #submit-button,
 .button {
-    font-weight: bold;
+    
     background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
 }
 
 .submit_box {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1.25rem;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    line-height: 42px;
+    line-height: 3rem;
     background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
-    padding: 20px 60px;
-    width: 125px;
-    height: 60px;
-    bottom: 15px;
-    padding-top: 10px;
-    padding-right: 0px;
-    padding-left: 0px;
+    padding: 2rem 4rem;
+    height: 4rem;
+    bottom: 1rem;
+    margin-bottom: 1rem;
+    padding-top: .5rem;
     display: block;
-    position: sticky;
-    margin-right: 15px;
-    margin-left: auto;
 }
 
 .stack-text {
@@ -283,14 +275,16 @@ table tbody th {
 /* home page - sidebar */
 
 .selection-sidebar-section {
-    padding-left: 10px;
-    padding: 10px;
-    padding-right: 10px;
+    padding: .75rem;
     overflow: auto;
     font-size: 14px;
     line-height: 15px;
 }
 
+.selection-sidebar-logo {
+    max-width: 10rem;
+    margin:auto;
+}
 .stack-section {
     padding: 10px;
     padding-left: 0px;
@@ -642,8 +636,9 @@ input:focus {
 }
 
 .acc-sprite {
+    background: rgba(0, 0, 0, 0.5);
     display: block;
-    width: 70px;
+    width: 4rem;
     color: #fff;
     height: 100%;
     float: left;
@@ -704,6 +699,9 @@ input:focus {
     background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
+}
+
+.bg-red {
     background-color: #ee0000;
 }
 
@@ -711,21 +709,30 @@ input:focus {
     background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: #316dc1;
 }
 
-.host-infra-header {
-    background-image: url("../images/section.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
-    background-color: #faaa4f;
+.bg-blue {
+    background-color: #316dc1;
 }
 
 .container-platform-header {
     background-image: url("../images/section.png");
     background-repeat: no-repeat;
     background-position: 100%;
+}
+
+.bg-brown {
     background-color: #96662f;
+}
+
+.host-infra-header {
+    background-image: url("../images/section.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.bg-light-orange {
+    background-color: #faaa4f;
 }
 
 .stack-text.active {
@@ -1024,17 +1031,15 @@ ul.parsley-errors-list li {
 
 .conf-acc-header {
     text-align: center;
-    background: #ee0000;
-    padding: 15px;
+    padding: 1rem;
 }
 
 .conf-acc-header h2 {
     color: #fff;
     text-align: center;
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
-    font-weight: bold;
     padding: 0;
     margin: 0;
 }
@@ -1554,7 +1559,9 @@ ul.parsley-errors-list li {
 /* FOOTER */
 
 .footer-main {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    bottom:0;
     overflow: hidden;
     z-index: 1;
     background: #000;
@@ -1829,9 +1836,6 @@ ul.parsley-errors-list li {
     }
     .submit_box {
         right: 15px !important;
-    }
-    .stack-text {
-        line-height: 10px;
     }
 }
 

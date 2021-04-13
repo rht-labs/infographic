@@ -28,7 +28,7 @@
       <div class="row">
         <div class="large-12 columns">
           <div class="top-section border-all">
-            <img src="images/red-hat-logo.png" class="rh-logo float-right" />
+            <img src="images/rh-labs-logo.svg" class="rh-logo float-right" />
             <h1>Jump start your development with a custom built environment</h1>
             <h3>Design your own Residency-ready technology stack.</h3>
             <p>Use this interactive menu to mix and match the services, tools, and infrastructure to create your own, customized, Open Innovation Lab technology stack that will help to accelerate your application development. Click submit to review your own personalized technology stack, which you can save, share, and use as a springboard for your own app development.</p>
@@ -41,7 +41,7 @@
             <div class="main">
               <div id="accordion">
                 <!-- ##### START FIRST ACCORDION BLOCK ##### -->
-                <div class="acc-header border-all" id="application-development-accordion-header">
+                <div class="acc-header border-all bg-red" id="application-development-accordion-header">
                   <div class="acc-left app-dev-header">
                     <div class="acc-sprite appdev-span">
                       <span onmouseover="" style="cursor: pointer;">+</span>
@@ -335,7 +335,7 @@
                 </div>
                 <!-- ##### CLOSE FIRST BLOCK ##### -->
                 <!-- ##### START SECOND ACCORDION BLOCK ##### -->
-                <div class="acc-header border-all" id="devops-tools-accordion-header">
+                <div class="acc-header bg-blue border-all" id="devops-tools-accordion-header">
                   <div class="acc-left dev-ops-header">
                     <div class="acc-sprite devops-span">
                       <span onmouseover="" style="cursor: pointer;">+</span>
@@ -600,7 +600,7 @@
                 <!-- ##### CLOSE SECOND BLOCK ##### -->
                 <!-- ##### START THIRD ACCORDION BLOCK ##### -->
                 <div class="acc-header border-all" id="container-platform-accordion-header">
-                  <div class="acc-left container-platform-header">
+                  <div class="acc-left container-platform-header bg-brown">
                     <div class="acc-sprite container-span">
                       <span onmouseover="" style="cursor: pointer;">+</span>
                     </div>
@@ -623,7 +623,7 @@
                         <div class="row">
                           <div class="medium-3 columns">
                             <input id="rh-openshift-ent" type="checkbox" name="rh-openshift-ent" checked="checked" disabled="disabled" class="locked container-check" value="true">
-                            <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/menu/openshift-logo-large-menu.png" class="checkbox-image" /></label>
+                            <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/openshift-logo.svg" class="checkbox-image" /></label>
                             <span class="text">OpenShift</span>
                           </div>
                           <div class="medium-3 columns">
@@ -690,7 +690,7 @@
                 <!-- ##### CLOSE THIRD BLOCK ##### -->
                 <!-- ##### START FOURTH ACCORDION BLOCK ##### -->
                 <div class="acc-header border-all" id="iaas-accordion-header">
-                  <div class="acc-left host-infra-header">
+                  <div class="acc-left host-infra-header bg-light-orange">
                     <div class="acc-sprite iaas-span">
                       <span onmouseover="" style="cursor: pointer;">+</span>
                     </div>
@@ -835,12 +835,12 @@
       <div class="large-3 columns">
         <div class="selection-sidebar">
           <div class="border-all selection-sidebar-top">
-            <div class="selection-sidebar-header border-bottom">
-              My Open Innovation Lab Stack
-            </div>
             <div class="selection-sidebar-block">
-              <div class="selection-sidebar-section border-bottom">
-                <img src="images/menu/openshift-logo-large-menu.png" />
+              <div class="selection-sidebar-section">
+                <div class="selection-sidebar-logo">
+                  <img src="images/openshift-logo.svg" />
+                </div>
+                
               </div>
             </div>
             <div class="" id="empty-stack">
@@ -999,13 +999,16 @@
             <div class="error-container"></div>
           </div>
         </div>
+        <div class="submit_box" id="submitBox">
+          <button class="btn-submit" type="button">
+            See Overview
+          </button>
       </div>
+    </div>
     </div>
     <input type="hidden" name="submitted" value="submitted">
     </form>
-    <div class="submit_box" id="submitBox">
-      <button class="btn-submit" type="button">Submit</button>
-    </div>
+
 
     <!-- BEGIN TEMPLATES -->
     <!-- When JS needs an image URL, store that URL in HTML so that the URL can
@@ -1074,7 +1077,7 @@
         <!-- vertical left column -->
         <div id="automation-vertical">
           <div class="conf-block border-all" id="automation-conf">
-            <div class="conf-acc-header">
+            <div class="conf-acc-header bg-red">
               <h2>Automation</h2>
             </div>
             <div class="conf-body">
@@ -1107,7 +1110,7 @@
           <div class="large-12 columns">
             <div class="conf-block border-all">
               <div id="automation-arrow-1" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-              <div class="conf-acc-header">
+              <div class="conf-acc-header bg-red">
                 <h2>Application Development</h2>
               </div>
               <div class="conf-body">
@@ -1241,7 +1244,7 @@
           <div class="large-12 columns">
             <div class="conf-block border-all">
               <div id="automation-arrow-2" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-              <div class="conf-acc-header">
+              <div class="conf-acc-header bg-blue">
                 <h2>Devops Tools</h2>
               </div>
               <div class="conf-body">
@@ -1408,7 +1411,7 @@
               <div class="large-12 columns">
                 <div class="conf-block border-left border-right border-top">
                   <div id="automation-arrow-3" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-                  <div class="conf-acc-header">
+                  <div class="conf-acc-header bg-brown">
                     <h2>Container Platform</h2>
                   </div>
                   <div class="conf-body">
@@ -1453,7 +1456,7 @@
               <div class="large-12 columns">
                 <div class="conf-block border-all">
                   <div id="automation-arrow-4" class="automation-arrow"><img src="images/arrow.png" class="arrow" /></div>
-                  <div class="conf-acc-header">
+                  <div class="conf-acc-header bg-light-orange">
                     <h2>Hosting Infrastructure</h2>
                   </div>
                   <div class="conf-body">
