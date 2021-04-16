@@ -610,20 +610,20 @@
                     </div>
                   </div>
                   <div class="acc-right">
-                    <p>The Container Platform layer, powered by Red Hat<sup>®</sup> OpenShift, provides Docker and Kubernetes, along with a rich set of tools for monitoring and logging.</p>
+                    <p>The Container Platform layer, powered by Red Hat<sup>®</sup> OpenShift, based on Kubernetes supports a rich set of tools for GitOps, templating, monitoring and logging.</p>
                   </div>
                 </div>
                 <div class="border-left border-right">
                   <div class="acc-content">
                     <!--Block 3 Section 1-->
                     <span id="rhel" class="block-section">
-                      <h3 class="block-section-header">RHEL</h3>
+                      <h3 class="block-section-header">Red Hat OpenShift Container Platform</h3>
                       <fieldset>
                         <!-- B3.S1.Row 1 -->
                         <div class="row">
                           <div class="medium-3 columns">
                             <input id="rh-openshift-ent" type="checkbox" name="rh-openshift-ent" checked="checked" disabled="disabled" class="locked container-check" value="true">
-                            <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/openshift-logo.svg" class="checkbox-image" /></label>
+                            <label for="rh-openshift-ent" data-tooltip data-template-classes="tooltip-container" data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift—an open source PaaS based on Docker containers and the Kubernetes container cluster manager for enterprise app development."><img src="images/container-platform/rhel/rh-openshift-ent.png" class="checkbox-image" /></label>
                             <span class="text">OpenShift</span>
                           </div>
                           <div class="medium-3 columns">
@@ -631,7 +631,12 @@
                             <label for="kubernetes" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Kubernetes—an open source container cluster manager."><img src="images/container-platform/rhel/kubernetes.png" class="checkbox-image" /></label>
                             <span class="text">Kubernetes</span>
                           </div>
-                          <div class="medium-3 columns end">
+                          <div class="medium-3 columns">
+                            <input id="cri-o" type="checkbox" name="cri-o" checked="checked" disabled="disabled" class="locked container-check" value="true">
+                            <label for="cri-o" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="cri-o- a lightweight container runtime for kubernetes, supporting any OCI-compliant container."><img src="images/container-platform/rhel/criologo.png" class="checkbox-image" /></label>
+                            <span class="text">CRI-O</span>
+                          </div>
+                          <div class="medium-3 columns">
                             <input id="docker" type="checkbox" name="docker" checked="checked" disabled="disabled" class="locked container-check" value="true">
                             <label for="docker" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Docker—an open platform for developers and system admins to build, ship, and run distributed applications on laptops, datacenter VMs, or in the cloud."><img src="images/container-platform/rhel/docker.png" class="checkbox-image" /></label>
                             <span class="text">Docker</span>
@@ -640,10 +645,34 @@
                       </fieldset>
                     </span>
                     <!-- BLOCK 3 SECTION 2  -->
+                    <span id="gitops-and-templating" class="block-section">
+                      <h3 class="block-section-header">GitOps & Templating </h3>
+                      <fieldset>
+                        <!-- B3.S2.Row 1 -->
+                        <div class="row">
+                          <div class="medium-3 columns">
+                            <input id="argo" type="checkbox" name="Argo" value="true" checked="checked"  disabled="disabled" class="locked container-check">
+                            <label for="argo" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Argo CD—a declarative, GitOps continuous delivery tool for Kubernetes."><img src="images/container-platform/gitops-templating/argo_logo.png" class="checkbox-image" /></label>
+                            <span class="text">ArgoCD</span>
+                          </div>
+                          <div class="medium-3 columns">
+                            <input id="helm" type="checkbox" name="helm" value="true" checked="checked"  disabled="disabled" class="locked container-check">
+                            <label for="helm" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Helm-the package manager for Kubernetes."><img src="images/container-platform/gitops-templating/helm_logo.png" class="checkbox-image" /></label>
+                            <span class="text">Helm</span>
+                          </div>
+                          <div class="medium-3 columns end">
+                            <input id="kustomize" type="checkbox" name="fluentd" value="true" checked="checked" disabled="disabled" class="locked container-check">
+                            <label for="kustomize" data-tooltip data-template-classes="tooltip-container" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Kustomize-a Kubernetes native configuration management."><img src="images/container-platform/gitops-templating/kustomize_logo.png" class="checkbox-image" /></label>
+                            <span class="text">Kustomize</span>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </span>
+                    <!-- BLOCK 3 SECTION 3  -->
                     <span id="monitoring-and-logging" class="block-section">
                       <h3 class="block-section-header">Monitoring and logging</h3>
                       <fieldset>
-                        <!-- B3.S2.Row 1 -->
+                        <!-- B3.S3.Row 1 -->
                         <div class="row">
                           <div class="medium-3 columns">
                             <input id="cluster-metrics" type="checkbox" name="cluster-metrics" value="true" checked="checked"  disabled="disabled" class="locked container-check">
@@ -666,7 +695,7 @@
                             <span class="text">Kibana</span>
                           </div>
                         </div>
-                        <!-- B3.S2 Row 2 -->
+                        <!-- B3.S3 Row 2 -->
                         <div class="row">
                           <div class="medium-3 columns">
                             <input id="sysdig" type="checkbox" name="sysdig" value="true" class="container-check">
@@ -681,7 +710,7 @@
                         </div>
                       </fieldset>
                     </span>
-                    <!-- BLOCK 3 SECTION 3  -->
+                    <!-- BLOCK 3 SECTION 4  -->
                   </div>
                   <div class="border-bottom backed-by-rhel">
                     <p>BACKED BY RED HAT ENTERPRISE LINUX</p>
@@ -944,8 +973,13 @@
                   <div class="selection-sidebar-block" id="container-platform-sidebar">
                     <h4 class="sidebar">Container Platform</h4>
                     <div class="selection-sidebar-section border-bottom">
-                      <h5>RHEL</h5>
+                      <h5>OpenShift Container Platform</h5>
                       <table id="rhel-table">
+                      </table>
+                    </div>
+                    <div class="selection-sidebar-section border-bottom">
+                      <h5>GitOps & Templating</h5>
+                      <table id="gitops-and-templating-table">
                       </table>
                     </div>
                     <div class="selection-sidebar-section border-bottom">
@@ -1416,11 +1450,32 @@
                   </div>
                   <div class="conf-body">
                     <div class="conf-section thin-border-right" id="rhel-conf">
-                      <div class="conf-section-header" style="display: none;">
-                        <h3>RHEL</h3>
+                      <div class="conf-section-header">
+                        <h3>RED HAT OPENSHIFT CONTAINER PLATFORM</h3>
                       </div>
                       <div>
-                        <img src="images/container-platform/rhel/openshift-kubernetes-docker-print.png" class="docker" />
+                        <div>
+                          <img src="images/container-platform/rhel/rh-openshift-ent.png" class="openshift" />
+                        </div>
+                        <div>
+                          <img src="images/container-platform/rhel/kubernetes.png" class="openshift" />
+                          <img src="images/container-platform/rhel/criologo.png" class="cri-o" />
+                        </div>
+                        <div>
+                          <img src="images/container-platform/rhel/docker.png" class="docker" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="conf-section thin-border-right" id="gitops-and-templating-conf">
+                      <div class="conf-section-header">
+                        <h3>GITOPS & TEMPLATING</h3>
+                      </div>
+                      <div>
+                        <img src="images/container-platform/gitops-templating/argo_logo.png" class="argo" />
+                        <img src="images/container-platform/gitops-templating/helm_logo.png" class="helm" />
+                      </div>
+                      <div>
+                        <img src="images/container-platform/gitops-templating/kustomize_logo.png" class="kustomize" />
                       </div>
                     </div>
                     <div class="conf-section text-center" id="monitoring-and-logging-conf">
@@ -1430,11 +1485,13 @@
                       <div>
                         <img src="images/container-platform/monitoring-logging/cluster-metrics-print.png" class="cluster-metrics" />
                         <img src="images/container-platform/monitoring-logging/elasticsearch-print.png" class="elasticsearch" />
-                        <img src="images/container-platform/monitoring-logging/fluentd-print.png" class="fluentd" />
-                        <img src="images/container-platform/monitoring-logging/kibana-print.png" class="kibana" />
-                        <img src="images/container-platform/monitoring-logging/sysdig-print-grey.png" class="sysdig" />
                       </div>
                       <div>
+                        <img src="images/container-platform/monitoring-logging/fluentd-print.png" class="fluentd" />
+                        <img src="images/container-platform/monitoring-logging/kibana-print.png" class="kibana" />
+                      </div>
+                      <div>
+                        <img src="images/container-platform/monitoring-logging/sysdig-print-grey.png" class="sysdig" />
                         <img src="images/container-platform/monitoring-logging/dynatrace-print-grey.png" class="dynatrace" />
                       </div>
                     </div>

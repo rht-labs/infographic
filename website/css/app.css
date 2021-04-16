@@ -141,7 +141,7 @@ form .block-section h3.block-section-header span {
     display: block;
     font-size: 16px;
     line-height: 16px;
-    padding: 10px 0;
+    padding: 10px 5px;
     font-weight: normal;
     font-weight: bold;
 }
@@ -1127,14 +1127,8 @@ ul.parsley-errors-list li {
     max-width: 80px;
 }
 
-.conf-section#rhel-conf img {
-    max-width: 300px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
 #container-platform-row .conf-section {
-    min-height: 140px;
+    min-height: 240px;
 }
 
 #container-platform-row .stripe-border {
@@ -1159,6 +1153,20 @@ ul.parsley-errors-list li {
     font-size: 12px;
     line-height: 12px;
     text-transform: uppercase;
+}
+
+.conf-section#rhel-conf img {
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 200px;
+}
+
+.conf-section#gitops-and-templating-conf img {
+    margin-top: 30px;
+    margin-right: 0px;
+    max-width: 110px;
 }
 
 .conf-section#monitoring-and-logging-conf img {
@@ -1264,8 +1272,13 @@ ul.parsley-errors-list li {
 }
 
 #rhel-conf {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#gitops-and-templating-conf {
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 0px;
 }
 
 #monitoring-and-logging-conf {
@@ -1507,6 +1520,7 @@ ul.parsley-errors-list li {
 .automation-arrow .arrow {
     width: 35px;
     height: auto;
+    margin-left: 12px;
 }
 
 #confirmation-image,
