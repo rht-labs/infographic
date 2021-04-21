@@ -47,7 +47,7 @@ body {
 #home > .row,
 #form {
     overflow: hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .border-all {
@@ -63,6 +63,7 @@ body {
 .top-section .rh-logo {
     max-width: 20rem;
     margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 
@@ -70,8 +71,7 @@ body {
 
 .top-section h1 {
     font-weight: bold;
-    font-size: 44px;
-    line-height: 48px;
+    font-size: 1.625rem;
     text-transform: uppercase;
     color: #ee0000;
     padding: 0;
@@ -84,19 +84,13 @@ body {
 }
 
 .top-section h3 {
-    font-size: 20px;
+    font-size: 1.125rem;
     font-weight: bold;
-    color: #ee0000;
     text-transform: uppercase;
+    font-weight: 200;
     padding: 0;
     margin: 0;
 }
-
-.top-section p {
-    color: #4C4D4D;
-    font-size: 16px;
-}
-
 .acc-title h2,
 form h3 {
     font-size: 22px;
