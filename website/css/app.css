@@ -1080,7 +1080,7 @@ ul.parsley-errors-list li {
 }
 
 #collaboration-conf .conf-section-header h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 #build-and-artifact-conf .conf-section-header h3 {
@@ -1090,6 +1090,10 @@ ul.parsley-errors-list li {
 #testing-conf .conf-section-header h3,
 #code-quality-conf .conf-section-header h3 {
     margin-bottom: 20px;
+}
+
+#collaboration-conf img {
+    margin-left: 15px;
 }
 
 #code-review-conf .conf-section-header h3, 
@@ -1113,6 +1117,8 @@ ul.parsley-errors-list li {
 
 .conf-section#rhe-os-conf img {
     max-width: 120px;
+    margin-top: 10px;
+    margin-left: 40px;
 }
 
 .conf-section#rhe-os-conf div {
@@ -1175,6 +1181,7 @@ ul.parsley-errors-list li {
     max-width: 85px;
 }
 
+.conf-section#managed-conf img,
 .conf-section#public-conf img,
 .conf-section#private-conf img {
     max-width: 100px;
@@ -1322,9 +1329,12 @@ ul.parsley-errors-list li {
 }
 
 #identity-management-conf,
-#certificate-management-conf,
-#management-conf {
+#certificate-management-conf {
     padding-top: 20px;
+}
+
+#management-conf {
+    padding-top: 0px;
 }
 
 .odd-section-block {
@@ -1342,7 +1352,7 @@ ul.parsley-errors-list li {
 }
 
 #storage-conf #storage-img-container-conf {
-    text-align: left;
+    text-align: center;
 }
 
 .thin-border-right {

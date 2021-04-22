@@ -63,9 +63,9 @@
                     <fieldset>
                       <div class="row">
                         <div class="medium-3 columns">
-                          <input id="rhoar" type="checkbox" class="appdev-check" value="true" name="rhoar">
-                          <label for="rhoar" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat OpenShift Applicaiton Runtimes—Cloud-native application runtimes, optimized for OpenShift."><img src="images/application-development/rhe-os/rhoar.png" class="checkbox-image has-tip rh-product-logo-larger" /></label>
-                          <span class="text">Red Hat OpenShift Application Runtimes</span>
+                          <input id="rh-runtimes" type="checkbox" class="appdev-check" value="true" name="rh-runtimes">
+                          <label for="rh-runtimes" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Runtimes—a set of products, tools, and components for developing and maintaining cloud-native applications. It offers lightweight runtimes and frameworks (like Quarkus) for highly-distributed cloud architectures, such as microservices."><img src="images/application-development/rhe-os/rh-runtimes.png" class="checkbox-image has-tip rh-product-logo-standard" /></label>
+                          <span class="text">Red Hat Runtimes</span>
                         </div>
                         <div class="medium-3 columns">
                           <input id="rhjb-amq" type="checkbox" class="appdev-check" value="true" name="rhjb-amq">
@@ -104,14 +104,6 @@
                           <input id="rhjb-webserver" type="checkbox" class="appdev-check" value="true" name="rhjb-webserver">
                           <label for="rhjb-webserver" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat JBoss Web Server—support large-scale websites and lightweight web apps with a web server built on Apache and Tomcat."><img src="images/application-development/rhe-os/rhjb-webserver.png" class="checkbox-image" /></label>
                           <span class="text">Red Hat JBoss Web Server</span>
-                        </div>
-                      </div>
-                      <!-- B1.S1.Row 3 -->
-                      <div class="row">
-                        <div class="medium-3 columns end">
-                          <input id="rhamt" type="checkbox" class="appdev-check" value="true" name="rhamt">
-                          <label for="rhamt" data-tooltip data-template-classes="tooltip-appdev" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Application Application Migration Toolkit—enable large-scale application migrations and modernizations."><img src="images/application-development/rhe-os/rhamt.png" class="checkbox-image rh-product-logo-larger" /></label>
-                          <span class="text">Red Hat Application Migration Toolkit</span>
                         </div>
                       </div>
                     </fieldset>
@@ -735,7 +727,7 @@
                 <div class="acc-content border-left border-right border-bottom">
                   <!--Block 4 Section 1-->
                   <span id="managed" class="block-section">
-                    <h3 class="block-section-header">Managed Services</h3>
+                    <h3 class="block-section-header">OpenShift Managed Services</h3>
                     <fieldset>
                       <!-- B4.S1.Row 1 -->
                       <div class="row">
@@ -743,6 +735,21 @@
                           <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
                           <label for="openshift-dedicated" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift Dedicated—Your own private, high availability OpenShift cluster, hosted in the cloud provider of your choice, and operated as a cloud service by Red Hat."><img src="images/iaas/managed/openshift-dedicated.png" class="checkbox-image" /></label>
                           <span class="text">OpenShift Dedicated</span>
+                        </div>
+                        <div class="medium-3 columns">
+                          <input id="rosa" type="checkbox" class="iaas-check" class="iaas-check" name="rosa" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <label for="rosa" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat OpenShift Service on AWS—Red Hat OpenShift Service on AWS (ROSA) is a fully-managed OpenShift service, jointly managed and supported by Red Hat and Amazon Web Services (AWS)."><img src="images/iaas/managed/rosa.svg" class="checkbox-image" /></label>
+                          <span class="text">Red Hat OpenShift Service on AWS</span>
+                        </div>
+                        <div class="medium-3 columns">
+                          <input id="ibm-openshift" type="checkbox" class="iaas-check" class="iaas-check" name="rosa" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <label for="ibm-openshift" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift on IBM Cloud—With Red Hat OpenShift on IBM Cloud, you can deploy apps on highly available OpenShift clusters."><img src="images/iaas/managed/ibm-openshift.png" class="checkbox-image" /></label>
+                          <span class="text">OpenShift on IBM Cloud</span>
+                        </div>
+                        <div class="medium-3 columns">
+                          <input id="azure-openshift" type="checkbox" class="iaas-check" class="iaas-check" name="azure-openshift" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <label for="azure-openshift" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Azure Red Hat OpenShift—Azure Red Hat OpenShift provides single-tenant, high-availability Kubernetes clusters on Azure, supported by Red Hat and Microsoft."><img src="images/iaas/managed/azure-openshift.png" class="checkbox-image" /></label>
+                          <span class="text">Azure Red Hat OpenShift</span>
                         </div>
                       </div>
                 </fieldset>
@@ -763,11 +770,16 @@
                           <label for="rhe-virtualization" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat Enterprise Virtualization—an open source product that provides complete virtualization management for servers and desktops that allows for eased migration to the cloud."><img src="images/iaas/private/rhe-virtualization.png" class="checkbox-image" /></label>
                           <span class="text">Red Hat Enterprise Virtualization</span>
                         </div>
-                        <div class="medium-3 columns end">
+                        <div class="medium-3 columns">
                           <input id="baremetal" type="checkbox" class="iaas-check" name="baremetal" value="true">
                           <label for="baremetal" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Bare metal server—a server that provides a non-virtualized compute infrastructure, meaning that unlike a public cloud, there is no hypervisor that creates virtual machines."><img src="images/iaas/private/baremetal.png" class="checkbox-image" /></label>
                           <span class="text">Bare Metal</span>
                         </div>
+                        <div class="medium-3 columns">
+                          <input id="vmware-vsphere" type="checkbox" class="iaas-check" name="baremetal" value="true">
+                          <label for="vmware-vsphere" data-tooltip data-template-classes="tooltip-iaas" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="vSphere—VMware's cloud computing virtualization platform."><img src="images/iaas/private/vmware-vsphere.jpg" class="checkbox-image" /></label>
+                          <span class="text">VMware vSphere</span>
+                        </div>                        
                   </div>
                 </fieldset>
               </span>
@@ -792,7 +804,7 @@
                       <label for="azure" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure—a cloud computing service for managing services through Microsoft-managed data centers."><img src="images/iaas/public/azure.png" class="checkbox-image" /></label>
                       <span class="text">Microsoft Azure</span>
                     </div>
-                    <div class="medium-3 columns end">
+                    <div class="medium-3 columns">
                       <input id="azure-gov" type="checkbox" class="iaas-check" name="public-cloud" value="azure-gov">
                       <label for="azure-gov" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure Government—a government-only cloud you can trust, exclusively for US federal, state, local and tribal government agencies and their partners."><img src="images/iaas/public/azure-gov.png" class="checkbox-image" /></label>
                       <span class="text">Microsoft Azure Government</span>
@@ -1154,7 +1166,7 @@
                   </div>
                   <div>
                     <!--2 images across-->
-                    <img src="images/application-development/rhe-os/rhoar.png" class="rhoar greyed-out rh-product-logo-extrawide">
+                    <img src="images/application-development/rhe-os/rh-runtimes.png" class="rhjb-amq greyed-out rh-product-logo-standard" />
                     <img src="images/application-development/rhe-os/rhjb-amq.png" class="rhjb-amq greyed-out rh-product-logo-standard" />
                     <img src="images/application-development/rhe-os/rh-decision-manager.png" class="rhjb-brms greyed-out rh-product-logo-extrawide" />
                   </div>
@@ -1167,7 +1179,6 @@
                   <div>
                     <img src="images/application-development/rhe-os/rh-map.png" class="rh-map greyed-out rh-product-logo-standard" />
                     <img src="images/application-development/rhe-os/rhjb-webserver.png" class="rhjb-webserver greyed-out rh-product-logo-standard" />
-                    <img src="images/application-development/rhe-os/rhamt.png" class="rhamt greyed-out rh-product-logo-extrawide" />
                   </div>
                 </div>
                 <!-- close conf-section -->
@@ -1287,10 +1298,10 @@
                     <h3>CONTINUOUS INTEGRATION/<br />CONTINUOUS DELIVERY</h3>
                   </div>
                   <div>
-                    <img src="images/devops-tools/cont-int-cont-del/jenkins-print-grey.png" class="jenkins" />
+                    <img src="images/devops-tools/cont-int-cont-del/jenkins.png" class="jenkins greyed-out" />
                   </div>
                   <div>
-                    <img src="images/devops-tools/cont-int-cont-del/tekton-print-grey.png" class="tekton" />
+                    <img src="images/devops-tools/cont-int-cont-del/tekton.png" class="tekton greyed-out" />
                   </div>
                   <div>
                     <!-- empty -->
@@ -1370,16 +1381,16 @@
                         <img src="images/devops-tools/collaboration/slack-print-grey.png" class="slack" />
                       </div>
                       <div>
-                        <img src="images/devops-tools/collaboration/miro-print-grey.png" class="miro" />
-                        <img src="images/devops-tools/collaboration/mural-print-grey.png" class="mural" />
+                        <img src="images/devops-tools/collaboration/miro.png" class="miro greyed-out" />
+                        <img src="images/devops-tools/collaboration/mural.png" class="mural greyed-out" />
                       </div>
                       <div>
-                        <img src="images/devops-tools/collaboration/zoom-print-grey.png" class="zoom" />
-                        <img src="images/devops-tools/collaboration/googlemeet-print-grey.png" class="googlemeet" />
+                        <img src="images/devops-tools/collaboration/zoom.png" class="zoom greyed-out" />
+                        <img src="images/devops-tools/collaboration/googlemeet.png" class="googlemeet greyed-out" />
                       </div>
                       <div>
-                        <img src="images/devops-tools/collaboration/bluejeans-print-grey.png" class="bluejeans" />
-                        <img src="images/devops-tools/collaboration/whatsapp-print-grey.png" class="whatsapp" />
+                        <img src="images/devops-tools/collaboration/bluejeans.png" class="bluejeans greyed-out" />
+                        <img src="images/devops-tools/collaboration/whatsapp.png" class="whatsapp greyed-out" />
                       </div>
                       <div>
                         <!-- empty -->
@@ -1524,6 +1535,15 @@
                       <div>
                         <img src="images/iaas/managed/openshift-dedicated.png" class="openshift-dedicated greyed-out" />
                       </div>
+                      <div>
+                        <img src="images/iaas/managed/rosa.svg" class="rosa greyed-out" />
+                      </div>
+                      <div>
+                        <img src="images/iaas/managed/ibm-openshift.png" class="ibm-openshift greyed-out" />
+                      </div>
+                      <div>
+                        <img src="images/iaas/managed/azure-openshift.png" class="azure-openshift greyed-out" />
+                      </div>                                                                  
                     </div>
                     <div class="conf-section thin-border-right" id="private-conf">
                       <div class="conf-section-header">
@@ -1539,6 +1559,9 @@
                         <div class="float-left">
                           <img src="images/iaas/private/baremetal-print-grey.png" class="baremetal" />
                         </div>
+                        <div>
+                          <img src="images/iaas/private/vmware-vsphere.jpg" class="baremetal greyed-out" />
+                        </div>                        
                       </div>
                     </div>
                     <div class="conf-section thin-border-right" id="public-conf">
@@ -1600,12 +1623,14 @@
                         </div>
                         <div class="row odd-section-margin-top">
                           <div class="large-12 columns">
-                            <div class="odd-section-block" id="management-conf">
+                            <div class="odd-section-block text-center" id="management-conf">
                               <div class="conf-section-header">
                                 <h3>Management</h3>
                               </div>
-                              <img src="images/iaas/management/rh-satellite.png" class="rh-satellite rh-product-logo-standard" />
-                              <img src="images/iaas/management/rh-cloudforms.png" class="rh-cloudforms rh-product-logo-standard" />
+                              <div>
+                                <img src="images/iaas/management/rh-satellite.png" class="rh-satellite rh-product-logo-standard" />
+                                <img src="images/iaas/management/rh-cloudforms.png" class="rh-cloudforms rh-product-logo-standard" />
+                              </div>
                             </div>
                           </div>
                         </div>
