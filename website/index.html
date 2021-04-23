@@ -30,7 +30,7 @@
           <div class="top-section border-all">
             <img src="images/rh-labs-logo.svg" class="rh-logo float-right" />
             <h1>
-              Let us Explore our Technology Together
+              Let us Explore Technology Together
             </h1>
             <h3>
               Design your own engagement-ready technology stack
@@ -47,7 +47,7 @@
                 <p>Click the solution to add it to your stack.</p>
               </li>
               <li>
-                <p>When finished, click "View Overview", to see your topology.</p>
+                <p>When finished, click "See Overview", to review your topology.</p>
               </li>
             </ul>
           </div>
@@ -381,27 +381,27 @@
                   </span>
                   <!--BLOCK 2 SECTION 2  -->
                   <span id="source-control-management" class="block-section">
-                    <h3 class="block-section-header">Source Control Management (SCM)<span>(Must choose ONE)</span></h3>
+                    <h3 class="block-section-header">Source Control Management (SCM)</h3>
                     <fieldset>
                       <!-- B2.S2.Row 1 -->
                       <div class="row">
                         <div class="medium-3 columns">
-                          <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose one option for Source Control Management under Devops Tools.">
+                          <input id="bitbucket" type="checkbox" class="devops-check" value="bitbucket" name="source-control-management">
                           <label for="bitbucket" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="BitBucket—a web-based hosting service for projects that use either the Mercurial or Git revision control systems, and which offers both commercial plans and free accounts."><img src="images/devops-tools/source-control-management/bitbucket.png" class="checkbox-image" /></label>
                           <span class="text">Bitbucket</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose one option for Source Control Management under Devops Tools.">
+                          <input id="git" type="checkbox" class="devops-check" value="git" name="source-control-management">
                           <label for="git" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Git—a free and open source distributed version control system designed to handle small and  very large projects with speed and efficiency."><img src="images/devops-tools/source-control-management/git.png" class="checkbox-image" /></label>
                           <span class="text">Git</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose one option for Source Control Management under Devops Tools.">
+                          <input id="github" type="checkbox" class="devops-check" value="github" name="source-control-management">
                           <label for="github" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitHub (PUBLIC or PRIVATE)—a web-based Git repository hosting service that offers the distributed revision control and source code management (SCM) functionality of Git on top of its own features."><img src="images/devops-tools/source-control-management/github.png" class="checkbox-image" /></label>
                           <span class="text">GitHub</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="gitlab" type="checkbox" class="devops-check" value="gitlab" name="source-control-management" data-parsley-mincheck="1" data-parsley-maxcheck="1" data-parsley-required="true" data-parsley-errors-container=".error-container" data-parsley-error-message="Please check one option for Source Control Management.">
+                          <input id="gitlab" type="checkbox" class="devops-check" value="gitlab" name="source-control-management">
                           <label for="gitlab" data-tooltip data-template-classes="tooltip-devops" aria-haspopup="true" class="has-tip" data-disable-hover="false" title="GitLab—a manager for git repositories on a centralized server that offers complete control over repositories, allowing you to select public or private usage."><img src="images/devops-tools/source-control-management/gitlab.png" class="checkbox-image" /></label>
                           <span class="text">GitLab</span>
                         </div>
@@ -750,22 +750,22 @@
                       <!-- B4.S1.Row 1 -->
                       <div class="row">
                         <div class="medium-3 columns">
-                          <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <input id="openshift-dedicated" type="checkbox" class="iaas-check" class="iaas-check" name="openshift-dedicated" value="true">
                           <label for="openshift-dedicated" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift Dedicated—Your own private, high availability OpenShift cluster, hosted in the cloud provider of your choice, and operated as a cloud service by Red Hat."><img src="images/iaas/managed/openshift-dedicated.png" class="checkbox-image" /></label>
                           <span class="text">OpenShift Dedicated</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="rosa" type="checkbox" class="iaas-check" class="iaas-check" name="rosa" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <input id="rosa" type="checkbox" class="iaas-check" class="iaas-check" name="rosa" value="true" >
                           <label for="rosa" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Red Hat OpenShift Service on AWS—Red Hat OpenShift Service on AWS (ROSA) is a fully-managed OpenShift service, jointly managed and supported by Red Hat and Amazon Web Services (AWS)."><img src="images/iaas/managed/rosa.svg" class="checkbox-image" /></label>
                           <span class="text">Red Hat OpenShift Service on AWS</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="ibm-openshift" type="checkbox" class="iaas-check" class="iaas-check" name="rosa" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <input id="ibm-openshift" type="checkbox" class="iaas-check" class="iaas-check" name="rosa" value="true">
                           <label for="ibm-openshift" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="OpenShift on IBM Cloud—With Red Hat OpenShift on IBM Cloud, you can deploy apps on highly available OpenShift clusters."><img src="images/iaas/managed/ibm-openshift.png" class="checkbox-image" /></label>
                           <span class="text">OpenShift on IBM Cloud</span>
                         </div>
                         <div class="medium-3 columns">
-                          <input id="azure-openshift" type="checkbox" class="iaas-check" class="iaas-check" name="azure-openshift" value="true" data-parsley-labs-require-if-checked="[name='public-cloud']" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose a public cloud provider.">
+                          <input id="azure-openshift" type="checkbox" class="iaas-check" class="iaas-check" name="azure-openshift" value="true">
                           <label for="azure-openshift" data-tooltip data-template-classes="tooltip-iaas"  data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Azure Red Hat OpenShift—Azure Red Hat OpenShift provides single-tenant, high-availability Kubernetes clusters on Azure, supported by Red Hat and Microsoft."><img src="images/iaas/managed/azure-openshift.png" class="checkbox-image" /></label>
                           <span class="text">Azure Red Hat OpenShift</span>
                         </div>
@@ -808,17 +808,17 @@
                   <!-- B4.S3.Row 1 -->
                   <div class="row">
                     <div class="medium-3 columns">
-                      <input id="aws" type="checkbox" class="iaas-check" name="public-cloud" value="aws" data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
+                      <input id="aws" type="checkbox" class="iaas-check" name="public-cloud" value="aws">
                       <label for="aws" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Amazon WebServices (AWS)—an on-demand computing platform that offers a suite of cloud computing services."><img src="images/iaas/public/aws.png" class="checkbox-image" /></label>
                       <span class="text">Amazon Web Services</span>
                     </div>
                     <div class="medium-3 columns">
-                      <input id="google" type="checkbox" class="iaas-check" name="public-cloud" value="google"data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
+                      <input id="google" type="checkbox" class="iaas-check" name="public-cloud" value="google">
                       <label for="google" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Google Cloud Platform (GCP)—a cloud computing service that offers hosting on the same infrastructure that Google uses."><img src="images/iaas/public/gcp.png" class="checkbox-image" /></label>
                       <span class="text">Google Cloud Platform</span>
                     </div>
                     <div class="medium-3 columns">
-                      <input id="azure" type="checkbox" class="iaas-check" name="public-cloud" value="azure"data-parsley-maxcheck="1" data-parsley-errors-container=".error-container" data-parsley-error-message="Please choose only one public cloud provider.">
+                      <input id="azure" type="checkbox" class="iaas-check" name="public-cloud" value="azure">
                       <label for="azure" data-tooltip data-template-classes="tooltip-iaas"  aria-haspopup="true" class="has-tip" data-disable-hover="false" title="Microsoft Azure—a cloud computing service for managing services through Microsoft-managed data centers."><img src="images/iaas/public/azure.png" class="checkbox-image" /></label>
                       <span class="text">Microsoft Azure</span>
                     </div>

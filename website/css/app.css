@@ -45,9 +45,13 @@ body {
 
 #main-graphic,
 #confirmation-row,
-#home > .row,
+#home > .row {
+    overflow: hidden;
+}
+
 #form {
     overflow: hidden;
+    margin-bottom: 4rem;
 }
 
 .border-all {
