@@ -45,10 +45,13 @@ body {
 
 #main-graphic,
 #confirmation-row,
-#home > .row,
+#home > .row {
+    overflow: hidden;
+}
+
 #form {
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .border-all {
@@ -438,7 +441,7 @@ form fieldset {
 }
 
 #red-hat-enterprise-open-source fieldset .row:not(:first-child) {
-    padding-top: 0;
+    padding-top: 25px;
 }
 
 fieldset .row:not(:first-child) {
@@ -1573,7 +1576,7 @@ ul.parsley-errors-list li {
 }
 
 .footer-main .traditional-primary {
-  width: 33.33333%;
+  width: 10%;
   float: right;
 
   position: relative;
@@ -1582,61 +1585,26 @@ ul.parsley-errors-list li {
   padding-right: 15px;
 }
 
+.footer-main .traditional-logo {
+   width: 101px;
+   float: left;
+   margin-left: 35px;
+}
+
 .footer-main .event-logo {
-  float: left;
-  width: 50%;
+  float: right;
+  width: 101px;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 100%;
 }
 
 .footer-main ul {
   margin: 0;
   list-style: none;
   text-align: left;
-}
-
-.footer-main .social-links {
-  float: left;
-  width: 50%;
-}
-
-.footer-main .social-links ul {
-  padding: 4px 0;
-  overflow: hidden;
-}
-
-.footer-main .social-links li {
-  margin-right: 0;
-  padding: 0;
-  width: 20%;
-  float: left;
-  text-align: center;
-  display: inline-block;
-}
-
-.footer-main .social-links a {
-  font-size: 17px;
-  color: #fff;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.footer-main .social-links a:hover {
-  color: #d2d3d4;
-}
-
-.footer-main .social-links a::before {
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'rh-icons';
 }
 
 .footer-main .icon-google-plus::before {
@@ -1674,7 +1642,7 @@ ul.parsley-errors-list li {
 .footer-main .legal .menu {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
+  padding-left: 65px;
   padding-right: 15px;
 }
 
@@ -1697,9 +1665,12 @@ ul.parsley-errors-list li {
 .footer-main .legal li {
   float: left;
   padding: 0;
-  margin-right: 8px;
+  margin-right: 15px;
+  margin-left: 8px;
   display: inline-block;
   font-size: 12px;
+  color: #aaa;
+  text-decoration: underline;
 }
 
 .footer-main .legal .last a {
@@ -1720,6 +1691,7 @@ ul.parsley-errors-list li {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 12px;
+  color: #aaa;
 }
 
 /* Footer on medium screens */
