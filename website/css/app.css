@@ -24,8 +24,9 @@ body {
     background-color: #142c4d;
     background-repeat: repeat;
     background-image: url("../images/background.svg");
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
 }
+
 
 .row {
     max-width: 75rem;
@@ -69,6 +70,11 @@ body {
 
 /* typography */
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Red Hat Display', sans-serif; 
+}
+
+
 .top-section h1 {
     font-weight: bold;
     font-size: 1.625rem;
@@ -80,7 +86,6 @@ body {
 
 .top-section h2 {
     font-size: 27px;
-    color: #4C4D4D;
 }
 
 .top-section h3 {
@@ -199,24 +204,14 @@ a#l11leu-accordion-label {
     font-weight: bold;
 }
 
-table tbody td,
-table tbody th {
-}
-
-#submit-button,
-.button {
-    
-    background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
-}
-
 .submit_box {
+    background: #cc0000;
     font-weight: bold;
     font-size: 1.25rem;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     line-height: 3rem;
-    background: linear-gradient(to right bottom, #ee0000 50%, #cc0000 50%);
     padding: 2rem 4rem;
     height: 4rem;
     bottom: 1rem;
@@ -403,19 +398,6 @@ form h3 span {
     color: #020000;
     font-size: 14px;
     text-transform: uppercase;
-}
-
-form #submit-button {
-    color: #fff;
-    background-color: yellow;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px 60px;
-    font-weight: normal;
-    border: none;
-    font-size: 22px;
 }
 
 input[type='checkbox'],
@@ -689,40 +671,17 @@ input:focus {
     overflow: visible;
 }
 
-.app-dev-header {
-    background-image: url("../images/section.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
-}
-
 .bg-red {
     background-color: #ee0000;
 }
 
-.dev-ops-header {
-    background-image: url("../images/section.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
-}
 
 .bg-blue {
     background-color: #316dc1;
 }
 
-.container-platform-header {
-    background-image: url("../images/section.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
-}
-
 .bg-brown {
     background-color: #96662f;
-}
-
-.host-infra-header {
-    background-image: url("../images/section.png");
-    background-repeat: no-repeat;
-    background-position: 100%;
 }
 
 .bg-light-orange {
