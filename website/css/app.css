@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "rh-icons";
-  src: url("../fonts/rh-icons.eot");
-  src: url("../fonts/rh-icons.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/rh-icons.woff") format("woff"),
-       url("../fonts/rh-icons.ttf") format("truetype"),
-       url("../fonts/rh-icons.svg#rh-icons") format("svg");
+  src: url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/fonts/rh-icons.eot");
+  src: url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/fonts/rh-icons.eot?#iefix") format("embedded-opentype"),
+       url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/fonts/rh-icons.woff") format("woff"),
+       url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/fonts/rh-icons.ttf") format("truetype"),
+       url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/fonts/rh-icons.svg#rh-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "rh-icons";
-    src: url("../fonts/rh-icons.svg#rh-icons") format("svg");
+    src: url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/fonts/rh-icons.svg#rh-icons") format("svg");
   }
 }
 
@@ -23,7 +23,7 @@ body {
     height: 100%;
     background-color: #142c4d;
     background-repeat: repeat;
-    background-image: url("../images/background.svg");
+    background-image: url("https://raw.githubusercontent.com/rht-labs/infographic/redhat.com/website/images/background.svg");
     font-family: 'Red Hat Text', sans-serif;
 }
 
