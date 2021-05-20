@@ -1,9 +1,0 @@
-NAMESPACE=infographic-pipeline
-NAMESPACE_DEV=infographic-dev
-NAMESPACE_TEST=infographic-test
-NAMESPACE_UAT=infographic-uat
-APPLICATION_NAME=infographic
-SCM_URL=https://github.com/rht-labs/infographic.git
-SCM_REF=master
-SCM_CONTEXT_DIR=website
-GITHUB_WEBHOOK_SECRET=
